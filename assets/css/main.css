@@ -96,7 +96,7 @@ body {
 }
 
 .footer-distributed .footer-left{
-	width: 40%;
+	width: 38%;
 }
 
 
@@ -116,7 +116,7 @@ body {
 
 
 .footer-distributed .footer-center{
-	width: 43%;
+	width: 36%;
 }
 
 .footer-distributed .footer-center i{
@@ -162,11 +162,9 @@ body {
 
 .footer-distributed .footer-icons a{
 	display: inline-block;
-	width: 45px;
-	height: 45px;
 	cursor: pointer;
-
-	font-size: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
 	color: #ffffff;
 
 }

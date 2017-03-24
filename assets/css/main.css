@@ -175,7 +175,7 @@ body {
 	color: #ffffff;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 
 	.footer-distributed .footer-left,
 	.footer-distributed .footer-right{

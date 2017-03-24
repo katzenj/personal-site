@@ -163,8 +163,10 @@ body {
 .footer-distributed .footer-icons a{
 	display: inline-block;
 	cursor: pointer;
-	margin-right: 20px;
-	margin-left: 20px;
+/*	margin-right: 20px;
+	margin-left: 20px;*/
+	padding-right: 20px;
+	padding-left: 20px;
 	color: #ffffff;
 
 }

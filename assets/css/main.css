@@ -179,7 +179,7 @@ body {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 736px) {
 
 	#me, #resume, #projects, #interests {
 		font-family: 'Varela Round', sans-serif;

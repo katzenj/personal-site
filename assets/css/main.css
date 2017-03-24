@@ -175,7 +175,14 @@ body {
 	color: #ffffff;
 }
 
+
 @media (min-width: 600px) {
+
+	#me, #resume, #projects, #interests {
+		font-family: 'Varela Round', sans-serif;
+		margin-left: 60px;
+		margin-right: 60px;
+	}
 
 	.footer-distributed .footer-left,
 	.footer-distributed .footer-right{

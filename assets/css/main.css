@@ -162,6 +162,7 @@ body {
 
 .footer-distributed .footer-icons li {
 	display: inline;
+	position: static;
 }
 
 .footer-distributed .footer-icons a{

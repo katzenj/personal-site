@@ -160,8 +160,13 @@ body {
 	margin-top: 15px;
 }
 
+.footer-distributed .footer-icons li {
+	list-style: none;
+	display: inline;
+}
+
 .footer-distributed .footer-icons a{
-	display: inline-block;
+	/*display: inline-block;*/
 	cursor: pointer;
 /*	margin-right: 20px;
 	margin-left: 20px;*/

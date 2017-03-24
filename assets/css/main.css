@@ -10,19 +10,23 @@ body {
 
 #me, #resume, #projects, #interests {
 	font-family: 'Varela Round', sans-serif;
-	margin-left: 120px;
-	margin-right: 120px;
+	width: 85%;
+	margin-left: 7.5%;
 }
 
 #me p {
-	margin-left: 160px;
-	margin-right: 160px;
+/*	margin-left: 160px;
+	margin-right: 160px;*/
+	margin-left: 17.5%;
+	margin-right: 17.5%;
 }
 
 .bg-1 {
 	background-color: #f2f2f2;
 	color: #303030;
-	margin-top: 100px;
+
+	margin-top: 7.5%;
+
 	padding-top: 40px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -66,18 +70,17 @@ body {
 	border-bottom-right-radius: 10px;
 	padding: 40px;
 	padding-top: 20px;
-	margin-bottom: 40px;
 }
 
 .navbar {
 	font-family: 'Varela Round', sans-serif;
 }
+
 .navbar-nav li a:hover {
 	color: #5f4b95 !important;
 }
 
 .footer-distributed{
-	/*box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);*/
 	box-sizing: border-box;
 	width: 90%;
 	text-align: left;
@@ -180,8 +183,6 @@ body {
 
 	#me, #resume, #projects, #interests {
 		font-family: 'Varela Round', sans-serif;
-		margin-left: 60px;
-		margin-right: 60px;
 	}
 
 	.footer-distributed .footer-left,

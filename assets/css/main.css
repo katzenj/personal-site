@@ -146,9 +146,9 @@ body {
 }
 
 
-.footer-distributed .footer-center p a{
+.footer-distributed .footer-center p a {
 	color: #ffffff;
-	text-decoration: none;;
+	text-decoration: none;
 }
 
 
@@ -167,28 +167,5 @@ body {
 	padding-left: 20px;
 	color: #ffffff;
 }
-
-
-/*@media screen and (min-width: 600px) and (max-width: 736px) {
-
-	#me, #resume, #projects, #interests {
-		font-family: 'Varela Round', sans-serif;
-	}
-
-	.footer-distributed .footer-left,
-	.footer-distributed .footer-right{
-		text-align: center;
-	}
-
-	.footer-distributed .footer-right{
-		float: none;
-		margin: 0 auto 20px;
-	}
-
-	.footer-distributed .footer-left p.footer-links{
-		line-height: 1.8;
-	}
-}*/
-
 
 

@@ -10,13 +10,12 @@ body {
 
 #me, #resume, #projects, #interests {
 	font-family: 'Varela Round', sans-serif;
-	width: 85%;
+	/*width: 85%;*/
+	margin-right: 7.5%;
 	margin-left: 7.5%;
 }
 
 #me p {
-/*	margin-left: 160px;
-	margin-right: 160px;*/
 	margin-left: 17.5%;
 	margin-right: 17.5%;
 }
@@ -87,9 +86,9 @@ body {
 	text-align: left;
 
 	padding: 55px 50px;
-	margin-top: 40px;
-	margin-left: 80px;
-	margin-right: 80px;
+	margin-top: 0;
+	margin-left: 7.5%;
+	margin-right: 7.5%;
 }
 
 .footer-distributed .footer-left,
@@ -126,18 +125,17 @@ body {
 .footer-distributed .footer-center i{
 	color: #ffffff;
 	font-size: 25px;
-	width: 38px;
-	height: 38px;
+	width: 10%;
+	height: 7%;
 	border-radius: 50%;
 	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
+	line-height: 125%;
+	padding: 2.5%;
 	vertical-align: middle;
 }
 
 .footer-distributed .footer-center i.fa-envelope{
 	font-size: 17px;
-	line-height: 38px;
 }
 
 .footer-distributed .footer-center p{
@@ -147,12 +145,6 @@ body {
 	margin:0;
 }
 
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
 
 .footer-distributed .footer-center p a{
 	color: #ffffff;
@@ -177,7 +169,7 @@ body {
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 736px) {
+/*@media screen and (min-width: 600px) and (max-width: 736px) {
 
 	#me, #resume, #projects, #interests {
 		font-family: 'Varela Round', sans-serif;
@@ -196,7 +188,7 @@ body {
 	.footer-distributed .footer-left p.footer-links{
 		line-height: 1.8;
 	}
-}
+}*/
 
 
 

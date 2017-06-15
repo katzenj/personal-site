@@ -15,9 +15,14 @@ body {
 	margin-left: 7.5%;
 }
 
+#me {
+	margin-top: 10%;
+}
+
+
 #me p {
-	margin-left: 17.5%;
-	margin-right: 17.5%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .bg-1 {

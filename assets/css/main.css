@@ -15,9 +15,14 @@ body {
 	margin-left: 7.5%;
 }
 
+#me {
+	margin-top: 10%;
+}
+
+
 #me p {
-	margin-left: 17.5%;
-	margin-right: 17.5%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .bg-1 {
@@ -76,7 +81,7 @@ body {
 }
 
 .navbar-nav li a:hover {
-	color: #5f4b95 !important;
+	color: #89d7ff !important;
 }
 
 .footer-distributed{

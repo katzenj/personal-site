@@ -1,234 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Jordan Katzen</title>
-	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+        <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    </head>
+    <body>
+        <!-- // Fixed Navbar with page links  -->
+        <nav class="navbar navbar-light clearfix ">
+            <div class="container">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteLinks">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><s>JORDAN KATZEN</s></a>
+                </div>
+                <div class="collapse navbar-collapse" id="siteLinks">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">ABOUT/CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <header>
+            <!-- // Header containing a picture of me and a lil summary -->
+            <div class="header-wrapper">
+                <img class="profile-pic" src="./assets/images/linkedin.jpg" alt="Profile"/>
+                <h1>Student & Software Developer 👨‍💻</h1>
+                <p>
+                    Finishing up my last year of school at the University of Texas at Austin.
+                    I've done several internships and most recently finished two in 2018, one
+                    at Google and one at Tableau.
+                </p>
+            </div>
+        </header>
 
-	<link href="assets/css/main.css" rel="stylesheet">
+        <main> 
+            <!-- // Work Experience -->
+            <section class="work">
+                <div class="content-wrap">
+                    <h2>Work Experience <a href="./assets/resume/KatzenResume.pdf" download><i style="color: black" class="fa fa-download"></i></a></h2>
+                    <hr>
+    
+                    <div class="column-medium">
+                        <h3>Software Engineering Intern</h3>
+                        <p>Tableau Software - Palo Alto, CA</p>
+                        <p>May 2018 - August 2018</p>
+                    </div>
+                    <div class="column-large">
+                        <ul>
+                            <li>Developed the Synonyms feature for Tableau's new NLP product, Ask Data, 
+                                which allows users to tailor their experiences through the use of synonyms in queries</li>
+                            <li>Implemented data persistence, API, and front-end, writing code in Go, C++, and Typescript</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="column-medium">
+                        <h3>Software Engineering Intern</h3>
+                        <p>Google - Mountain View, CA</p>
+                        <p>January 2018 - April 2018</p>
+                    </div>
+                    
+                    <div class="column-large">
+                        <ul>
+                            <li>Developed the Ad Group Shift Card for Google Adwords which, with A/B testing, launched to 50% in my last week and then fully to 100% in June</li>
+                            <li>Owned the project completely, writing the back-end and front-end code in Java and Angular2/Dart</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Job Details -->
+                    <div class="column-medium">
+                        <h3>Software Engineering Intern</h3>
+                        <p>Unbound Medicine - Media, PA</p>
+                        <p>June 2017 - August 2017</p>
+                    </div>
+                    <div class="column-large">
+                        <ul>
+                            <li>Worked with the lead designer to completely redo the receipt and activation emails with HTML using XSL/XSLT, and added Google Email markup</li>
+                            <li>Utilized Apache Spark/Cassandra to develop a modified shortest paths algorithm written in Scala to compute the path between research articles</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="projects">
+                <div class="content-wrap">
+                    <h2>Projects &#x1F4BB;</h2>
+                    <hr>
+                    <div class="row">
+                        <div class="column-small">
+                            <h4 class="project-title">ToDo ✔</h4>
+                            <img class="todo-pic" src="./assets/images/ToDo_Home.jpeg" alt="ToDo Home" />
+                            <ul>
+                                <li>A work-in-progress developed in Swift that expands on the basic concept behind reminders and Apple’s own tutorial</li>
+                                <li>Allows users to create to-do’s with different features based on inspiration from my favorite productivity apps</li>
+                            </ul>
+                        </div>
+                        <div class="column-small">
+                            <h4 class="project-title">SideGrind 💰</h4>
+                            <video class="sg-video" width="200" height="300" controls>
+                                    <source src="./assets/images/sg-website.mp4" type="video/mp4">
+                                </video>
+                            <ul>
+                                <li>iOS app developed in Swift, using Firebase for user authentication and database storage for posts and users</li>
+                                <li>Allows users to post a job/product that one would like to buy/sell</li>
+                            </ul>
+                        </div>
+                        <div class="column-small">
+                            <h4 class="project-title">Pet Adoption App 🐶</h4>
+                            <img class="adopt-pic" src="./assets/images/Register.png" alt="Adopt Pic" />
+                            <ul>
+                                <li>iOS app developed with React Native and Redux, using Firebase for authentication and database storage for posts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- // Education -->
+            <section class="education">
+                <div class="content-wrap">
+                    <h2>Education</h2>
+                    <hr>
+                    <h3>The University of Texas at Austin</h3>
+                    <h4>Bachelor of Science and Arts, 2015 - Present</h4>
+                    <p>Major in Computer Science | Certificate in Business</p>
+    
+                </div>
+            </section>
+        </main>
 
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jordanNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#me">About Me</a>
-			</div>
-			<div class="collapse navbar-collapse" id="jordanNavbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#resume">Resume</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#interests">Interests</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	<!-- About Me Section, Includes Short Bio -->
-
-	<section id="me">
-		<div class="container-fluid bg-1 text-center">
-			<h2>Jordan</h2>
-			<img src="images/me.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Me" height="200" width="300"><br>
-			<p></p><br>
-			<p>I'm currently a third year student Computer Science major at the University of Texas at Austin. My interests include mobile app development, learning web development (front & back end), investing, and expanding my coding skill set.</p>
-		</div>
-	</section>
-
-	<!-- Section that contains my resume in HTML and link to resume by clicking heading -->
-
-	<section id="resume">
-		<div class="container-fluid bg-2 text-center">
-			<h2><a href="KatzenResume.pdf" download><i style="color: black" class="fa fa-download"></i></a> Resume</h2>
-		</div>
-		<div id="res-info" class="container-fluid">
-			<h3>Education</h3>
-
-			<p>The University of Texas at Austin (Expected Graduation: December 2018)</p>
-			<ul>
-				<li>Bachelor of Science and Arts in Computer Science. Certificate in Business.</li>
-				<li>Cumulative GPA: 3.83  |  Major Specific: 3.92/4.0</li>
-				<li>Relevant Coursework: Data Structures, Discrete Math, and Computer Organization and Architecture</li>
-			</ul>
-
-			<h3>Experience</h3>
-			<p>Software Development Intern, Unbound Medicine || June 2017 through August 2017</p>
-			<ul>
-				<li>Use of Apache Spark/Cassandra to develop a shortest paths method written in Scala and making use
-					of Cassandra CQL queries</li>
-				<li>Learned XSL and XSL:FO to transform XML and XHTML documents into HTML and PDF documents,
-					respectively</li>
-				<li>Updated receipt and activation emails from plain text to HTML using HTML and XSL, and added Google
-					Email markup</li>
-			</ul><br/>
-
-			<p>Software Development Intern, Unbound Medicine || June 2016 to August 2016</p>
-			<ul>
-				<li>Responsible for learning Apache Spark and Cassandra, and then setting up Spark on several machines</li>
-				<li>Set up and integrated Spark with Cassandra and wrote programs in Scala to utilize the GraphX library for the company's website article graph tool</li>
-			</ul>
-
-			<h3>Technical Skills</h3>
-
-			<ul>
-				<li>Java, Scala, C, Git, HTML, CSS/SASS, XSL, Swift, React Native</li>
-			</ul>
-
-			<h3>Extracurricular Activities</h3>
-
-			<p>Mobile App Development Club  ||  September 2015 - May 2016</p>
-			<ul>
-				<li>Attended weekly iOS development lectures and created a flappy bird clone</li>
-			</ul><br>
-
-			<p>Co-Founder and Partner of Gambit Capital Investment Club</p>
-
-			<ul>
-				<li>Analyze market trends, write stock pitcehs and focus on Tech/Biotech sectors</li>
-				<li>Helped coordinate initial restructuring of the fund a few months after founding</li>
-			</ul>
-
-			<p>Phi Chi Theta Business Fratnerity</p>
-
-			<ul>
-				<li>Member, attend weekly meetings and meet philanthropic and financial requirements</li>
-			</ul>
-		</div>
-	</section>
-
-	<!-- Projects Sections -->
-
-	<section id="projects">
-		<div class="container-fluid bg-3 text-center">
-			<h2>Projects</h2><br>
-			<div class="row slideanim">
-				<div class="col-sm-6">
-					<i class="fa fa-file-code-o fa-4x"></i>
-					<h3>SideGrind</h3><br>
-					<p>This was the first iOS app I developed, and was developed with Swift. It uses Firebase for user authentication and database storage. While not in progress anymore because the idea was shut down, I still use it to show how I implemented user authentication, and the posts which are stored in a database.</p>
-					<video width="300" height="250" controls>
-						<source src="images/sg-website.mp4" type="video/mp4">
-					</video>
-				</div>
-
-				<div class="col-sm-6">
-					<i class="fa fa-paw fa-4x"></i>
-					<h3>Adopt A Pet</h3><br/>
-					<p>
-						This is an iOS app written with React Native and is still in development. This has been a huge learning experience, having to learn React Native, Redux, Router-Flux, etc. as I continue to create the app. All of the design is mine, and thus far I have completed user authentication and am working on the profile section next.<br><br>
-						As it is unfinished all I have below are two screenshots of what has been completed.
-						<br>
-						<div class="imgContainer">
-							<img src="images/Login.png" alt="Login Page" style="margin-left: 40px; padding-left: 20px; width:215px; height:350px
-							"/>
-						</div>
-						<div class="imgContainer">
-							<img src="images/Register.png" alt="Register Page" style="padding-left: 20px; width:215px; height:350px
-							"/>
-						</div>
-					</p>
-				</div>
-
-
-
-			</div>
-		</div>
-	</section>
-
-	<!-- Interests Section/Extracurriculars/Extra Stuff -->
-
-	<section id="interests">
-		<div class="container-fluid bg-4 text-center">
-			<h2>Interests</h2>
-			<p>Just some of my hobbies and such</p>
-			<div class="row slideanim">
-				<div class="col-sm-4">
-					<h3>Investing</h3><br>
-					<i class="fa fa-line-chart fa-4x"></i>
-					<p></p><br>
-					<p>Investing is one of my passions and I'm constantly staying up to date on my personal portfolio. I am currently in the process of learning to write investing algorithms.</p>
-				</div>
-
-				<div class="col-sm-4">
-					<h3>Programming</h3><br>
-					<i class="fa fa-code fa-4x"></i>
-					<p></p><br>
-					<p>I love programming and enjoy expanding my knowledge when possible. I am also constantly improving my coding skills like my HTML and CSS knowledge by doing projects like creating this site.</p>
-				</div>
-
-				<div class="col-sm-4">
-					<h3>Reading</h3><br>
-					<i class="fa fa-book fa-4x"></i>
-					<p></p><br>
-					<p>Everything from book to articles on Medium, Bleacher Report, GearPatrol and everything inbetween.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer that includes links to site and other links -->
-
-	<footer class="footer-distributed">
-
-		<div class="footer-left">
-
-			<p class="footer-links">
-				<a href="#me">About Me</a>
-				 |
-				<a href="#resume">Resume</a>
-				 |
-				<a href="#projects">Projects</a>
-				 |
-				<a href="#interests">Interests</a>
-			</p>
-
-			<p class="footer-katzen">Jordan Katzen &copy; 2017</p>
-
-		</div>
-
-		<div class="footer-center">
-
-			<div>
-				<i class="fa fa-map-pin"></i>
-				<p>Austin, Texas</p>
-			</div>
-
-			<div>
-				<i class="fa fa-mobile"></i>
-				<p>(610) 883 - 7195</p>
-			</div>
-
-			<div>
-				<i class="fa fa-envelope"></i>
-				<p><a href="mailto:jkatzen@utexas.edu">jkatzen@utexas.edu</a></p>
-			</div>
-		</div>
-
-		<div class="footer-right">
-			<div class="footer-icons">
-				<ul>
-					<li><a href="https://www.linkedin.com/in/jordankatzen"><i class="fa fa-linkedin fa-3x"></i></a></li>
-					<li><a href="https://github.com/katzenj"><i class="fa fa-github fa-3x"></i></a></li>
-				</ul>
-			</div>
-		</div>
-
-		</div>
-
-	</footer>
-
-</body>
+        <footer>
+            <p>
+                © 2018 Jordan Katzen
+            </p>
+        </footer>
+    </body>
 </html>

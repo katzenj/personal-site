@@ -28,19 +28,35 @@ p {
     color: black;
     font-size: 16px;
 }
+.column-large {
+    width: 58%;
+    float: left;
+    min-height: 175px;
+}
 .column-medium {
     width: 39%;
     float: left;
     padding-right: 3%;
     min-height: 175px;
 }
-.column-large {
-    width: 58%;
-    float: left;
-    min-height: 175px;
+.column-small {
+    width: 31%;
+    min-width: 250px;
+}
+.column-header {
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 /*----- nav -----*/
+nav .nav-container {
+    width: 80%;
+    margin: 0 auto;
+}
 nav a {
     color: black;
     text-decoration: none;
@@ -101,19 +117,22 @@ header p {
     height: 448px;
 }
 
-/*----- projects -----*/
-.projects {
-    margin-bottom: 40px;
-}
-.column-small {
-    width: 31%;
-}
-.project-title {
+/*----- skills -----*/
+.skills-container .column-small {
     text-align: center;
+    min-width: 100px;
 }
-.row {
-    display: flex;
-    justify-content: space-evenly;
+.skills-container .column-small p {
+    font-size: 14px;
+}
+.skill-list {
+    display: table;
+    list-style: none;
+}
+
+/*----- projects -----*/
+.projects, .projects .column-small {
+    margin-bottom: 40px;
 }
 .todo-pic, .adopt-pic {
     display: block;
@@ -138,9 +157,14 @@ footer p {
 
 /*----- RESPONSIVE -----*/
 @media only screen and (max-width: 991px) {
-     header p {
-         width: 90%;
-     }
+    header .profile-pic {
+        height: 175px;
+        width: 175px;
+        border-radius: 50%;
+    }
+    header p {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 768px) {

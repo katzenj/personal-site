@@ -14,12 +14,13 @@
     </head>
     <body>
         <!-- // Fixed Navbar with page links  -->
-        <nav class="navbar navbar-light clearfix ">
-            <div class="container">
+        <nav class="navbar navbar-inverse clearfix ">
+            <div class="nav-container">
                 <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#siteLinks">
                     <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"><s>JORDAN KATZEN</s></a>
                 </div>
@@ -78,7 +79,6 @@
                         </ul>
                     </div>
                     
-                    <!-- Job Details -->
                     <div class="column-medium">
                         <h3>Software Engineering Intern</h3>
                         <p>Unbound Medicine - Media, PA</p>
@@ -91,15 +91,47 @@
                         </ul>
                     </div>
                 </div>
-            </section>
-    
+			</section>
+			
+			<section class="skills">
+				<div class="content-wrap">
+					<h2>Technical Skills</h2>
+					<hr>
+					<div class="skills-container">
+						<div class="row">
+							<div class="column-small">
+								<h4 class="column-header">Best</h4>
+								<p>Java</p>
+								<p>Golang</p>
+								<p>TypeScript</p>
+							</div>
+
+							<div class="column-small">
+								<h4 class="column-header">Better</h4>
+								<p>Hadoop</p>
+								<p>Apache Spark</p>
+								<p>Git</p>
+								<p>Swift</p>
+							</div>
+
+							<div class="column-small">
+								<h4 class="column-header">Good</h4>
+								<p>C++</p>
+								<p>Postgres</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+	
+			<!-- // Section about the projects I've completed or am working on. -->
             <section class="projects">
                 <div class="content-wrap">
                     <h2>Projects &#x1F4BB;</h2>
                     <hr>
                     <div class="row">
                         <div class="column-small">
-                            <h4 class="project-title">ToDo ✔</h4>
+                            <h4 class="column-header">ToDo ✔</h4>
                             <img class="todo-pic" src="./assets/images/ToDo_Home.jpeg" alt="ToDo Home" />
                             <ul>
                                 <li>A work-in-progress developed in Swift that expands on the basic concept behind reminders and Apple’s own tutorial</li>
@@ -107,7 +139,7 @@
                             </ul>
                         </div>
                         <div class="column-small">
-                            <h4 class="project-title">SideGrind 💰</h4>
+                            <h4 class="column-header">SideGrind 💰</h4>
                             <video class="sg-video" width="200" height="300" controls>
                                     <source src="./assets/images/sg-website.mp4" type="video/mp4">
                                 </video>
@@ -117,7 +149,7 @@
                             </ul>
                         </div>
                         <div class="column-small">
-                            <h4 class="project-title">Pet Adoption App 🐶</h4>
+                            <h4 class="column-header">Pet Adoption App 🐶</h4>
                             <img class="adopt-pic" src="./assets/images/Register.png" alt="Adopt Pic" />
                             <ul>
                                 <li>iOS app developed with React Native and Redux, using Firebase for authentication and database storage for posts</li>

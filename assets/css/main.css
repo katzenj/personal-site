@@ -26,6 +26,7 @@ h3 {
 p, li {
     color: black;
     font-size: 16px;
+    margin: 0;
 }
 section {
     padding: 30px 0;
@@ -36,10 +37,11 @@ section {
     min-height: 175px;
 }
 .column-medium {
-    width: 39%;
+    width: 36%;
     float: left;
     padding-right: 3%;
     min-height: 175px;
+    min-width: 200px;
 }
 .column-small {
     width: 31%;
@@ -109,6 +111,24 @@ header p {
     border-radius: 50%;
 }
 
+/*----- about me section -----*/
+.about-pic {
+    max-height: 610px;
+    max-width: 472px;
+}
+.about-pic img {
+    height: 100%;
+    width: 100%;
+}
+.about h3 {
+    color: rgb(0,0,0,0.64);
+    padding-bottom: 7.5px;
+}
+.about p {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
 /*----- work -----*/
 .work {
     background-color: #dddedd;
@@ -116,7 +136,6 @@ header p {
 .content-wrap {
     width: 80%;
     margin: 0 auto;
-    overflow: hidden;
 }
 .work a img {
     margin: 1%;
@@ -167,20 +186,52 @@ footer {
     text-align: center;
     padding: 60px 0;
 }
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content > p {
+    padding-left: 5px;
+}
+.footer-content > a {
+    padding: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+.footer-content > a:hover, .footer-content a:focus {
+    color: rgb(0, 0, 0, 0.58);
+}
 
 
 /*----- RESPONSIVE -----*/
 @media only screen and (max-width: 991px) {
+    .column-large {
+        padding-bottom: 25px;
+    }
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-brand:hover, 
+    .navbar-inverse .navbar-brand:focus {
+        background-color: transparent;
+        color: #999999;
+        font-size: 18px;
+        cursor: default;
+    }
+    nav a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+    }
     header h1 {
         font-size: 24px;
     }
-    header .profile-pic {
-        height: 175px;
-        width: 175px;
-        border-radius: 50%;
-    }
     header p {
         width: 90%;
+    }
+    .about p {
+        font-size: 14px;
     }
     .skills-container .column-small p {
         font-size: 16px;

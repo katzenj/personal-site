@@ -7,7 +7,6 @@ html {
 }
 body {
     width: 100%;
-    background-color: white;
 }
 .clearfix::after {
     content: "";
@@ -24,9 +23,12 @@ h2 {
 h3 {
     margin: 0px;
 }
-p {
+p, li {
     color: black;
     font-size: 16px;
+}
+section {
+    padding: 30px 0;
 }
 .column-large {
     width: 58%;
@@ -60,17 +62,12 @@ nav .nav-container {
 nav a {
     color: black;
     text-decoration: none;
-    font-size: 18px;
     font-weight: bold;
+    font-size: 20px;
 }
-
 nav ul {
     list-style: none;
     margin-top: 30px;
-}
-nav li {
-    color: black;
-    font-size: 16px;
 }
 nav #siteLinks a:hover {
     color: #686b6b;
@@ -79,10 +76,13 @@ nav .siteElements a {
     padding-left: 7.5px;
     padding-right: 7.5px;
 }
-nav .navbar-brand, .navbar-brand a:hover {
-    text-decoration: none;
-    color: black;
-    cursor: default;
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+  background-color: transparent;
+  color: #999999;
+  font-size: 24px;
+  cursor: default;
 }
 
 
@@ -91,9 +91,13 @@ nav .navbar-brand, .navbar-brand a:hover {
     width: 80%;
     margin: 0 auto;
 }
-header {
-    margin: 100px 0 100px 0;
+.header-content {
+    padding: 100px 0 100px 0;
     text-align: center;
+    background-color: #eeeeee;
+}
+header {
+    margin-top: -20px;
 }
 header p {
     width: 45%;
@@ -106,6 +110,9 @@ header p {
 }
 
 /*----- work -----*/
+.work {
+    background-color: #dddedd;
+}
 .content-wrap {
     width: 80%;
     margin: 0 auto;
@@ -118,12 +125,12 @@ header p {
 }
 
 /*----- skills -----*/
+.skills {
+    background-color: #d6d9de;
+}
 .skills-container .column-small {
     text-align: center;
     min-width: 100px;
-}
-.skills-container .column-small p {
-    font-size: 14px;
 }
 .skill-list {
     display: table;
@@ -131,7 +138,10 @@ header p {
 }
 
 /*----- projects -----*/
-.projects, .projects .column-small {
+.projects {
+    background-color: #c4c6cb;
+}
+.projects .column-small {
     margin-bottom: 40px;
 }
 .todo-pic, .adopt-pic {
@@ -145,18 +155,25 @@ header p {
     margin: 20px auto;
 }
 
-/*----- footer -----*/
-footer {
-    text-align: center;
-    margin: 60px 0;
+/*----- education -----*/
+.education {
+    background-color: #cfd9dc;
+    padding: 30px 0;
 }
 
-footer p {
-    color: #404348;
+/*----- footer -----*/
+footer {
+    background-color: #acafae;
+    text-align: center;
+    padding: 60px 0;
 }
+
 
 /*----- RESPONSIVE -----*/
 @media only screen and (max-width: 991px) {
+    header h1 {
+        font-size: 24px;
+    }
     header .profile-pic {
         height: 175px;
         width: 175px;
@@ -165,12 +182,7 @@ footer p {
     header p {
         width: 90%;
     }
-}
-
-@media only screen and (max-width: 768px) {
-    header {
-        width: 96%;
-        margin: 100px auto 100px auto;
-        text-align: left;
+    .skills-container .column-small p {
+        font-size: 16px;
     }
 }

@@ -2,9 +2,6 @@
 html {
     font-family: 'Verela', sans-serif;
 }
-*, *:before, *:after {
-    box-sizing: inherit;
-}
 body {
     width: 100%;
 }
@@ -55,38 +52,6 @@ section {
     flex-flow: row wrap;
     justify-content: center;
 }
-
-/*----- nav -----*/
-nav .nav-container {
-    width: 80%;
-    margin: 0 auto;
-}
-nav a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-}
-nav ul {
-    list-style: none;
-    margin-top: 30px;
-}
-nav #siteLinks a:hover {
-    color: #686b6b;
-}
-nav .siteElements a {
-    padding-left: 7.5px;
-    padding-right: 7.5px;
-}
-.navbar-inverse .navbar-brand,
-.navbar-inverse .navbar-brand:hover, 
-.navbar-inverse .navbar-brand:focus {
-  background-color: transparent;
-  color: #999999;
-  font-size: 24px;
-  cursor: default;
-}
-
 
 /*----- header -----*/
 .header-wrapper {
@@ -176,53 +141,14 @@ header p {
 
 /*----- education -----*/
 .education {
-    background-color: #cfd9dc;
+    background-color: #d1d1d1;
     padding: 30px 0;
 }
-
-/*----- footer -----*/
-footer {
-    background-color: #acafae;
-    text-align: center;
-    padding: 60px 0;
-}
-.footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.footer-content > p {
-    padding-left: 5px;
-}
-.footer-content > a {
-    padding: 0 5px;
-    text-decoration: none;
-    color: black;
-}
-.footer-content > a:hover, .footer-content a:focus {
-    color: rgb(0, 0, 0, 0.58);
-}
-
 
 /*----- RESPONSIVE -----*/
 @media only screen and (max-width: 991px) {
     .column-large {
         padding-bottom: 25px;
-    }
-    .navbar-inverse .navbar-brand,
-    .navbar-inverse .navbar-brand:hover, 
-    .navbar-inverse .navbar-brand:focus {
-        background-color: transparent;
-        color: #999999;
-        font-size: 18px;
-        cursor: default;
-    }
-    nav a {
-        color: black;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 18px;
     }
     header h1 {
         font-size: 24px;

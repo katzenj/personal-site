@@ -1,0 +1,26 @@
+/*----- footer -----*/
+footer {
+    background-color: #acafae;
+    text-align: center;
+    padding: 60px 0;
+}
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer-content > p {
+    padding-left: 5px;
+    color: black;
+    font-size: 16px;
+    margin: 0;
+}
+.footer-content > a {
+    padding: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+.footer-content > a:hover, .footer-content a:focus {
+    color: rgb(0, 0, 0, 0.58);
+}

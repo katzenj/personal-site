@@ -175,6 +175,8 @@ header p {
     .content-wrap {
         width: 90%;
     }
+}
+@media only screen and (max-width: 500px) {
     .work ul {
         padding: 0;
     }

@@ -57,6 +57,10 @@ section {
 .header-wrapper {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .header-content {
     padding: 100px 0 100px 0;
@@ -67,13 +71,17 @@ header {
     margin-top: -20px;
 }
 header p {
-    width: 45%;
+    width: 65%;
     margin: 30px auto 0 auto;
 }
-.profile-pic {
-    height: 375px;
-    width: 375px;
+.profile {
+    max-height: 375px;
+    max-width: 375px;
+}
+.profile > img {
     border-radius: 50%;
+    height: 100%;
+    width: 100%;
 }
 
 /*----- about me section -----*/
@@ -161,5 +169,13 @@ header p {
     }
     .skills-container .column-small p {
         font-size: 16px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .content-wrap {
+        width: 90%;
+    }
+    .work ul {
+        padding: 0;
     }
 }

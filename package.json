@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
+    "deploy": "env-cmd -f .env gatsby build && gh-pages -d public -b master",
     "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",

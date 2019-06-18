@@ -1,7 +1,7 @@
 {
   "name": "katzen-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "My portfolio site",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

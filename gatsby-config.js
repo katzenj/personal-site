@@ -9,7 +9,6 @@ module.exports = {
         title: 'Jordan Katzen',
         author: 'Jordan Katzen'
     },
-
     plugins: [
         'gatsby-plugin-react-helmet',
         {

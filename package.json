@@ -1,11 +1,12 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "katzen-portfolio",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "env-cmd": "^9.0.1",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.17.1"
   },
   "repository": {

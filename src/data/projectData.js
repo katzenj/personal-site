@@ -15,7 +15,7 @@ const projects = [
             alt: "ToDo app image",
             class: "todo",
         },
-        details: "<li>A work-in-progress developed in Swift that expands on the basic concept behind reminders and Apple’s own tutorial</li><li>Allows users to create to-do’s with different features based on inspiration from my favorite productivity apps</li>"
+        details: "<a href=\"https://github.com/katzenj/ToDo-iOS\" target=\"_blank\" rel=\"noopener noreferrer\">Source Code</a><li>A work-in-progress developed in Swift that expands on the basic concept behind reminders and Apple’s own tutorial</li><li>Allows users to create to-do’s with different features based on inspiration from my favorite productivity apps</li>"
     },
 ]
 

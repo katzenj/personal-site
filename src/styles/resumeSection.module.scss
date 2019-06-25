@@ -6,12 +6,16 @@
 
     h3 {
         margin: 0;
-        padding-bottom: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+        box-shadow: rgb(238, 251, 255) 0px -9px 0px inset;
+        color: #323336;
     }
 
     p {
         margin: 0;
-        font-size: 14px;
+        font-size: 16px;
+        color: #858a8e;
     }
 
     li {
@@ -40,9 +44,19 @@
 
 @media only screen and (max-width: 700px) {
     .section {
+        justify-content: center;
+        text-align: center;
+
         h1, h3, p {
             padding: 0;
-            text-align: center;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    
+        p {
+            font-size: 16px;
         }
     }
 
@@ -52,17 +66,5 @@
 
     .column-large {
         width: 100%;
-    }
-
-    .section {
-        justify-content: center;
-
-        h3 {
-            font-size: 18px;
-        }
-    
-        p {
-            font-size: 12px;
-        }
     }
 }

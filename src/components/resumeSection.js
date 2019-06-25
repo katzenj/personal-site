@@ -9,8 +9,8 @@ const ResumeSection = (props) => {
     return (
         <div className={resumeStyles.section}>
             <div className={resumeStyles.columnMedium}>
-                <h3>{props.title}</h3>
-                <p>{props.company} - <em>{props.location}</em></p>
+                <h3>{props.company}</h3>
+                <p>{props.title} | <em>{props.location}</em></p>
                 <p>{props.dates}</p>
             </div>
             <div className={resumeStyles.columnLarge}>

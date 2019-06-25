@@ -1,12 +1,25 @@
 import React from 'react'
+import Img from 'gatsby-image'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
-import me from '../data/images/me.jpeg'
 
 import aboutStyles from '../styles/about.module.scss'
 
 const AboutPage = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            file(relativePath: { eq: "data/images/me.jpeg" }) {
+                childImageSharp {
+                    fluid(maxWidth: 400) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <div>
             <Layout>
@@ -14,7 +27,11 @@ const AboutPage = () => {
                 <div className={aboutStyles.aboutContent}>
                     <div className={aboutStyles.column}>
                         <div className="about-pic">
-                            <img src={me} alt="Me in Vancouver"/>
+                            <Img 
+                                title="Me"
+                                alt="Picture of me by a lake"
+                                fluid={data.file.childImageSharp.fluid}
+                            />
                         </div>
                     </div>
                     <div className={aboutStyles.column}>

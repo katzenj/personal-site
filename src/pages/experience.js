@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Head from '../components/head'
 import Layout from '../components/layout'
@@ -15,6 +16,25 @@ import experienceStyles from '../styles/experience.module.scss'
 const ExperiencePage = () => {
     const title = "Experience"
 
+    const data = useStaticQuery(graphql`
+        query {
+            beertenderImg: file(relativePath: { eq: "data/images/Beertender.png" }) {
+                childImageSharp {
+                    sizes(maxWidth: 750) {
+                        srcSet
+                    }
+                }
+            }
+            todoImg: file(relativePath: { eq: "data/images/ToDo_Home.jpeg" }) {
+                childImageSharp {
+                    sizes(maxWidth: 750) {
+                        srcSet
+                    }
+                }
+            }
+        }
+    `)
+
     const resumeSections = resumeData.map(item => 
         <ResumeSection 
             key={item.id}
@@ -27,7 +47,7 @@ const ExperiencePage = () => {
     )
 
     const projects = projectData.map(proj => 
-        <Project key={proj.id} proj={proj}/>    
+        <Project key={proj.id} proj={proj} imgData={data}/>    
     )
 
     return (

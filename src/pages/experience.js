@@ -9,7 +9,6 @@ import Project from '../components/project'
 
 import resumeData from '../data/resumeData'
 import projectData from '../data/projectData'
-import resume from '../data/docs/KatzenResume.pdf'
 
 import experienceStyles from '../styles/experience.module.scss'
 
@@ -30,6 +29,12 @@ const ExperiencePage = () => {
                     sizes(maxWidth: 750) {
                         srcSet
                     }
+                }
+            }
+            resume: contentfulAsset(title: { eq: "KatzenResume" }) {
+                title 
+                file {
+                    url
                 }
             }
         }
@@ -54,7 +59,7 @@ const ExperiencePage = () => {
         <div>
             <Layout>
                 <Head title={title} />
-                <h1>{title} <a href={resume} download><FontAwesomeIcon icon={["fas","download"]} size="sm" /></a></h1>
+                <h1>{title} <a href={data.resume.file.url} target="_blank" download><FontAwesomeIcon icon={["fas","download"]} size="sm" /></a></h1>
                 <div className={experienceStyles.resumeWrapper} >
                     {resumeSections}
                 </div>

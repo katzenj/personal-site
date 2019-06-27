@@ -59,7 +59,7 @@ const ExperiencePage = () => {
         <div>
             <Layout>
                 <Head title={title} />
-                <h1>{title} <a href={data.resume.file.url} target="_blank" download><FontAwesomeIcon icon={["fas","download"]} size="sm" /></a></h1>
+                <h1>{title} <a href={data.resume.file.url} target="_blank" rel="noopener noreferrer" download><FontAwesomeIcon icon={["fas","download"]} size="sm" /></a></h1>
                 <div className={experienceStyles.resumeWrapper} >
                     {resumeSections}
                 </div>

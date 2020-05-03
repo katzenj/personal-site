@@ -17,7 +17,6 @@ const About = () => {
   const [projects, setProjects] = useState([]);
 
   const [isLoading, setIsLoading] = useState(true);
-  const title = 'About';
 
   const getEntries = async () => {
     try {
@@ -32,7 +31,6 @@ const About = () => {
         picture: item.fields.picture.fields.file.url,
         resumeUrl: item.fields.document[0].fields.file.url
       });
-      console.log(item);
     } catch (err) {
       console.error(err);
     }
@@ -64,10 +62,10 @@ const About = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.aboutContainer}>
       <img className={styles.picture} src={aboutContent.picture} alt="A picture of myself" />
       <h1>
-        {title}{' '}
+        About{' '}
         <a
           href={isLoading ? null : aboutContent.resumeUrl}
           target="_blank"
@@ -77,25 +75,6 @@ const About = () => {
           <FontAwesomeIcon icon={['fas', 'download']} size="sm" />
         </a>
       </h1>
-      <p
-        className={classnames([
-          styles.loadingContent,
-          { [styles.animate]: isLoading, [styles.unanimated]: !isLoading }
-        ])}
-      />
-      <p
-        className={classnames([
-          styles.loadingContent,
-          { [styles.animate]: isLoading, [styles.unanimated]: !isLoading }
-        ])}
-      />
-      <p
-        className={classnames([
-          styles.loadingContent,
-          { [styles.animate]: isLoading, [styles.unanimated]: !isLoading }
-        ])}
-      />
-
       <p>{aboutContent.content}</p>
       <br />
       <hr />

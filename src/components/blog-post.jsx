@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment/moment';
 
-import client from 'src/components/contentfulClient';
+import client from 'src/components/contentful-client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-import blogStyles from 'src/styles/blogTemplate.module.scss';
+import blogStyles from 'src/styles/blog.module.scss';
 
 const BlogPost = ({
   slug

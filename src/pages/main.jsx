@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import moment from 'moment/moment';
 import { Link } from '@reach/router';
 
-import client from 'src/components/contentfulClient';
+import client from 'src/components/contentful-client';
 
 import styles from 'src/styles/main.module.scss';
 

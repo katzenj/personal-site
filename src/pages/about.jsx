@@ -3,9 +3,8 @@ import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import client from 'src/components/contentfulClient';
+import client from 'src/components/contentful-client';
 import Project from 'src/components/project';
-import projectData from 'static/projectData';
 
 import styles from 'src/styles/about.module.scss';
 

@@ -1,32 +1,42 @@
 import React from 'react';
 import { Link } from '@reach/router';
 
-import headerStyles from 'src/styles/header.module.scss';
+import styles from 'src/styles/header.module.scss';
 
 const Header = () => {
   return (
-    <header className={headerStyles.header}>
+    <header className={styles.header}>
       <h1>
-        <Link className={headerStyles.title} to="/">
+        <Link className={styles.title} to="/">
           Jordan Katzen
         </Link>
       </h1>
       <nav>
-        <ul className={headerStyles.navList}>
+        <ul className={styles.navList}>
           <li>
             <Link
-              className={headerStyles.navItem}
-              activeclassname={headerStyles.activeNavItem}
+              className={styles.navItem}
               to="/"
+              getProps={({ isCurrent }) => ({
+                // Little bit of a hack workaround for the time being.
+                style: {
+                  color: isCurrent ? '#222' : '#999'
+                }
+              })}
             >
               Home
             </Link>
           </li>
           <li>
             <Link
-              className={headerStyles.navItem}
-              activeclassname={headerStyles.activeNavItem}
+              className={styles.navItem}
               to="/about"
+              getProps={({ isCurrent }) => ({
+                // Little bit of a hack workaround for the time being.
+                style: {
+                  color: isCurrent ? '#222' : '#999'
+                }
+              })}
             >
               About
             </Link>

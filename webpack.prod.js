@@ -2,19 +2,12 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
+const BrotliPlugin = require('brotli-webpack-plugin');
+
 
 module.exports = {
   entry: './index.js',
-  devtool: 'inline-source-map',
-  /* For Flask Python Routing */
-  devServer: {
-    historyApiFallback: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000'
-      }
-    }
-  },
+  devtool: '',
   output: {
     path: path.join(__dirname, 'dist/'),
     publicPath: '/',
@@ -83,6 +76,17 @@ module.exports = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  },
   plugins: [
     new MomentLocalesPlugin(),
     new HtmlWebPackPlugin({
@@ -92,6 +96,12 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.SPACE_ID': JSON.stringify(process.env.SPACE_ID),
       'process.env.ACCESS_TOKEN': JSON.stringify(process.env.ACCESS_TOKEN)
+    }),
+    new BrotliPlugin({
+      asset: '[path].br[query]',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
   ],
   resolve: {

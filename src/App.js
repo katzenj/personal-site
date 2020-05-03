@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Layout>
         <Router>
-          <Main default path="/"/>
+          <Main default path={process.env.PUBLIC_URL + '/'}/>
           <About path="/about"/>
           <BlogPost path="/blog/:slug" />
         </Router>

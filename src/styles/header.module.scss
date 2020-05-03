@@ -53,17 +53,12 @@
     }
 
     .title {
-      color: #000000;
       font-size: 1.8rem;
       text-decoration: none;
     }
 
     .nav-item {
-      color: #999999;
       font-size: 0.9rem;
-      font-weight: 600;
-      margin-right: .5rem;
-      text-decoration: none;
 
       &:hover {
         color: #666666;
@@ -80,18 +75,5 @@
       font-size: 1.5rem;
       text-decoration: none;
     }
-
-    .nav-item {
-      color: #999999;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-right: 0.3rem;
-      text-decoration: none;
-
-      &:hover {
-        color: #666666;
-        font-size: 1rem;
-      }
-    } 
   }
 }

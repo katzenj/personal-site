@@ -1,19 +1,19 @@
 .container {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 1rem;
 
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-}
-
-.content {
-    flex-grow: 1;
+  min-height: 80vh;
 }
 
 @media only screen and (max-width: 991px) {
-    .container {
-        margin: 0 10%;
-    }
+  .container {
+    margin: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    margin: 0;
+  }
 }

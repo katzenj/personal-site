@@ -1,32 +1,38 @@
 .project {
-    width: 45%;
-    min-width: 200px;
+  width: 45%;
+  min-width: 200px;
+
+  h3 {
     text-align: center;
+  }
 
-    img {
-        display: block;
-        height: 316px;
-        width: 157px;
-        margin: 20px auto;
-    }
+  img {
+    display: block;
+    height: 316px;
+    width: 157px;
+    margin: 20px auto;
+  }
 
-    p, li{
-        font-size: 16px;
-    }
+  p, li {
+    padding-bottom: 8px;
+    font-size: 16px;
+  }
 
-    a {
-        transition: box-shadow 160ms ease 0s;
-        border-bottom: 2px solid rgb(207, 243, 255);
-        text-decoration: none;
-        color: #323336;
-        &:hover {
-          box-shadow: rgb(207, 243, 255) 0px -1.2em 0px inset;
-        }
+  a {
+    transition: box-shadow 160ms ease 0s;
+    border-bottom: 2px solid rgb(207, 243, 255);
+    text-decoration: none;
+    color: #323336;
+
+    &:hover {
+      box-shadow: rgb(207, 243, 255) 0px -1.2em 0px inset;
+      color: #323336;
     }
+  }
 }
 
 @media only screen and (max-width: 991px) {
-    .project {
-        width: 100%;
-    }
+  .project {
+    width: 100%;
+  }
 }

@@ -116,6 +116,12 @@ const About = () => {
           />
         ))}
       </div>
+      <div className={styles.bmcContainer}>
+        <a className={styles.bmcButton} target="_blank" href="https://www.buymeacoffee.com/jak">
+          <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a beer"/>
+          <span className={styles.bmcText}>Buy me a beer (for Beertender research)</span>
+        </a>
+      </div>
     </div>
   );
 };

@@ -15,51 +15,6 @@
   }
 }
 
-/* BMC styles copied and slightly modified from buymeacoffee.com's generated HTML/CSS. */
-.bmc-button img {
-  border: none;
-  box-shadow: none;
-  height: 34px;
-  margin-bottom: 1px;
-  vertical-align: middle;
-  width: 35px;
-}
-
-.bmc-button {
-  color: #FFFFFF;
-  background-color: #FF813F;
-  border: 1px solid transparent;
-  border-radius: 5px;
-  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5);
-  display: inline-flex;
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  height: 51px;
-  line-height: 35px;
-  margin: 32px auto 0 auto;
-  min-width: 217px;
-  padding: 7px 10px 7px 10px;
-  text-decoration: none;
-  transition: 0.3s all linear;
-  -o-transition: 0.3s all linear;
-  -moz-transition: 0.3s all linear;
-  -ms-transition: 0.3s all linear;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5);
-  -webkit-transition: 0.3s all linear;
-}
-
-.bmc-button:hover,
-.bmc-button:active,
-.bmc-button:focus {
-  color: #FFFFFF;
-  box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5);
-  opacity: 0.85;
-  text-decoration: none;
-  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5);
-}
-
 .posts {
   list-style-type: none;
   margin: 0;

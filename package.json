@@ -8,7 +8,8 @@
   "scripts": {
     "start": "env-cmd -f .env webpack-dev-server --hot --mode development",
     "build": "env-cmd -f .env webpack --mode production --config webpack.prod.js",
-    "lint:fix": "eslint --fix \"src/**/*.(js|jsx)\""
+    "lint:fix": "eslint --fix \"src/**/*.(js|jsx)\"",
+    "deploy": "gh-pages -d dist -b master"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

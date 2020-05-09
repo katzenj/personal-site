@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 import { useParams } from 'react-router-dom';
 import moment from 'moment/moment';
 

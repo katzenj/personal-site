@@ -1,4 +1,4 @@
-import React from 'react';
+import { h } from 'preact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from 'src/styles/footer.module.scss';

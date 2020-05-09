@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import client from 'src/components/contentful-client';

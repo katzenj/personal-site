@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { h, Component } from 'preact';
 import { Switch, Route } from 'react-router-dom';
 
 import Layout from 'src/components/layout';

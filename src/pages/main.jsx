@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import moment from 'moment/moment';
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 import { Link } from 'react-router-dom';
 
 import client from 'src/components/contentful-client';

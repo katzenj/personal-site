@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import moment from 'moment/moment';
-import { Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 
 import client from 'src/components/contentful-client';
 

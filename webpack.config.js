@@ -96,7 +96,10 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src')
+      "src": path.resolve(__dirname, 'src'),
+      "react": "preact/compat",
+      "react-dom/test-utils": "preact/test-utils",
+      "react-dom": "preact/compat"
     },
     extensions: ['.jsx', '.js', '.scss']
   }

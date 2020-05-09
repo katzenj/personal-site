@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
-import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import client from 'src/components/contentful-client';

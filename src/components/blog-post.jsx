@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 import moment from 'moment/moment';
 
 import client from 'src/components/contentful-client';
@@ -7,9 +7,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import blogStyles from 'src/styles/blog.module.scss';
 
-const BlogPost = ({
-  slug
-}) => {
+const BlogPost = () => {
+  const { slug } = useParams();
   const options = {
     renderNode: {
       'embedded-asset-block': (node) => {
@@ -73,10 +72,6 @@ const BlogPost = ({
       {documentToReactComponents(post.body, options)}
     </div>
   );
-};
-
-BlogPost.propTypes = {
-  slug: PropTypes.string
 };
 
 export default BlogPost;

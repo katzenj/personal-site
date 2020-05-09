@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router } from '@reach/router';
+import { Switch, Route } from 'react-router-dom';
 
 import Layout from 'src/components/layout';
 import About from 'src/pages/about';
@@ -10,11 +10,17 @@ class App extends Component {
   render () {
     return (
       <Layout>
-        <Router>
-          <Main default path={process.env.PUBLIC_URL + '/'}/>
-          <About path="/about"/>
-          <BlogPost path="/blog/:slug" />
-        </Router>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/blog/:slug">
+            <BlogPost />
+          </Route>
+        </Switch>
       </Layout>
     );
   }

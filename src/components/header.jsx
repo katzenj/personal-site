@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from '@reach/router';
+import { Link, NavLink } from 'react-router-dom';
 
 import styles from 'src/styles/header.module.scss';
 
@@ -14,32 +14,22 @@ const Header = () => {
       <nav>
         <ul className={styles.navList}>
           <li>
-            <Link
+            <NavLink
               className={styles.navItem}
+              activeClassName={styles.activeNavItem}
               to="/"
-              getProps={({ isCurrent }) => ({
-                // Little bit of a hack workaround for the time being.
-                style: {
-                  color: isCurrent ? '#222' : '#999'
-                }
-              })}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               className={styles.navItem}
+              activeClassName={styles.activeNavItem}
               to="/about"
-              getProps={({ isCurrent }) => ({
-                // Little bit of a hack workaround for the time being.
-                style: {
-                  color: isCurrent ? '#222' : '#999'
-                }
-              })}
             >
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

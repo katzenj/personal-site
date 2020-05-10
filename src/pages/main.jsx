@@ -1,4 +1,4 @@
-import moment from 'moment/moment';
+import { format, parseISO, compareDesc } from 'date-fns'
 import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { Link } from 'react-router-dom';
@@ -19,10 +19,10 @@ const Main = () => {
 
       const retrievedPosts = response.items.map((item) => ({
         title: item.fields.title,
-        date: moment(item.fields.publishedDate),
+        date: parseISO(item.fields.publishedDate),
         slug: item.fields.slug
       }));
-      retrievedPosts.sort((post1, post2) => moment(post1.date).isBefore(moment(post2.date)));
+      retrievedPosts.sort(compareDesc);
       setPosts(retrievedPosts);
 
       return retrievedPosts;
@@ -46,7 +46,7 @@ const Main = () => {
           <li className={styles.post} key={post.slug}>
             <Link to={`/blog/${post.slug}`}>
               <h2>{post.title}</h2>
-              <p>{post.date.format('MMM D, YYYY').toUpperCase()}</p>
+              <p>{format(post.date, 'MMM do, yyyy').toUpperCase()}</p>
             </Link>
           </li>
         ))}

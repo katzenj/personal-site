@@ -1,7 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
-const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const BrotliPlugin = require('brotli-webpack-plugin');
 
 
@@ -88,7 +87,6 @@ module.exports = {
     }
   },
   plugins: [
-    new MomentLocalesPlugin(),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html'
@@ -106,7 +104,10 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src')
+      "src": path.resolve(__dirname, 'src'),
+      "react": "preact/compat",
+      "react-dom/test-utils": "preact/test-utils",
+      "react-dom": "preact/compat"
     },
     extensions: ['.jsx', '.js', '.scss']
   }

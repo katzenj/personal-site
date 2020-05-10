@@ -1,7 +1,7 @@
+import { format, parseISO } from 'date-fns';
 import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { useParams } from 'react-router-dom';
-import moment from 'moment/moment';
 
 import client from 'src/components/contentful-client';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -50,7 +50,7 @@ const BlogPost = () => {
       setPost({
         title: post.fields.title,
         subtitle: post.fields.subtitle,
-        date: moment(post.fields.publishedDate).format('MMM D, YYYY'),
+        date: format(parseISO(post.fields.publishedDate), 'MMM do, yyyy'),
         body: post.fields.body
       });
 

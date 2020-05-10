@@ -1,7 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
-const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 module.exports = {
   entry: './index.js',
@@ -84,7 +83,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new MomentLocalesPlugin(),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html'

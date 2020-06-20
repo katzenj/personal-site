@@ -5,15 +5,6 @@ const path = require('path');
 module.exports = {
   entry: './index.js',
   devtool: 'inline-source-map',
-  /* For Flask Python Routing */
-  devServer: {
-    historyApiFallback: true,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000'
-      }
-    }
-  },
   output: {
     path: path.join(__dirname, 'dist/'),
     publicPath: '/',

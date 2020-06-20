@@ -10,7 +10,7 @@ import styles from 'src/styles/about.module.scss';
 const About = () => {
   const [aboutContent, setAboutContent] = useState({
     title: '',
-    content: '',
+    content: [''],
     resumeUrl: ''
   });
   const [projects, setProjects] = useState([]);
@@ -26,8 +26,7 @@ const About = () => {
       const item = response.items[0];
       setAboutContent({
         title: item.fields.title,
-        content: item.fields.content,
-        picture: item.fields.picture.fields.file.url,
+        content: item.fields.content.split('\n'),
         resumeUrl: item.fields.document[0].fields.file.url
       });
     } catch (err) {
@@ -62,7 +61,6 @@ const About = () => {
 
   return (
     <div className={styles.aboutContainer}>
-      <img className={styles.picture} src={aboutContent.picture} alt="A picture of myself" />
       <h1>
         About{' '}
         <a
@@ -74,7 +72,7 @@ const About = () => {
           <FontAwesomeIcon icon={['fas', 'download']} size="sm" />
         </a>
       </h1>
-      <p>{aboutContent.content}</p>
+      {aboutContent.content.map(content => <p>{content}</p>)}
       <br />
       <hr />
 
@@ -94,12 +92,12 @@ const About = () => {
           />
         ))}
       </div>
-      <div className={styles.bmcContainer}>
+      {/* <div className={styles.bmcContainer}>
         <a className={styles.bmcButton} target="_blank" href="https://www.buymeacoffee.com/jak">
           <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a beer"/>
           <span className={styles.bmcText}>Buy me a beer (for research)</span>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

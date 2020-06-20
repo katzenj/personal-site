@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "start": "env-cmd -f .env webpack-dev-server --hot --mode development",
+    "develop": "yarn start",
     "build": "env-cmd -f .env webpack --mode production --config webpack.prod.js",
     "lint:fix": "eslint --fix \"src/**/*.(js|jsx)\"",
     "deploy": "gh-pages -d dist -b master"

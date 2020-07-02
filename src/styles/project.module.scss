@@ -1,8 +1,10 @@
 .project {
-  float: left;
-  width: 50%;
-  padding: 10px;
+  display: inline-block;
   min-width: 200px;
+  overflow: hidden;
+  padding: 10px;
+  vertical-align: top;
+  width: 50%;
 
   h3 {
     text-align: center;
@@ -11,7 +13,7 @@
   img {
     display: block;
     height: 316px;
-    width: 157px;
+    width: auto;
     margin: 20px auto;
   }
 

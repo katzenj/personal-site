@@ -1,12 +1,17 @@
+$header-hover: #5DC0BF;
+
 .header {
-  background-color: #edeeee;
   margin: 0 auto 40px auto;
-  padding: 20px 20% 0px 20%;
+  padding: 40px 20% 0px 20%;
 
   h1 {
-    margin: 0;
+    display: inline;
     padding: 16px 0;
   }
+}
+
+nav {
+  float: right;
 }
 
 .title {
@@ -19,6 +24,7 @@
 .nav-list {
   list-style-type: none;
   padding-bottom: 16px;
+  padding-left: 8px;
   margin: 0;
 
   li {
@@ -34,14 +40,13 @@
     text-decoration: none;
 
     &:hover {
-      color: #222;
-      font-size: 1.3rem;
+      color: $header-hover;
     }
   }
-}
 
-.active-nav-item {
-  color: #222;
+  .active-nav-item {
+    color: $header-hover;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -61,8 +66,7 @@
       font-size: 0.9rem;
 
       &:hover {
-        color: #666666;
-        font-size: 1rem;
+        color: $header-hover;
       }
     }
   }
@@ -75,5 +79,11 @@
       font-size: 1.5rem;
       text-decoration: none;
     }
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  nav {
+    float: left;
   }
 }

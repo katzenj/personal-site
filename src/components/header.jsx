@@ -1,7 +1,11 @@
-import { h } from 'preact';
-import { Link, NavLink } from 'react-router-dom';
+import { h } from "preact";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import classnames from "classnames";
 
-import styles from 'src/styles/header.module.scss';
+import { ABOUT, HOME } from "src/utils/defs";
+import { getPage } from "src/utils/utils";
+
+import styles from "src/styles/header.module.scss";
 
 const Header = () => {
   return (
@@ -15,8 +19,11 @@ const Header = () => {
         <ul className={styles.navList}>
           <li>
             <NavLink
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
+              className={classnames({
+                [styles.navItem]: true,
+                [styles.activeNavItem]:
+                  getPage(useLocation().pathname) === HOME,
+              })}
               to="/"
             >
               home
@@ -24,8 +31,11 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              className={styles.navItem}
-              activeClassName={styles.activeNavItem}
+              className={classnames({
+                [styles.navItem]: true,
+                [styles.activeNavItem]:
+                  getPage(useLocation().pathname) === ABOUT,
+              })}
               to="/about"
             >
               about

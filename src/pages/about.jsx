@@ -1,17 +1,17 @@
-import { h } from 'preact';
-import { useEffect, useState } from 'preact/hooks';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { h } from "preact";
+import { useEffect, useState } from "preact/hooks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import client from 'src/components/contentful-client';
-import Project from 'src/components/project';
+import client from "src/components/contentful-client";
+import Project from "src/components/project";
 
-import styles from 'src/styles/about.module.scss';
+import styles from "src/styles/about.module.scss";
 
 const About = () => {
   const [aboutContent, setAboutContent] = useState({
-    title: '',
-    content: [''],
-    resumeUrl: ''
+    title: "",
+    content: [""],
+    resumeUrl: "",
   });
   const [projects, setProjects] = useState([]);
 
@@ -21,13 +21,13 @@ const About = () => {
     try {
       setIsLoading(true);
       const response = await client.getEntries({
-        content_type: 'bio'
+        content_type: "bio",
       });
       const item = response.items[0];
       setAboutContent({
         title: item.fields.title,
-        content: item.fields.content.split('\n'),
-        resumeUrl: item.fields.document[0].fields.file.url
+        content: item.fields.content.split("\n"),
+        resumeUrl: item.fields.document[0].fields.file.url,
       });
     } catch (err) {
       console.error(err);
@@ -37,12 +37,12 @@ const About = () => {
   const getProjects = async () => {
     try {
       const response = await client.getEntries({
-        content_type: 'project'
+        content_type: "project",
       });
       const responseProjects = response.items.map((proj) => ({
         title: proj.fields.title,
         link: proj.fields.link,
-        desc: proj.fields.description
+        desc: proj.fields.description,
       }));
       responseProjects.sort((proj1, proj2) => proj1.title > proj2.title);
 
@@ -62,22 +62,22 @@ const About = () => {
   return (
     <div className={styles.aboutContainer}>
       <h1>
-        About{' '}
+        About{" "}
         <a
           href={isLoading ? null : aboutContent.resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
           download
         >
-          <FontAwesomeIcon icon={['fas', 'download']} size="sm" />
+          <FontAwesomeIcon icon={["fas", "download"]} size="sm" />
         </a>
       </h1>
-      {aboutContent.content.map(content => <p>{content}</p>)}
+      {aboutContent.content.map((content) => <p>{content}</p>)}
       <br />
       <hr />
 
       <h1>
-        Projects{' '}
+        Projects{" "}
         <span role="img" aria-label="computer">
           💻
         </span>

@@ -10,7 +10,7 @@
     "develop": "yarn start",
     "build": "env-cmd -f .env webpack --mode production --config webpack.prod.js",
     "lint:fix": "eslint --fix \"src/**/*.(js|jsx)\"",
-    "deploy": "gh-pages -d dist -b master"
+    "deploy": "yarn build && gh-pages -d dist -b master"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.9.4",

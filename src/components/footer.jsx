@@ -30,7 +30,14 @@ const Footer = () => {
       >
         <FontAwesomeIcon icon={['fas', 'link']} size="lg" />
       </a>
-      <p>Jordan Katzen</p>
+      <a
+        href="https://www.strava.com/athletes/jordankz"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FontAwesomeIcon icon={['fas', 'running']} size="lg" />
+      </a>
+      <p>© Jordan Katzen 2020</p>
     </footer>
   );
 };

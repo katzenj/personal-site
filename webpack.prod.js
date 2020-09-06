@@ -54,7 +54,8 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              implementation: require('sass')
             }
           }
         ]
@@ -68,7 +69,8 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              implementation: require('sass')
             }
           }
         ]

@@ -1,3 +1,5 @@
+@use "src/styles/variables" as *;
+
 .footer {
   margin-top: 3rem;
   padding: 40px 0;
@@ -19,6 +21,6 @@
 
   a:hover,
   a:focus {
-    color: rgba(0, 0, 0, 0.58);
+    color: $global-hover;
   }
 }

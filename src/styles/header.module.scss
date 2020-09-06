@@ -1,8 +1,10 @@
-$header-hover: #5DC0BF;
+@use "src/styles/variables"as *;
+// @import "variables";
 
 .header {
   margin: 0 auto 40px auto;
-  padding: 40px 20% 0px 20%;
+  max-width: 1000px;
+  padding: 1rem;
 
   h1 {
     display: inline;
@@ -23,8 +25,7 @@ nav {
 
 .nav-list {
   list-style-type: none;
-  padding-bottom: 16px;
-  padding-left: 8px;
+  padding: 8px;
   margin: 0;
 
   li {
@@ -40,12 +41,12 @@ nav {
     text-decoration: none;
 
     &:hover {
-      color: $header-hover;
+      color: $global-hover;
     }
   }
 
   .active-nav-item {
-    color: $header-hover;
+    color: $global-hover;
   }
 }
 
@@ -63,10 +64,10 @@ nav {
     }
 
     .nav-item {
-      font-size: 0.9rem;
+      font-size: 1rem;
 
       &:hover {
-        color: $header-hover;
+        color: $global-hover;
       }
     }
   }
@@ -79,11 +80,5 @@ nav {
       font-size: 1.5rem;
       text-decoration: none;
     }
-  }
-}
-
-@media only screen and (max-width: 410px) {
-  nav {
-    float: left;
   }
 }

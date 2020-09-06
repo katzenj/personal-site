@@ -2,22 +2,24 @@
   display: inline-block;
   min-width: 200px;
   overflow: hidden;
-  padding: 10px;
   vertical-align: top;
-  width: 50%;
 
-  h3 {
-    text-align: center;
+  .imageContainer {
+    float: left;
+    width: 40%;
+  }
+
+  .textContainer {
+    float: left;
+    width: 59%;
   }
 
   img {
-    display: block;
-    height: 316px;
-    width: auto;
-    margin: 20px auto;
+    max-height: 316px;
+    padding-right: 32px;
   }
 
-  p, li {
+  p {
     padding-bottom: 8px;
     font-size: 16px;
   }
@@ -37,7 +39,16 @@
 
 @media only screen and (max-width: 667px) {
   .project {
-    float: none;
     width: 100%;
+
+    .imageContainer {
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    .textContainer {
+      width: 100%;
+    }
   }
 }

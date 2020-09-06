@@ -12,7 +12,21 @@ const Project = ({ title, link, desc }) => {
         const url = node.data.target.fields.file.url;
 
         return (
-          <div><img alt={alt} src={url} /></div>
+          <div className={projectStyles.imageContainer}>
+            <img alt={alt} src={url} />
+          </div>
+        );
+      },
+      'unordered-list': (node) => {
+        const listItems = node.content.map(
+          (item) => item.content[0].content[0].value
+        );
+        return (
+          <div className={projectStyles.textContainer}>
+            {listItems.map((listItem) => (
+              <p>{listItem}</p>
+            ))}
+          </div>
         );
       }
     }
@@ -20,7 +34,11 @@ const Project = ({ title, link, desc }) => {
 
   return (
     <div className={projectStyles.project}>
-      <h3><a href={link} target="_blank" rel="noopener noreferrer">{title}</a></h3>
+      <h2>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
+      </h2>
       {documentToReactComponents(desc, options)}
     </div>
   );

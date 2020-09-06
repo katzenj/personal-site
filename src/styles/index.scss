@@ -1,7 +1,6 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -133,13 +132,13 @@ button:-moz-focusring {
 }
 
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
 
 * {
   box-sizing: inherit;
+  font-family: 'Lato', sans-serif;
 }
 
 *:before {
@@ -152,8 +151,6 @@ html {
 
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
-  font-weight: normal;
 }
 
 img {
@@ -202,7 +199,6 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 
 figure {

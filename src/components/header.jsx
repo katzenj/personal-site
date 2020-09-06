@@ -2,7 +2,7 @@ import { h } from "preact";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import classnames from "classnames";
 
-import { ABOUT, HOME } from "src/utils/defs";
+import { PROJECTS, HOME } from "src/utils/defs";
 import { getPage } from "src/utils/utils";
 
 import styles from "src/styles/header.module.scss";
@@ -12,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <h1>
         <Link className={styles.title} to="/">
-          Jordan Katzen
+          Jordan
         </Link>
       </h1>
       <nav>
@@ -34,11 +34,11 @@ const Header = () => {
               className={classnames({
                 [styles.navItem]: true,
                 [styles.activeNavItem]:
-                  getPage(useLocation().pathname) === ABOUT,
+                  getPage(useLocation().pathname) === PROJECTS,
               })}
-              to="/about"
+              to="/projects"
             >
-              about
+              projects
             </NavLink>
           </li>
         </ul>

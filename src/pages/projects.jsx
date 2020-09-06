@@ -7,7 +7,7 @@ import Project from "src/components/project";
 
 import styles from "src/styles/about.module.scss";
 
-const About = () => {
+const Projects = () => {
   const [aboutContent, setAboutContent] = useState({
     title: "",
     content: [""],
@@ -62,21 +62,6 @@ const About = () => {
   return (
     <div className={styles.aboutContainer}>
       <h1>
-        About{" "}
-        <a
-          href={isLoading ? null : aboutContent.resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          <FontAwesomeIcon icon={["fas", "download"]} size="sm" />
-        </a>
-      </h1>
-      {aboutContent.content.map((content) => <p>{content}</p>)}
-      <br />
-      <hr />
-
-      <h1>
         Projects{" "}
         <span role="img" aria-label="computer">
           💻
@@ -102,4 +87,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Projects;

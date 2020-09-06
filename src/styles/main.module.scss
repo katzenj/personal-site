@@ -13,7 +13,8 @@
 
   .main-about {
     color: black;
-
+    width: 60%;
+    text-align: left;
   }
 
   p {
@@ -88,11 +89,10 @@
   }
 }
 
-
 @media only screen and (max-width: 991px) {
   .post {
     h2 {
-      font-size: 20px
+      font-size: 20px;
     }
 
     p {
@@ -100,7 +100,7 @@
     }
 
     a {
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
   }
 

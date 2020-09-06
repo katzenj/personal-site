@@ -46,7 +46,6 @@ const Projects = () => {
       }));
       responseProjects.sort((proj1, proj2) => proj1.title > proj2.title);
 
-      console.log(responseProjects);
       setProjects(responseProjects);
     } catch (err) {
       console.error(err);

@@ -1,37 +1,26 @@
-import { format, parseISO, compareDesc } from "date-fns";
-import { h } from "preact";
-import { useEffect, useState } from "preact/hooks";
-import { Link } from "react-router-dom";
+import { format, parseISO, compareDesc } from 'date-fns';
+import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
+import { Link } from 'react-router-dom';
 
-import client from "src/components/contentful-client";
+import client from 'src/components/contentful-client';
 
-import styles from "src/styles/main.module.scss";
+import styles from 'src/styles/main.module.scss';
 
 const Main = () => {
   const [posts, setPosts] = useState([]);
-  const [about, setAbout] = useState([""]);
-
-  const getAbout = async () => {
-    const response = await client.getEntries({
-      content_type: "mainPage",
-    });
-    const item = response.items[0];
-    const header = item.fields.header.split("\n");
-    const filteredHeader = header.filter((content) => content !== "");
-    setAbout(filteredHeader);
-  };
 
   const getPosts = async () => {
     try {
       const response = await client.getEntries({
-        content_type: "blogPost",
-        select: "fields.title,fields.publishedDate,fields.slug",
+        content_type: 'blogPost',
+        select: 'fields.title,fields.publishedDate,fields.slug'
       });
 
       const retrievedPosts = response.items.map((item) => ({
         title: item.fields.title,
         date: parseISO(item.fields.publishedDate),
-        slug: item.fields.slug,
+        slug: item.fields.slug
       }));
       retrievedPosts.sort(compareDesc);
       setPosts(retrievedPosts);
@@ -44,7 +33,6 @@ const Main = () => {
   };
 
   useEffect(() => {
-    getAbout();
     getPosts();
   }, []);
 
@@ -54,14 +42,26 @@ const Main = () => {
         👨‍💻
       </span>
       <div className={styles.mainAbout}>
-        {about.map((paragraph) => <p>{paragraph}</p>)}
+        <p>I'm a software engineer and runner (unofficially of course).</p>
+        <p>
+          Currently a Software Engineer @ affirm in San Francisco. I graduated
+          with a B.S.A in Computer Science and a minor in Business from The
+          University of Texas at Austin in 2019.
+        </p>
+        <p>
+          I tend to have a lot of varying interests that take precendence at
+          different times: researching renewables, training for my second
+          half-marathon (first was a solo run during quarantine), building out
+          an app to find local beers, and reading about psychology - to name a
+          handful.
+        </p>
       </div>
       <ol className={styles.posts}>
         {posts.map((post) => (
           <li className={styles.post} key={post.slug}>
             <Link to={`/blog/${post.slug}`}>
               <h2>{post.title}</h2>
-              <p>{format(post.date, "MMM do, yyyy").toUpperCase()}</p>
+              <p>{format(post.date, 'MMM do, yyyy').toUpperCase()}</p>
             </Link>
           </li>
         ))}

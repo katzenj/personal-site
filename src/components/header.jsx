@@ -36,9 +36,9 @@ const Header = () => {
                 [styles.activeNavItem]:
                   getPage(useLocation().pathname) === PROJECTS,
               })}
-              to="/projects"
+              to="/stuff"
             >
-              projects
+              other stuff
             </NavLink>
           </li>
         </ul>

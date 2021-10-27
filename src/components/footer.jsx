@@ -35,9 +35,9 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={['fas', 'running']} size="lg" />
+        <FontAwesomeIcon icon={['fas', 'bicycle']} size="lg" />
       </a>
-      <p>© Jordan Katzen 2020</p>
+      <p>© Jordan Katzen 2021</p>
     </footer>
   );
 };

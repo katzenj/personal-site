@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
+  faBicycle,
   faDownload,
   faLink,
   faPaperPlane,
-  faRunning
+  faRunning,
 } from '@fortawesome/free-solid-svg-icons';
 
 import Footer from 'src/components/footer';
@@ -23,7 +24,8 @@ const Layout = ({ children }) => {
     faPaperPlane,
     faDownload,
     faLink,
-    faRunning
+    faRunning,
+    faBicycle
   );
 
   return (

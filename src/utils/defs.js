@@ -1,2 +1,2 @@
-export const PROJECTS = 'projects';
+export const PROJECTS = 'stuff';
 export const HOME = 'home';

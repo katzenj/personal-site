@@ -42,19 +42,7 @@ const Main = () => {
         👨‍💻
       </span>
       <div className={styles.mainAbout}>
-        <p>I'm a software engineer and runner (unofficially of course).</p>
-        <p>
-          Currently a Software Engineer @ affirm in San Francisco. I graduated
-          with a B.S.A in Computer Science and a minor in Business from The
-          University of Texas at Austin in 2019.
-        </p>
-        <p>
-          I tend to have a lot of varying interests that take precendence at
-          different times: researching renewables, training for my second
-          half-marathon (first was a solo run during quarantine), building out
-          an app to find local beers, and reading about psychology - to name a
-          handful.
-        </p>
+        <p>Coming soon...</p>
       </div>
       <ol className={styles.posts}>
         {posts.map((post) => (

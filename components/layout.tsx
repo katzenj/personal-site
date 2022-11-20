@@ -1,3 +1,4 @@
+import { Header } from "./header";
 import { Footer } from "./footer";
 import { Meta } from "./meta";
 
@@ -10,6 +11,7 @@ export const Layout = ({ preview, children }: Props) => {
   return (
     <>
       <Meta />
+      <Header />
       <div className="min-h-screen">
         <main>{children}</main>
       </div>

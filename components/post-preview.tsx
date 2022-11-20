@@ -1,5 +1,5 @@
 import { FormattedDate } from "./formatted-date";
-import CoverImage from "./cover-image";
+import { CoverImage } from "./cover-image";
 import Link from "next/link";
 
 type Props = {
@@ -31,8 +31,10 @@ export const PostPreview = ({
           {title}
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <FormattedDate dateString={date} />
+      <div className="text-md mb-4">
+        <i>
+          <FormattedDate dateString={date} />
+        </i>
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
     </div>

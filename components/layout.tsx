@@ -9,13 +9,13 @@ type Props = {
 
 export const Layout = ({ preview, children }: Props) => {
   return (
-    <>
+    <div className="bg-eerie-black">
       <Meta />
       <Header />
       <div className="min-h-screen">
         <main>{children}</main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };

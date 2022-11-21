@@ -1,6 +1,5 @@
 import { Container } from "../components/container";
 import { AllStories } from "../components/all-stories";
-import { HeroPost } from "../components/hero-post";
 import { Layout } from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
@@ -19,8 +18,7 @@ export default function Index({ allPosts }: Props) {
           <title>Jordan</title>
         </Head>
         <Container>
-          <Intro />
-          {allPosts.length > 0 && <AllStories posts={allPosts} />}
+          <AllStories posts={allPosts} />
         </Container>
       </Layout>
     </>

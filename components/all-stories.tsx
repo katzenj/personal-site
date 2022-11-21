@@ -9,9 +9,9 @@ export const AllStories = ({ posts }: Props) => {
   const postsLength = posts.length;
   return (
     <section>
-      <h2 className="mb-8 text-3xl font-bold tracking-tighter leading-tight">
+      <h1 className="mb-8 text-5xl font-bold tracking-tighter leading-tight text-white my-12">
         Posts
-      </h2>
+      </h1>
       <div className="pb-12">
         {posts.map((post, idx) => (
           <>
@@ -23,7 +23,7 @@ export const AllStories = ({ posts }: Props) => {
               slug={post.slug}
               excerpt={post.excerpt}
             />
-            {idx < postsLength - 1 && <hr className="my-12" />}
+            {idx < postsLength - 1 && <hr key={post.slug} className="my-12" />}
           </>
         ))}
       </div>

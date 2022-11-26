@@ -1,9 +1,9 @@
 {
-  "version": "7.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Some tinkering",
   "scripts": {
-    "clean": "rimraf public",
+    "clean": "rimraf _site",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",
     "start": "npx @11ty/eleventy --serve",

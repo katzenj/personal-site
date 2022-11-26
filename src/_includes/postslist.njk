@@ -1,12 +1,18 @@
-<ul>
-{% for post in postslist | reverse %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    {% for tag in post.data.tags | filterTagList %}
-      {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    {% endfor %}
-  </li>
-{% endfor %}
-</ul>
+<div class="pt-2">
+  <ul>
+  {% for post in postslist | reverse %}
+    <li class="py-1">
+      <a href="{{ post.url | url }}" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
+        {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+      </a>
+      <time class="pr-4" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+      {% for tag in post.data.tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+          {{ tag }}
+        </a>
+      {% endfor %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>

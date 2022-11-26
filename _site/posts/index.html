@@ -21,7 +21,7 @@
 
       <div class="flex flex-row place-content-center items-end">
         <a
-          class="px-1 hover:text-green hover:bg-green"
+          class="px-1 hover:text-teal-600"
           href="mailto:jkatzen8@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -29,7 +29,7 @@
           <i class="fa-solid fa-paper-plane"></i>
         </a>
         <a
-          class="px-1 hover:text-blue"
+          class="px-1 hover:text-teal-600"
           href="https://www.github.com/katzenj"
           target="_blank"
           rel="noopener noreferrer"
@@ -37,7 +37,7 @@
           <i class="fa-brands fa-github"></i>
         </a>
         <a
-          class="px-1 hover:text-blue"
+          class="px-1 hover:text-teal-600"
           href="https://www.linkedin.com/in/jordankatzen/"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +45,7 @@
           <i class="fa-brands fa-linkedin"></i>
         </a>
         <a
-          class="px-1 hover:text-blue"
+          class="px-1 hover:text-teal-600"
           href="https://strava.com/athletes/jordanktz"
           target="_blank"
           rel="noopener noreferrer"
@@ -56,60 +56,82 @@
 
       <div class="flex items-end">
         <ul class="list-none flex justify-evenly">
-          <li class="font-bold mx-2 nav-item"><a href="/">Home</a></li>
-          <li class="font-bold mx-2 nav-item nav-item-active"><a href="/posts/">Archive</a></li>
+          <li class="font-bold mx-2 "><a href="/">Home</a></li>
+          <li class="font-bold mx-2 underline"><a href="/posts/">Archive</a></li>
         </ul>
       </div>
     </header>
 
     <main class="tmpl-home">
       
-<h1>Archive</h1>
+<div class="pt-12">
+  <h1 class="text-2xl tracking-tight font-bold">Archive</h1>
 
-
-<ul>
-
-  <li class="postlist-item">
-    <a href="/posts/fourthpost/" class="postlist-link">This is my fourth post.</a>
-    <time class="postlist-date" datetime="2018-09-30">Sep 30, 2018</time>
-    
+  
+  <div class="pt-2">
+  <ul>
+  
+    <li class="py-1">
+      <a href="/posts/fourthpost/" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
+        This is my fourth post.
+      </a>
+      <time class="pr-4" datetime="2018-09-30">Sep 30, 2018</time>
       
-      <a href="/tags/second-tag/" class="post-tag">second tag</a>
-    
-  </li>
-
-  <li class="postlist-item">
-    <a href="/posts/thirdpost/" class="postlist-link">This is my third post.</a>
-    <time class="postlist-date" datetime="2018-08-24">Aug 24, 2018</time>
-    
+        
+        <a href="/tags/second-tag/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+          second tag
+        </a>
       
-      <a href="/tags/second-tag/" class="post-tag">second tag</a>
-    
+    </li>
+  
+    <li class="py-1">
+      <a href="/posts/thirdpost/" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
+        This is my third post.
+      </a>
+      <time class="pr-4" datetime="2018-08-24">Aug 24, 2018</time>
       
-      <a href="/tags/posts-with-two-tags/" class="post-tag">posts with two tags</a>
-    
-  </li>
-
-  <li class="postlist-item">
-    <a href="/posts/secondpost/" class="postlist-link">This is my second post.</a>
-    <time class="postlist-date" datetime="2018-07-04">Jul 04, 2018</time>
-    
+        
+        <a href="/tags/second-tag/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+          second tag
+        </a>
       
-      <a href="/tags/number-2/" class="post-tag">number 2</a>
-    
-  </li>
-
-  <li class="postlist-item">
-    <a href="/posts/firstpost/" class="postlist-link">This is my first post.</a>
-    <time class="postlist-date" datetime="2018-05-01">May 01, 2018</time>
-    
+        
+        <a href="/tags/posts-with-two-tags/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+          posts with two tags
+        </a>
       
-      <a href="/tags/another-tag/" class="post-tag">another tag</a>
-    
-  </li>
+    </li>
+  
+    <li class="py-1">
+      <a href="/posts/secondpost/" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
+        This is my second post.
+      </a>
+      <time class="pr-4" datetime="2018-07-04">Jul 04, 2018</time>
+      
+        
+        <a href="/tags/number-2/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+          number 2
+        </a>
+      
+    </li>
+  
+    <li class="py-1">
+      <a href="/posts/firstpost/" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
+        This is my first post.
+      </a>
+      <time class="pr-4" datetime="2018-05-01">May 01, 2018</time>
+      
+        
+        <a href="/tags/another-tag/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+          another tag
+        </a>
+      
+    </li>
+  
+  </ul>
+</div>
 
-</ul>
-
+</div>
 
 
     </main>

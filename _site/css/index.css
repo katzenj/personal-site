@@ -501,25 +501,12 @@ video {
     max-width: 1536px;
   }
 }
-.fixed {
-  position: fixed;
-}
-.absolute {
-  position: absolute;
-}
-.bottom-0 {
-  bottom: 0px;
-}
 .m-auto {
   margin: auto;
 }
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 .my-8 {
   margin-top: 2rem;
@@ -541,9 +528,6 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
-.mt-auto {
-  margin-top: auto;
-}
 .flex {
   display: flex;
 }
@@ -555,10 +539,6 @@ video {
 }
 .h-full {
   height: 100%;
-}
-.h-max {
-  height: -moz-max-content;
-  height: max-content;
 }
 .w-4\/5 {
   width: 80%;

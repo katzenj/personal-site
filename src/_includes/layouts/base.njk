@@ -56,7 +56,6 @@
         </div>
 
         <div class="flex items-end">
-          {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
           <ul class="list-none flex justify-evenly">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="font-bold mx-2 {% if entry.url == page.url %}underline{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>

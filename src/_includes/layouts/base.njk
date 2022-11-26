@@ -27,6 +27,7 @@
             href="mailto:jkatzen8@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Send an email to jkatzen8@gmail.com"
           >
             <i class="fa-solid fa-paper-plane"></i>
           </a>
@@ -35,6 +36,7 @@
             href="https://www.github.com/katzenj"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to my github profile"
           >
             <i class="fa-brands fa-github"></i>
           </a>
@@ -43,6 +45,7 @@
             href="https://www.linkedin.com/in/jordankatzen/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to my LinkedIn profile"
           >
             <i class="fa-brands fa-linkedin"></i>
           </a>
@@ -51,6 +54,7 @@
             href="https://strava.com/athletes/jordanktz"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to my Strava profile"
           >
             <i class="fa-solid fa-person-biking"></i>
           </a>
@@ -59,7 +63,9 @@
         <div class="flex items-end">
           <ul class="list-none flex justify-evenly">
           {%- for entry in collections.all | eleventyNavigation %}
-            <li class="font-bold mx-2 {% if entry.url == page.url %}underline{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+            <li class="font-bold mx-2 {% if entry.url == page.url %}underline{% endif %}">
+              <a href="{{ entry.url | url }}" aria-label="Link to page {{entry.title}}">{{ entry.title }}</a>
+            </li>
           {%- endfor %}
           </ul>
         </div>

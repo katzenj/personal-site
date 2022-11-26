@@ -2,13 +2,13 @@
   <ul>
   {% for post in postslist | reverse %}
     <li class="py-1">
-      <a href="{{ post.url | url }}" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
+      <a href="{{ post.url | url }}" aria-label="Go to page for post {{post.data.title}}" class="text-lg font-medium text-teal-600 pr-2 hover:underline">
         {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
       </a>
       <time class="pr-4" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       {% for tag in post.data.tags | filterTagList %}
         {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="post-tag">
+        <a href="{{ tagUrl | url }}" class="post-tag" aria-label="Go to page for tag {{tag}}">
           {{ tag }}
         </a>
       {% endfor %}

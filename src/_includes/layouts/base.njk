@@ -14,46 +14,68 @@
     <link rel="stylesheet" href="{{ '/css/prism-diff.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <script src="https://kit.fontawesome.com/e2bbc5068f.js" crossorigin="anonymous"></script>
   </head>
   <body class="w-4/5 m-auto">
-    <header class="my-8 flex flex-row justify-between">
-      <div class="columns-3">
-        <div>
-          <h1 class="text-3xl font-bold tracking-tighter"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-        </div>
+    <header class="mx-auto my-8 flex flex-row justify-between">
+      <div>
+        <h1 class="text-4xl font-bold hover:text-red tracking-tighter"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+      </div>
 
-        <div>
+      <div class="flex flex-row place-content-center items-end">
+        <a
+          class="px-1 hover:text-green hover:bg-green"
+          href="mailto:jkatzen8@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-paper-plane"></i>
+        </a>
+        <a
+          class="px-1 hover:text-blue"
+          href="https://www.github.com/katzenj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          class="px-1 hover:text-blue"
+          href="https://www.linkedin.com/in/jordankatzen/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          class="px-1 hover:text-blue"
+          href="https://strava.com/athletes/jordanktz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-person-biking"></i>
+        </a>
+      </div>
 
-        </div>
-
-        <div>
-          {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-          <ul class="list-none flex justify-evenly">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="font-bold mx-2 nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-          </ul>
-        </div>
+      <div class="flex items-end">
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        <ul class="list-none flex justify-evenly">
+        {%- for entry in collections.all | eleventyNavigation %}
+          <li class="font-bold mx-2 nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        {%- endfor %}
+        </ul>
       </div>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
-      <!-- Delete this message -->
-      <div class="infobox">
-        <ul>
-          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
-          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
-        </ul>
-        <p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-      </div>
-      <!-- Stop deleting -->
-
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="text-center">
+        <p>© Jordan Katzen 2022</p>
+      </div>
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>

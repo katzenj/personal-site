@@ -11,41 +11,58 @@
     <link rel="stylesheet" href="/css/prism-diff.css">
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Jordan.">
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="Jordan.">
+    <script src="https://kit.fontawesome.com/e2bbc5068f.js" crossorigin="anonymous"></script>
   </head>
   <body class="w-4/5 m-auto">
-    <header class="my-8 flex flex-row justify-between">
-      <div class="columns-3">
-        <div>
-          <h1 class="text-3xl font-bold tracking-tighter"><a href="/">Jordan.</a></h1>
-        </div>
+    <header class="mx-auto my-8 flex flex-row justify-between">
+      <div>
+        <h1 class="text-4xl font-bold hover:text-red tracking-tighter"><a href="/">Jordan.</a></h1>
+      </div>
 
-        <div>
+      <div class="flex flex-row place-content-center items-end">
+        <a
+          class="px-1 hover:text-green hover:bg-green"
+          href="mailto:jkatzen8@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-paper-plane"></i>
+        </a>
+        <a
+          class="px-1 hover:text-blue"
+          href="https://www.github.com/katzenj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          class="px-1 hover:text-blue"
+          href="https://www.linkedin.com/in/jordankatzen/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          class="px-1 hover:text-blue"
+          href="https://strava.com/athletes/jordanktz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-person-biking"></i>
+        </a>
+      </div>
 
-        </div>
-
-        <div>
-          <ul class="list-none flex justify-evenly">
-            <li class="font-bold mx-2 nav-item"><a href="/">Home</a></li>
-            <li class="font-bold mx-2 nav-item"><a href="/posts/">Archive</a></li>
-            <li class="font-bold mx-2 nav-item"><a href="/about/">About Me</a></li>
-          </ul>
-        </div>
+      <div class="flex items-end">
+        <ul class="list-none flex justify-evenly">
+          <li class="font-bold mx-2 nav-item"><a href="/">Home</a></li>
+          <li class="font-bold mx-2 nav-item"><a href="/posts/">Archive</a></li>
+        </ul>
       </div>
     </header>
 
     <main class="tmpl-home">
-
-      <!-- Delete this message -->
-      <div class="infobox">
-        <ul>
-          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
-          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
-        </ul>
-        <p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-      </div>
-      <!-- Stop deleting -->
-
       <table>
   <thead>
     <tr>
@@ -71,24 +88,16 @@
     <td>This is my fourth post.</td>
   </tr>
   <tr>
-    <td><a href="/about/"><code>/about/</code></a></td>
-    <td>About Me</td>
+    <td><a href="/"><code>/</code></a></td>
+    <td></td>
   </tr>
   <tr>
     <td><a href="/posts/"><code>/posts/</code></a></td>
     <td></td>
   </tr>
   <tr>
-    <td><a href="/"><code>/</code></a></td>
-    <td></td>
-  </tr>
-  <tr>
     <td><a href="/tags/"><code>/tags/</code></a></td>
     <td></td>
-  </tr>
-  <tr>
-    <td><a href="/tags/number-2/"><code>/tags/number-2/</code></a></td>
-    <td>Tagged “number 2”</td>
   </tr>
   <tr>
     <td><a href="/tags/another-tag/"><code>/tags/another-tag/</code></a></td>
@@ -97,6 +106,10 @@
   <tr>
     <td><a href="/tags/second-tag/"><code>/tags/second-tag/</code></a></td>
     <td>Tagged “second tag”</td>
+  </tr>
+  <tr>
+    <td><a href="/tags/number-2/"><code>/tags/number-2/</code></a></td>
+    <td>Tagged “number 2”</td>
   </tr>
   <tr>
     <td><a href="/tags/posts-with-two-tags/"><code>/tags/posts-with-two-tags/</code></a></td>
@@ -108,7 +121,11 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="text-center">
+        <p>© Jordan Katzen 2022</p>
+      </div>
+    </footer>
 
     <!-- Current page: /page-list/ -->
   </body>

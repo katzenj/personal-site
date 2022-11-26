@@ -5,8 +5,8 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="pt-10">
-  <h1 class="text-2xl tracking-tight font-bold">Latest Posts</h1>
+<div class="">
+  <h1 class="page-header">Latest Posts</h1>
 
   {% set postslist = collections.posts | head(-3) %}
   {% set postslistCounter = collections.posts | length %}

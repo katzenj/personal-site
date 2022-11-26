@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan.</title>
     <meta name="description" content="Beep boop bop">
-
+    <meta name="generator" content="Eleventy v1.0.2">
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
     <link rel="stylesheet" href="/css/prism-diff.css">
@@ -13,8 +13,8 @@
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="Jordan.">
     <script src="https://kit.fontawesome.com/e2bbc5068f.js" crossorigin="anonymous"></script>
   </head>
-  <body class="w-4/5 m-auto">
-    <header class="mx-auto my-8">
+  <body class="container w-4/5 m-auto h-screen flex flex-col">
+    <header class="my-8">
       <div class="flex flex-row justify-between">
         <div>
           <h1 class="text-4xl font-bold hover:text-red tracking-tighter"><a href="/">Jordan.</a></h1>
@@ -65,10 +65,10 @@
       <hr class="mt-6" />
     </header>
 
-    <main>
+    <main class="mb-8 grow">
       
-<div class="pt-10">
-  <h1 class="text-2xl tracking-tight font-bold">Latest Posts</h1>
+<div class="">
+  <h1 class="page-header">Latest Posts</h1>
 
   
   
@@ -82,7 +82,7 @@
       <time class="pr-4" datetime="2018-09-30">Sep 30, 2018</time>
       
         
-        <a href="/tags/second-tag/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+        <a href="/tags/second-tag/" class="post-tag">
           second tag
         </a>
       
@@ -95,12 +95,12 @@
       <time class="pr-4" datetime="2018-08-24">Aug 24, 2018</time>
       
         
-        <a href="/tags/second-tag/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+        <a href="/tags/second-tag/" class="post-tag">
           second tag
         </a>
       
         
-        <a href="/tags/posts-with-two-tags/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+        <a href="/tags/posts-with-two-tags/" class="post-tag">
           posts with two tags
         </a>
       
@@ -113,7 +113,7 @@
       <time class="pr-4" datetime="2018-07-04">Jul 04, 2018</time>
       
         
-        <a href="/tags/number-2/" class="border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200">
+        <a href="/tags/number-2/" class="post-tag">
           number 2
         </a>
       
@@ -130,13 +130,12 @@
 
     </main>
 
-    <footer class="absolute bottom-0 w-4/5">
+    <!-- Current page: / -->
+    <footer class="pb-8">
       <hr />
-      <div class="h-6 my-8 text-center">
+      <div class="mt-8 text-center">
         <p>© Jordan Katzen 2022</p>
       </div>
     </footer>
-
-    <!-- Current page: / -->
   </body>
 </html>

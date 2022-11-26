@@ -1,0 +1,21 @@
+{
+  "title": "Jordan.",
+  "url": "https://jordankatzen.com/",
+  "language": "en",
+  "description": "Beep boop bop",
+  "feed": {
+    "subtitle": "There's nothing here because I can't write it seems.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://jordankatzen.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://jordankatzen.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Jordan Katzen",
+    "email": "jkatzen8@gmail.com",
+    "url": "https://jordankatzen.com/about/"
+  }
+}

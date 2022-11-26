@@ -1,0 +1,35 @@
+{
+  "name": "eleventy-base-blog",
+  "version": "7.0.0",
+  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "scripts": {
+    "clean": "rimraf public",
+    "build": "npx @11ty/eleventy",
+    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
+    "start": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy",
+    "dev:tailwind": "postcss src/css/index.css -o _site/css/index.css -w",
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "build:tailwind": "npx tailwindcss -i src/css/index.css -o _site/css/index.css --minify",
+    "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
+    "dev2": "npm-run-all clean --parallel dev:*",
+    "build2": "NODE_ENV=production npm-run-all clean build:eleventy build:tailwind"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "luxon": "^2.4.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.4",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0"
+  }
+}

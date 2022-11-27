@@ -1,0 +1,39 @@
+
+<div>
+  <h1 class="page-header">Recs</h1>
+
+  <div class="mt-4 mb-8">
+
+    {%- if recs.articlesList %}
+    <h3 class="text-lg font-medium">Articles</h3>
+    <div class="ml-8 mb-4">
+      <ul>
+        {% for article in recs.articlesList %}
+          <li class="py-1">
+            <a href="{{ article.url | url }}" aria-label="Go to article line for article {{article.title}}" class="mr-1 underline">
+              {{ article.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+
+    {%- if recs.booksList %}
+    <h3 class="text-lg font-medium">Books</h3>
+    <div class="ml-8 mb-4">
+      <ul>
+        {% for book in recs.booksList %}
+          <li class="py-1">
+            <a href="{{ book.url | url }}" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">
+              {{ book.title }}
+            </a>
+            by {{ book.author }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+
+  </div>
+</div>

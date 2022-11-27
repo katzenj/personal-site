@@ -6,12 +6,12 @@ eleventyNavigation:
 ---
 
 <div class="">
-  <h1 class="page-header">Latest Posts</h1>
+  {% include "recs.njk" %}
 
+  <h1 class="page-header">Latest Posts</h1>
   {% set postslist = collections.posts | head(-3) %}
   {% set postslistCounter = collections.posts | length %}
   {% include "postslist.njk" %}
 
   <p class="pt-4">More posts can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.</p>
 </div>
-

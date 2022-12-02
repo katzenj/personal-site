@@ -27,8 +27,8 @@ templateClass: tmpl-post
   <div class="py-12">
     -------
     <ul>
-      {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}" aria-label="Go to post {{nextPost.data.title}}">{{ nextPost.data.title }}</a></li>{% endif %}
-      {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}" aria-label="Go to post {{previousPost.data.title}}">{{ previousPost.data.title }}</a></li>{% endif %}
+      {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}" class="underline" aria-label="Go to post {{nextPost.data.title}}">{{ nextPost.data.title }}</a></li>{% endif %}
+      {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}" class="underline" aria-label="Go to post {{previousPost.data.title}}">{{ previousPost.data.title }}</a></li>{% endif %}
     </ul>
   </div>
   {%- endif %}

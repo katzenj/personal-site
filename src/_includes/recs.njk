@@ -10,7 +10,7 @@
       <ul>
         {% for article in recs.articlesList %}
           <li class="py-1">
-            <a href="{{ article.url | url }}" aria-label="Go to article line for article {{article.title}}" class="mr-1 underline">
+            <a href="{{ article.url | url }}" target="_blank" aria-label="Go to article line for article {{article.title}}" class="mr-1 underline">
               {{ article.title }}
             </a>
           </li>
@@ -25,10 +25,14 @@
       <ul>
         {% for book in recs.booksList %}
           <li class="py-1">
-            <a href="{{ book.url | url }}" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">
+            <a href="{{ book.url | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">
               {{ book.title }}
             </a>
             by {{ book.author }}
+
+            {%- if book.review %}
+              <p class="pt-1 ml-8 w-2/3">{{ book.review }}</p>
+            {%- endif %}
           </li>
         {% endfor %}
       </ul>

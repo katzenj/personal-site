@@ -1,13 +1,15 @@
 [
   {
-    "url": "https://bookshop.org/p/books/what-happened-to-you-conversations-on-trauma-resilience-and-healing-oprah-winfrey/14596716?ean=9781250223180",
-    "title": "What Happened to You?",
-    "author": "Oprah Winfrey and Dr. Bruce D. Perry"
+    "url": "https://bookshop.org/p/books/mistakes-were-made-but-not-by-me-third-edition-why-we-justify-foolish-beliefs-bad-decisions-and-hurtful-acts-carol-tavris/7084608",
+    "title": "Mistakes Were Made (But Not by Me)",
+    "author": "Carol Tavris, Elliot Aronson",
+    "review": "Wow do we make a lot of irrational decisions. Try to step back to avoid sliding down the pyramid of self-justification. Self-justification allows us to (usually unconsciously) convince ourselves what we did was the right choice/best thing we could have done even if it was definitely not."
   },
   {
-    "url": "https://bookshop.org/p/books/freezing-order-a-true-story-of-money-laundering-murder-and-surviving-vladimir-putin-s-wrath-bill-browder/17554492",
-    "title": "Freezing Order",
-    "author": "Bill Browder"
+    "url": "https://bookshop.org/p/books/what-happened-to-you-conversations-on-trauma-resilience-and-healing-oprah-winfrey/14596716?ean=9781250223180",
+    "title": "What Happened to You?",
+    "author": "Oprah Winfrey, Dr. Bruce D. Perry",
+    "review": "Trauma. Who'd have thought it affects you significantly?! Connectedness, relationships with others, and community are hugely important in healing trauma and helping people develop in a healthy way."
   },
   {
     "url": "https://bookshop.org/p/books/maybe-you-should-talk-to-someone-lori-gottlieb/18733877?ean=9781328662057",
@@ -18,5 +20,11 @@
     "url": "https://bookshop.org/p/books/how-to-be-perfect-the-correct-answer-to-every-moral-question-michael-schur/17494407?ean=9781982159313",
     "title": "How to be Perfect",
     "author": "Micahel Schur"
+  },
+  {
+    "url": "https://bookshop.org/p/books/freezing-order-a-true-story-of-money-laundering-murder-and-surviving-vladimir-putin-s-wrath-bill-browder/17554492",
+    "title": "Freezing Order",
+    "author": "Bill Browder",
+    "review": "Yeah, so I'm not planning on traveling to Russia ever. Browder's previous book, Red Notice, and this book detail the corruption, fraud, injustices, and more that Russia has and continues to commit. Oh and Russia's successfully infected and lured more than a handful of Americans to their side."
   }
 ]

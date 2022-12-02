@@ -26,6 +26,10 @@
   @apply mb-4
 }
 
+.post-content ul {
+	@apply list-disc ml-8
+}
+
 .post-content pre[class*="language-"] {
   @apply my-4 p-4
 }

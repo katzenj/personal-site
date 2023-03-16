@@ -9,9 +9,6 @@ tags:
   - fitness
 layout: layouts/post.njk
 ---
-
-# Notes on self (001)
-
 ## At a glance
 In this edition, I consider how to best provide support for a struggling friend. There's a brief consideration of how our life has an infinite number of paths it could take (see image below), and why focusing on previous branches/possibilities is a fool’s errand.
 

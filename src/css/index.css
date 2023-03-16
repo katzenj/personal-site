@@ -22,6 +22,10 @@
   @apply text-lg mt-6 mb-2 font-medium
 }
 
+.post-content a {
+	@apply text-teal-600 hover:underline
+}
+
 .post-content p {
   @apply mb-4
 }

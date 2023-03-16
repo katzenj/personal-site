@@ -10,7 +10,8 @@ layout: layouts/post.njk
 ---
 Note: All data as of November 27, 2022.
 
-TL;DR -> I sometimes waste my time and could spend it on net-positive activities
+## At a glance
+I sometimes waste my time and could spend it on net-positive activities
  - Spent ~11-13 days working out
  - Ran 82 times, biked 69 times, and worked out 120 times
  - Would've thought I'd be stronger at this point

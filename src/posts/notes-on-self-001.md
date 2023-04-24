@@ -6,7 +6,7 @@ tags:
   - support
   - friends
   - fitness
-  - 2023
+  - "2023"
 layout: layouts/post.njk
 ---
 ## At a glance

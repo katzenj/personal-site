@@ -5,7 +5,7 @@ date: 2022-12-02
 tags:
   - time
   - fitness
-  - 2022
+  - "2022"
 layout: layouts/post.njk
 ---
 Note: All data as of November 27, 2022.

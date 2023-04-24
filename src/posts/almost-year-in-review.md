@@ -4,8 +4,8 @@ description: A pre-end-of-year look at 2022. I spent ~2 days of my year watching
 date: 2022-12-02
 tags:
   - time
-  - 2022
   - fitness
+  - 2022
 layout: layouts/post.njk
 ---
 Note: All data as of November 27, 2022.

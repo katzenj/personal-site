@@ -18,7 +18,7 @@ Labels can promote binary thought patterns and shape our opinions and conviction
 
 Labels form the foundation for many aspects of our lives, influencing the way we see ourselves and the way we view others. Labels like liberal, vegetarian, minimalist, anxious, introvert, and perfectionist. Those labels can influence the things we buy (or don’t), our opinions on how other people spend their time, or how we act (e.g. “What would a minimalist do in this situation”).
 
-If I label myself as a Catholic, there are a set of beliefs that *********generally********* come with that — beliefs about personal conduct and history. Without examining everything that comes with the “Catholic” label, I might feel that I hold some or all of the beliefs generally held by Catholics despite the lack of due diligence. Depending on how much I identify with the label, I might even feel disinclined to explore other religions or ideas.
+If I label myself as a Catholic, there are a set of beliefs that *generally* come with that — beliefs about personal conduct and history. Without examining everything that comes with the “Catholic” label, I might feel that I hold some or all of the beliefs generally held by Catholics despite the lack of due diligence. Depending on how much I identify with the label, I might even feel disinclined to explore other religions or ideas.
 
 ### Binaries and assumed opinions
 

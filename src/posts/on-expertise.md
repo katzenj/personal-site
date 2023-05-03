@@ -17,17 +17,28 @@ But I don't know any of those things deeply enough to consider myself an expert.
 
 In short, I'm an expert in being a jack of all trades. I excel at spreading myself across multiple disciplines and pursuits without ever getting good enough at one thing to consider myself an expert. I spend just enough time on a subject to become proficient (according to my own standards) before either moving on or relaxing in the zone of proficiency.
 
+<br />
 So, how might you become an expert in being proficient in many things but a master of none? Here are five steps:
 
-Step 1: Pick a passion or interest of yours. It could be painting, hunting, or knitting throw pillows. Have fun with it! What you pick doesn’t really matter, just that you have some interest in it.
+<br />
+<br />
 
-Step 2: Research and practice your chosen passion/interest. If you chose painting, watch some YouTube videos and buy a watercolor set. Set aside a bit of time every day to paint. Learning by doing is key here. Also, be aware that you might not be that good to start out. It may take a while to develop some base level of competency, but keep going because it’s worth the effort.
+**Step 1** <br/>
+Pick a passion or interest of yours. It could be painting, hunting, or knitting throw pillows. Have fun with it! What you pick doesn’t really matter, just that you have some interest in it.
 
-Step 3: Continue to practice. Keep at it and continue to build proficiency in the subject you've chosen. Push through the plateau and build on your earlier learnings. At this point, you may start to seek out resources targeted toward those with more experience. Maybe you’re skiing the blues, painting detailed portraits, or knitting designs into your pillows. You’re building a foundation you can fall back on in the future.
+**Step 2** <br/>
+Research and practice your chosen passion/interest. If you chose painting, watch some YouTube videos and buy a watercolor set. Set aside a bit of time every day to paint. Learning by doing is key here. Also, be aware that you might not be that good to start out. It may take a while to develop some base level of competency, but keep going because it’s worth the effort.
 
-Step 4: Reach the zone of proficiency. Congrats, you’ve reached what I have deemed “The Zone of Proficiency.” You can hold your ground in whatever subject you've chosen. You can ski the blacks on the mountain and do little bunny hops along the way. Your latest poems are looking solid. You’re no Robert Frost yet, but then again, you took the path less traveled (note to the learned reader: if you actually read this poem, you’d know that the interpretation is that both paths are effectively equal, but travel influencers use the quote as some sort of motto despite not understanding the true meaning).
+**Step 3** <br/>
+Continue to practice. Keep at it and continue to build proficiency in the subject you've chosen. Push through the plateau and build on your earlier learnings. At this point, you may start to seek out resources targeted toward those with more experience. Maybe you’re skiing the blues, painting detailed portraits, or knitting designs into your pillows. You’re building a foundation you can fall back on in the future.
 
-Step 5: Deprioritize your chosen subject. Stop practicing as frequently. Maybe you only paint a couple days a week. Or you keep running every few days but stop reading so much about different routines and how to optimize your training. At this point, you’ve lost the passion and intrigue you felt at step one. Your chosen subject is still interesting, but knitting every day was getting old, so now you just do it when you have time. You can still tell your friends what they’re doing wrong when you have your knitting club meetings, but you’ve stopped really progressing.
+**Step 4** <br/>
+Reach the zone of proficiency. Congrats, you’ve reached what I have deemed “The Zone of Proficiency.” You can hold your ground in whatever subject you've chosen. You can ski the blacks on the mountain and do little bunny hops along the way. Your latest poems are looking solid. You’re no Robert Frost yet, but then again, you took the path less traveled (note to the learned reader: if you actually read this poem, you’d know that the interpretation is that both paths are effectively equal, but travel influencers use the quote as some sort of motto despite not understanding the true meaning).
+
+**Step 5** <br/>
+Deprioritize your chosen subject. Stop practicing as frequently. Maybe you only paint a couple days a week. Or you keep running every few days but stop reading so much about different routines and how to optimize your training. At this point, you’ve lost the passion and intrigue you felt at step one. Your chosen subject is still interesting, but knitting every day was getting old, so now you just do it when you have time. You can still tell your friends what they’re doing wrong when you have your knitting club meetings, but you’ve stopped really progressing.
+
+<br/>
 
 By following those five steps, you can become an expert in being an expert of absolutely nothing. Those steps make up the simple framework that I continue to use throughout my life.
 

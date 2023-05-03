@@ -57,6 +57,14 @@
 	color: #f8f8f2;
 }
 
+.post-content h2 > a {
+	@apply -ml-[18px]
+}
+
+.post-content h3 > a {
+	@apply -ml-[16px]
+}
+
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
 	color: #75715e;
 }

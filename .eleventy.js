@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
     linkify: true,
   }).use(markdownItAnchor, {
     permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
+      placement: "before",
       class: "direct-link",
       symbol: "#",
     }),

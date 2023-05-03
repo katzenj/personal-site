@@ -6,6 +6,23 @@
     <title>{{ title or metadata.title }}</title>
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="{{ title or metadata.title }}" />
+    <meta property="og:description" content="{{ description or metadata.description }}" />
+    <meta property="og:url" content="{{ url or metadata.url }}" />
+    <meta property="og:type" content="{{ type or metadata.type }}" />
+    {# <meta property="og:image" content="" /> #}
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ url or metadata.url }}" />
+    <meta property="twitter:title" content="{{ title or metadata.title }}" />
+    <meta property="twitter:description" content="{{ description or metadata.description }}" />
+    {# <meta property="twitter:image" content={new URL(image, Astro.url)} /> #}
+
+    <link rel="canonical" href="{{ metadata.url }}" />
+
     <!-- Icons -->
     <!-- https://favicon.io/ -->
     <link
@@ -85,11 +102,10 @@
       {{ content | safe }}
     </main>
 
-    <!-- Current page: {{ page.url | url }} -->
     <footer class="pb-8">
       <hr />
       <div class="mt-8 text-center">
-        <p>© Jordan Katzen 2023</p>
+        <p>© Jordan Katzen {{ "now" | date("yyyy")}}</p>
       </div>
     </footer>
   </body>

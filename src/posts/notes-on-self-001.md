@@ -1,6 +1,7 @@
 ---
 title: notes on self (001)
 description: Considering how to support a friend, consuming less, and pre-70.3 training.
+type: article
 date: 2023-03-13
 tags:
   - support

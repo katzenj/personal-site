@@ -1,6 +1,7 @@
 ---
 title: on labels and absolutes
 description: How labels and absolutes shape our thinking and our identity.
+type: article
 date: 2023-04-25
 tags:
   - identity

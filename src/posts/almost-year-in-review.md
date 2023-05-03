@@ -1,6 +1,7 @@
 ---
 title: almost year in review.
 description: A pre-end-of-year look at 2022. I spent ~2 days of my year watching Love Island...
+type: article
 date: 2022-12-02
 tags:
   - time

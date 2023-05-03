@@ -1,6 +1,7 @@
 ---
 title: notes on self (002)
 description: Discipline and consumption, introspective reads, and building up to the start of 70.3 training.
+type: article
 date: 2023-03-20
 tags:
   - time

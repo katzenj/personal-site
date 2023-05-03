@@ -1,6 +1,7 @@
 ---
 title: on expertise
 description: I'm an expert at not being an expert
+type: article
 date: 2023-04-19
 tags:
   - expertise

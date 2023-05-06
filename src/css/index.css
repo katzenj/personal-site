@@ -23,7 +23,7 @@
 }
 
 .post-content a {
-	@apply text-teal-600 hover:underline
+  @apply text-teal-700 hover:underline
 }
 
 .post-content p {
@@ -31,7 +31,7 @@
 }
 
 .post-content ul {
-	@apply list-disc ml-8
+  @apply list-disc ml-8
 }
 
 .post-content pre[class*="language-"] {

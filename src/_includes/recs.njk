@@ -25,9 +25,7 @@
       <ul>
         {% for book in recs.booksList %}
           <li class="py-1">
-            <a href="{{ book.url | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">
-              {{ book.title }}
-            </a>
+            <a href="{{ book.url | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">{{ book.title }}</a>
             by {{ book.author }}
 
             {%- if book.review %}

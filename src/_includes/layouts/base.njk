@@ -56,34 +56,8 @@
           <h1 class="text-4xl font-bold tracking-tight text-teal-700"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
         </div>
 
-        <div class="flex flex-row place-content-center items-end">
-          <a
-            class="px-1 hover:text-teal-700"
-            href="mailto:info@jordankatzen.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Send an email to info@jordankatzen.com"
-          >
-            <i class="fa-solid fa-paper-plane"></i>
-          </a>
-          <a
-            class="px-1 hover:text-teal-700"
-            href="https://www.github.com/katzenj"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to my github profile"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a
-            class="px-1 hover:text-teal-700"
-            href="https://www.linkedin.com/in/jordankatzen/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to my LinkedIn profile"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
+        <div class="menu flex flex-row place-content-center items-end">
+          {% include "menu-items.njk" %}
         </div>
 
         <div class="flex items-end">
@@ -106,6 +80,9 @@
     <footer class="pb-8">
       <hr />
       <div class="mt-8 text-center">
+        <div class="footer-menu flex flex-row place-content-center items-end mb-4">
+          {% include "menu-items.njk" %}
+        </div>
         <p>© Jordan Katzen {{ "now" | date("yyyy")}}</p>
       </div>
     </footer>

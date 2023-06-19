@@ -126,3 +126,15 @@ pre > code.highlight {
 	outline: 0.4em solid #f92672;
 	outline-offset: .4em;
 }
+
+@media only screen and (max-device-width: 480px) {
+	.menu {
+		display: none
+	}
+}
+
+@media only screen and (min-device-width: 480px) {
+	.footer-menu {
+		display: none
+	}
+}

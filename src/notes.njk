@@ -1,0 +1,36 @@
+---
+layout: layouts/home.njk
+title: Notes
+description: All of my random book highlights, notes, and more.
+permalink: /notes/
+eleventyNavigation:
+  key: Notes
+  order: 3
+eleventyImport:
+  collections: ["notes"]
+---
+
+<div class="">
+  <h1 class="page-header">Notes</h1>
+
+  <p class="my-4">A list of my book highlights and other random notes.</p>
+
+  <div class="pt-2">
+    <ul>
+    {% for note in collections.notes | reverse %}
+      <li class="py-1">
+        <a href="{{ note.url | url }}" aria-label="Go to page for highlight {{note.data.title}}" class="text-lg font-medium text-teal-700 pr-2 hover:underline">
+          {% if note.data.title %}{{ note.data.title }}{% else %}<code>{{ note.url }}</code>{% endif %}
+        </a>
+        {% for tag in note.data.tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag" aria-label="Go to page for tag {{tag}}">
+            {{ tag }}
+          </a>
+        {% endfor %}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+

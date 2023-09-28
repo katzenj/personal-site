@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-highlight
+templateClass: tmpl-notes
 ---
-<div class="h-full highlight">
+<div class="h-full note">
   {# Post header info #}
   <div class="pb-4">
     <h1 class="text-3xl tracking-tight font-bold pb-2">{{title}}</h1>
@@ -11,6 +11,13 @@ templateClass: tmpl-highlight
     {%- if link -%}
     <p>Link: <a class="text-blue-600 visited:text-purple-600" href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
     {%- endif -%}
+
+    {%- for tag in tags | filterTagList %}
+    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+    <a href="{{ tagUrl | url }}" aria-label="Go to page for tag {{tag}}" class="post-tag">
+      {{tag}}
+    </a>
+    {%- endfor %}
   </div>
 
   <div class="post-content">

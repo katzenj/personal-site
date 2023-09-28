@@ -13,11 +13,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/static");
 
-  eleventyConfig.addCollection("highlights", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/highlights/*.md");
+  eleventyConfig.addCollection("notes", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/notes/*.md");
   });
 
-  eleventyConfig.addWatchTarget("src/highlights/*.md");
+  eleventyConfig.addWatchTarget("src/notes/*.md");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);

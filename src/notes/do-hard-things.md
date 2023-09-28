@@ -1,12 +1,15 @@
 ---
 title: Do Hard Things
 author: Steve Magness
-type: highlight
+type: note
 rating: 5/7
 link:
   title: "Bookshop"
   url: https://bookshop.org/p/books/do-hard-things-why-we-get-resilience-wrong-and-the-surprising-science-of-real-toughness-steve-magness/18829968
-layout: layouts/highlight.njk
+tags:
+  - books
+  - highlights
+layout: layouts/note.njk
 ---
 
 ## Exercise one: Go deep to understand nuance

@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-highlight
+---
+<div class="h-full highlight">
+  {# Post header info #}
+  <div class="pb-4">
+    <h1 class="text-3xl tracking-tight font-bold pb-2">{{title}}</h1>
+    <p>By: {{ author }}</p>
+    <p>Rating: {{ rating }}</p>
+    {%- if link -%}
+    <p>Link: <a class="text-blue-600 visited:text-purple-600" href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
+    {%- endif -%}
+  </div>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+</div>
+

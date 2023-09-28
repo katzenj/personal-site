@@ -1,0 +1,19 @@
+---
+layout: layouts/home.njk
+title: Highlights
+description: All of my book highlights
+permalink: /highlights/
+eleventyNavigation:
+  key: Highlights
+  order: 3
+eleventyImport:
+  collections: ["highlights"]
+---
+
+<div class="">
+  <h1 class="page-header">Highlights</h1>
+
+  {% set highlightslist = collections.highlights %}
+  {% include "highlightslist.njk" %}
+</div>
+

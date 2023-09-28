@@ -1,0 +1,12 @@
+
+<div class="pt-2">
+  <ul>
+  {% for highlight in highlightslist | reverse %}
+    <li class="py-1">
+      <a href="{{ highlight.url | url }}" aria-label="Go to page for highlight {{highlight.data.title}}" class="text-lg font-medium text-teal-700 pr-2 hover:underline">
+        {% if highlight.data.title %}{{ highlight.data.title }}{% else %}<code>{{ highlight.url }}</code>{% endif %}
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>

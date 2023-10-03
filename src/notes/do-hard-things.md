@@ -1,14 +1,15 @@
 ---
 title: Do Hard Things
 author: Steve Magness
-type: note
+type: highlight
 rating: 5/7
 link:
   title: "Bookshop"
   url: https://bookshop.org/p/books/do-hard-things-why-we-get-resilience-wrong-and-the-surprising-science-of-real-toughness-steve-magness/18829968
+description: My notes and highlights from reading Do Hard Things by Steve Magness.
 tags:
-  - books
   - highlights
+  - books
 layout: layouts/note.njk
 ---
 
@@ -67,12 +68,4 @@ layout: layouts/note.njk
 - Remember from chapter 7 that when we switch from first person to either second or third person, we are putting distance between what’s occurring and our response to it. This doesn’t just apply to our inner dialogue, but journaling using second or third person can also help us process our emotions.
 - You can’t force cohesion or unity. It doesn’t come from trust falls, gimmicky bonding activities, or forced interaction. It comes from being real. From allowing people to lower their defenses and feel comfortable enough to be who they are. You can’t force it. All you can do is create the space for it to happen. The magic wasn’t in Popovich’s team dinners. It was in his creating space for genuine interaction.
 - Coyle makes the case that contrary to the way we traditionally think about it, we don’t need trust before we can become vulnerable. The opposite is true. In order to trust, we first must be vulnerable.
-- Being open and vulnerable sends an invitation to the person sitting across from you that you trust them. If that signal is reciprocated, that trust between the pair increases. We lower our defenses and guard, feeling open to being who we are. The more this cycle repeats, the stronger trust and cooperation become.
-- Instead, if we wanted to be fulfilled, there were three ways to achieve this.
-- First, the act of doing. Creating—whether it be in an artistic pursuit or a labor of love—brought meaning to one’s life.
-- The second was in experiencing—nature, love, art, or anything that might create the sensation of awe and expand one’s perspective of the world.
-- The third key to fulfillment would catch most off guard, but this particular audience was likely expecting it: suffering.
-- To him, suffering wasn’t to be sought out. But if we found ourselves there, meaning could be extracted. Suffering strips us of our vanities and allows us an opportunity to respond.
-- Purpose is the fuel that allows you to be tough.
-- Todd Kashdan found that it was those who navigated their anxiety and trauma not via avoidance but through exploration who experienced the highest levels of growth.
-- When we explore instead of avoid, we are able to integrate the experience into our story. We’re able to make meaning out of struggle, out of suffering. Meaning is the glue that holds our mind together, allowing us to both respond and recover.
+- Being open and vulnerable sends an invitation to the person sitting across from you that you trust them. If that signal is reciprocated, that trust between the pair

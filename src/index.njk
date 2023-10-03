@@ -3,7 +3,18 @@ layout: layouts/home.njk
 ---
 
 <div class="">
-  <h1 class="page-header">Musings</h1>
+  {# Show my notes and book highlights #}
+  <h1 class="page-header">Notes</h1>
+  {% set notesList = collections.notes | head(-3) %}
+  {% set notesListCounter = collections.notes | length %}
+  {% include "noteslist.njk" %}
+
+  {%- if notesListCounter > 3 %}
+  <p class="pt-4">More notes/highlights can be found <a class="underline" href="{{ '/notes/' | url }}">here</a>.</p>
+  {%- endif %}
+
+  {# Show my ~musings~ #}
+  <h1 class="page-header mt-12">Musings</h1>
   {% set postslist = collections.posts | head(-3) %}
   {% set postslistCounter = collections.posts | length %}
   {% include "postslist.njk" %}
@@ -12,6 +23,7 @@ layout: layouts/home.njk
   <p class="pt-4">More posts can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.</p>
   {%- endif %}
 
+  {# List out my recs #}
   {% include "recs.njk" %}
 
   <div class="hidden">

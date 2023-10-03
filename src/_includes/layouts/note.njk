@@ -1,16 +1,22 @@
 ---
 layout: layouts/base.njk
 templateClass: tmpl-notes
+description: "{{ description }}"
 ---
 <div class="h-full note">
   {# Post header info #}
   <div class="pb-4">
     <h1 class="text-3xl tracking-tight font-bold pb-2">{{title}}</h1>
-    <p>By: {{ author }}</p>
-    <p>Rating: {{ rating }}</p>
-    {%- if link -%}
-    <p>Link: <a class="text-blue-600 visited:text-purple-600" href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
+
+    {%- if type == "highlight" -%}
+      <p>By: {{ author }}</p>
+      <p>Rating: {{ rating }}</p>
+
+      {%- if link -%}
+      <p>Link: <a class="text-blue-600 visited:text-purple-600" href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
+      {%- endif -%}
     {%- endif -%}
+
 
     {%- for tag in tags | filterTagList %}
     {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
@@ -23,5 +29,11 @@ templateClass: tmpl-notes
   <div class="post-content">
     {{ content | safe }}
   </div>
+
+  {%- if updated_at -%}
+    <div class="updated-at mt-16">
+      <p><b>Last updated: </b><time class="pr-4" datetime="{{ updated_at | htmlDateString }}">{{ updated_at | readableDate }}</time></p>
+    </div>
+  {%- endif -%}
 </div>
 

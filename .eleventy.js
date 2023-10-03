@@ -3,6 +3,7 @@ const fs = require("fs");
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItLinkAttr = require("markdown-it-link-attributes");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -24,7 +25,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
-  eleventyConfig.addFilter("date", (date, format) => {
+  eleventyConfig.addFilter("date", (_, format) => {
     return DateTime.local().toFormat(format);
   });
 
@@ -64,6 +65,20 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("filterTagList", filterTagList);
 
+  function filterNotesList(notes) {
+    return (notes || []).filter(
+      (note) => note.data && note.data.type === "note",
+    );
+  }
+  eleventyConfig.addFilter("filterNotesList", filterNotesList);
+
+  function filterHighlightsList(notes) {
+    return (notes || []).filter(
+      (note) => note.data && note.data.type === "highlight",
+    );
+  }
+  eleventyConfig.addFilter("filterHighlightsList", filterHighlightsList);
+
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
@@ -78,15 +93,20 @@ module.exports = function (eleventyConfig) {
   let markdownLibrary = markdownIt({
     html: true,
     linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "before",
-      class: "direct-link",
-      symbol: "#",
-    }),
-    level: [1, 2, 3, 4],
-    slugify: eleventyConfig.getFilter("slugify"),
-  });
+  })
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        placement: "before",
+        class: "direct-link",
+        symbol: "#",
+      }),
+      level: [1, 2, 3, 4],
+      slugify: eleventyConfig.getFilter("slugify"),
+    })
+    .use(markdownItLinkAttr, {
+      attrs: { target: "_blank", rel: "noopener" },
+    });
+
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   eleventyConfig.setServerOptions({

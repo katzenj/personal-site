@@ -11,10 +11,14 @@ description: "{{ description }}"
     {%- if type == "highlight" -%}
       <p>By: {{ author }}</p>
       <p>Rating: {{ rating }}</p>
+      {%- if completed_on -%}
+      <p>Last read: <time datetime="{{ completed_on | htmlDateString}}">{{ completed_on | readableDate }}</time></p>
+      {%- endif -%}
 
       {%- if link -%}
       <p>Link: <a class="text-blue-600 visited:text-purple-600" href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
       {%- endif -%}
+
     {%- endif -%}
 
 

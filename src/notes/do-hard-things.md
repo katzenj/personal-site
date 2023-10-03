@@ -7,6 +7,7 @@ link:
   title: "Bookshop"
   url: https://bookshop.org/p/books/do-hard-things-why-we-get-resilience-wrong-and-the-surprising-science-of-real-toughness-steve-magness/18829968
 description: My notes and highlights from reading Do Hard Things by Steve Magness.
+completed_on: 2023-08-20
 tags:
   - highlights
   - books
@@ -68,4 +69,4 @@ layout: layouts/note.njk
 - Remember from chapter 7 that when we switch from first person to either second or third person, we are putting distance between what’s occurring and our response to it. This doesn’t just apply to our inner dialogue, but journaling using second or third person can also help us process our emotions.
 - You can’t force cohesion or unity. It doesn’t come from trust falls, gimmicky bonding activities, or forced interaction. It comes from being real. From allowing people to lower their defenses and feel comfortable enough to be who they are. You can’t force it. All you can do is create the space for it to happen. The magic wasn’t in Popovich’s team dinners. It was in his creating space for genuine interaction.
 - Coyle makes the case that contrary to the way we traditionally think about it, we don’t need trust before we can become vulnerable. The opposite is true. In order to trust, we first must be vulnerable.
-- Being open and vulnerable sends an invitation to the person sitting across from you that you trust them. If that signal is reciprocated, that trust between the pair
+- Being open and vulnerable sends an invitation to the person sitting across from you that you trust them. If that signal is reciprocate

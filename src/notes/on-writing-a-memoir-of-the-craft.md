@@ -7,6 +7,7 @@ link:
   title: "Bookshop"
   url: https://bookshop.org/p/books/on-writing-a-memoir-of-the-craft-stephen-king/14560198
 description: My notes and highlights from reading On Writing by Steven King.
+completed_on: 2023-02-08
 tags:
   - highlights
   - books

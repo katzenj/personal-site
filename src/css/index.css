@@ -3,138 +3,167 @@
 @tailwind utilities;
 
 .page-header {
-  @apply text-2xl tracking-tight font-bold
+  @apply text-2xl tracking-tight font-bold;
 }
 
 .post-tag {
-  @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200
+  @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200;
 }
 
 .post-content h1 {
-  @apply text-2xl mt-6 mb-2 font-bold
+  @apply text-2xl mt-6 mb-2 font-bold;
 }
 
 .post-content h2 {
-  @apply text-xl mt-6 mb-2 font-semibold
+  @apply text-xl mt-6 mb-2 font-semibold;
 }
 
 .post-content h3 {
-  @apply text-lg mt-6 mb-2 font-medium
+  @apply text-lg mt-6 mb-2 font-medium;
 }
 
 .post-content a {
-  @apply text-teal-700 hover:underline
+  @apply text-teal-700 hover:underline;
 }
 
 .post-content p {
-  @apply mb-4
+  @apply mb-4;
 }
 
 .post-content ul {
-  @apply list-disc ml-8
+  @apply list-disc ml-8;
+}
+
+.post-content > ul {
+  @apply my-2;
+}
+
+.post-content ol {
+  @apply list-decimal ml-8;
+}
+
+.post-content > ol {
+  @apply my-2;
 }
 
 .post-content pre[class*="language-"] {
-  @apply my-4 p-4
+  @apply my-4 p-4;
 }
 
-.post-content code[class*="language-"], .post-content pre[class*="language-"] {
-	font-size: 14px;
-	line-height: 1.375;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
-	tab-size: 2;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	background: #272822;
-	color: #f8f8f2;
+.post-content code[class*="language-"],
+.post-content pre[class*="language-"] {
+  font-size: 14px;
+  line-height: 1.375;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  background: #272822;
+  color: #f8f8f2;
 }
 
 .post-content h2 > a {
-	@apply -ml-[18px]
+  @apply -ml-[18px];
 }
 
 .post-content h3 > a {
-	@apply -ml-[16px]
+  @apply -ml-[16px];
 }
 
-.token.comment, .token.prolog, .token.doctype, .token.cdata {
-	color: #75715e;
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #75715e;
 }
 .token.punctuation {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 .token.namespace {
-	opacity: .7;
+  opacity: 0.7;
 }
-.token.operator, .token.boolean, .token.number {
-	color: #fd971f;
+.token.operator,
+.token.boolean,
+.token.number {
+  color: #fd971f;
 }
 .token.property {
-	color: #f4bf75;
+  color: #f4bf75;
 }
 .token.tag {
-	color: #66d9ef;
+  color: #66d9ef;
 }
 .token.string {
-	color: #a1efe4;
+  color: #a1efe4;
 }
 .token.selector {
-	color: #ae81ff;
+  color: #ae81ff;
 }
 .token.attr-name {
-	color: #fd971f;
+  color: #fd971f;
 }
-.token.entity, .token.url, .language-css .token.string, .style .token.string {
-	color: #a1efe4;
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a1efe4;
 }
-.token.attr-value, .token.keyword, .token.control, .token.directive, .token.unit {
-	color: #a6e22e;
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+  color: #a6e22e;
 }
-.token.statement, .token.regex, .token.atrule {
-	color: #a1efe4;
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #a1efe4;
 }
-.token.placeholder, .token.variable {
-	color: #66d9ef;
+.token.placeholder,
+.token.variable {
+  color: #66d9ef;
 }
 .token.deleted {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 .token.inserted {
-	text-decoration: none;
+  text-decoration: none;
 }
 .token.italic {
-	font-style: italic;
+  font-style: italic;
 }
-.token.important, .token.bold {
-	font-weight: bold;
+.token.important,
+.token.bold {
+  font-weight: bold;
 }
 .token.important {
-	color: #f92672;
+  color: #f92672;
 }
 .token.entity {
-	cursor: help;
+  cursor: help;
 }
 pre > code.highlight {
-	outline: 0.4em solid #f92672;
-	outline-offset: .4em;
+  outline: 0.4em solid #f92672;
+  outline-offset: 0.4em;
 }
 
 @media only screen and (max-device-width: 480px) {
-	.menu {
-		display: none
-	}
+  .menu {
+    display: none;
+  }
 }
 
 @media only screen and (min-device-width: 480px) {
-	.footer-menu {
-		display: none
-	}
+  .footer-menu {
+    display: none;
+  }
 }

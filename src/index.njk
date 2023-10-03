@@ -15,7 +15,7 @@ layout: layouts/home.njk
 
   {# Show my ~musings~ #}
   <h1 class="page-header mt-12">Musings</h1>
-  {% set postslist = collections.posts | head(-3) %}
+  {% set postslist = collections.posts | reverse | head(-3) %}
   {% set postslistCounter = collections.posts | length %}
   {% include "postslist.njk" %}
 

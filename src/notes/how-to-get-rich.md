@@ -15,8 +15,6 @@ layout: layouts/note.njk
 ---
 
 ## Highlights
-- If it flies, floats or fornicates, always rent it—it’s cheaper in the long run.
-  - Note: I agree with the first two (flies and floats). I don't agree with the last.
 - fear of failing in the eyes of the world is the single biggest impediment to amassing wealth.
 - Inclinations are easy to list. Aptitude is far less so. Trial and error, combined with fierce determination and a willingness to discard cherished perceptions about ourselves, is the best that I can suggest.
 - “Luck is preparation multiplied by opportunity.” — SENECA, ROMAN PHILOSOPHER “The harder I practiced, the luckier I got.” — GARY PLAYER, GOLF CHAMPION “Luck is a dividend of sweat.” —RAY KROC, MCDONALD’S FOUNDER
@@ -51,7 +49,8 @@ layout: layouts/note.njk
 - Never stop looking for talent and promoting talent. This single suggestion will keep anyone rich. Talent is all most companies consist of.
 - No deal is a “must-do” deal.
 
-## TL;DR
+<br/>
+
 1. Analyze your need. Desire is insufficient. Compulsion is mandatory. 
 2. Cut loose from negative influences. Never give in. Stay the course.
 3. Ignore “great ideas.” Concentrate on great execution. 

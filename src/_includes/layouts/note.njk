@@ -9,7 +9,7 @@ description: "{{ description }}"
     <h1 class="text-3xl tracking-tight font-bold pb-2">{{title}}</h1>
 
     {%- if type == "highlight" -%}
-      <p>By: {{ author }}</p>
+      <p>Author: {{ author }}</p>
       <p>Rating: {{ rating }}</p>
       {%- if completed_on -%}
       <p>Last read: <time datetime="{{ completed_on | htmlDateString}}">{{ completed_on | readableDate }}</time></p>

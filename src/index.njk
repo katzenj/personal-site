@@ -4,18 +4,18 @@ layout: layouts/home.njk
 
 <div class="">
   {# Show my notes and book highlights #}
-  <h1 class="page-header">Notes</h1>
-  {% set notesList = collections.notes | head(-3) %}
+  <h1 class="page-header">Highlights & Notes</h1>
+  {% set notesList = collections.sortedNotes | head(3) %}
   {% set notesListCounter = collections.notes | length %}
   {% include "noteslist.njk" %}
 
   {%- if notesListCounter > 3 %}
-  <p class="pt-4">More notes/highlights can be found <a class="underline" href="{{ '/notes/' | url }}">here</a>.</p>
+  <p class="pt-4">More highlights/notes can be found <a class="underline" href="{{ '/notes/' | url }}">here</a>.</p>
   {%- endif %}
 
   {# Show my ~musings~ #}
   <h1 class="page-header mt-12">Musings</h1>
-  {% set postslist = collections.posts | reverse | head(-3) %}
+  {% set postslist =  collections.sortedPosts | head(3) %}
   {% set postslistCounter = collections.posts | length %}
   {% include "postslist.njk" %}
 

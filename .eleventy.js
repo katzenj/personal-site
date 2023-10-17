@@ -89,6 +89,24 @@ module.exports = function (eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  function sortByDateDescending(collection) {
+    const arr = Array.from(collection);
+    arr.sort((a, b) => b.data.date - a.data.date);
+    return arr;
+  }
+
+  eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
+    return sortByDateDescending(
+      collectionApi.getFilteredByGlob("**/posts/*.md"),
+    );
+  });
+
+  eleventyConfig.addCollection("sortedNotes", function (collectionApi) {
+    return sortByDateDescending(
+      collectionApi.getFilteredByGlob("**/notes/*.md"),
+    );
+  });
+
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,

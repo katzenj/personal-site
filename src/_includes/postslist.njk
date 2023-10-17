@@ -1,6 +1,6 @@
 <div class="pt-2">
   <ul>
-  {% for post in postslist | reverse %}
+  {% for post in postslist %}
     <li class="py-1">
       <a href="{{ post.url | url }}" aria-label="Go to page for post {{post.data.title}}" class="text-lg font-medium text-teal-700 pr-2 hover:underline">
         {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}

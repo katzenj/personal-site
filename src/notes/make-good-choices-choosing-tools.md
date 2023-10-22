@@ -3,8 +3,7 @@ title: Make good choices when choosing tools
 type: note
 description: Thoughts on choosing tools.
 tags:
-  - notes
-  - seedling
+  - seed
 updated_at: 2023-10-02
 layout: layouts/note.njk
 ---

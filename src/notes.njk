@@ -16,7 +16,7 @@ eleventyImport:
   <p class="my-4">A list of my book highlights and other random notes.</p>
 
   <div class="pt-2">
-  {% set notesList = collections.notes %}
+  {% set notesList = collections.sortedNotes %}
   {% include "noteslist.njk" %}
   </div>
 </div>

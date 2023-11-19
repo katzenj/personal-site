@@ -7,7 +7,10 @@ module.exports = {
         "16px": "16px",
         "18px": "18px",
       },
+      minWidth: {
+        "160px": "160px",
+      },
     },
   },
   plugins: [],
-}
+};

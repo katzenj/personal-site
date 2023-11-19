@@ -1,0 +1,230 @@
+---
+layout: layouts/home.njk
+title: Breath Pacer
+description: A pacer I use for breathing exercises
+permalink: /breath-pacer/
+---
+<style>
+  .breathing-circle {
+    border-radius: 50%;
+  }
+</style>
+<div
+  class="flex flex-col items-center w-full h-full align-center justify-center pb-32"
+>
+  <div class="mt-12 mb-24 lg:mt-32 lg:mb-36">
+    <div
+      class="breathing-circle w-32 h-32 lg:w-56 lg:h-56 border-teal-700 border-4 text-center align-middle table-cell"
+      id="breathing-circle"
+    >
+      <span id="action-text" ari>Inhale</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 gap-4 md:gap-12 md:grid-cols-2 xl:grid-cols-4">
+    <div class="flex flex-col justify-center items-center">
+      <p>Inhale</p>
+      <div>
+        <button
+          id="inhale-decrement"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          -
+        </button>
+        <span class="mx-4" id="inhale">5</span>
+        <button
+          id="inhale-increment"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          +
+        </button>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <p>Hold at top</p>
+      <div>
+        <button
+          id="hold-decrement"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          -
+        </button>
+        <span class="mx-4" id="hold">3</span>
+        <button
+          id="hold-increment"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          +
+        </button>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <p>Exhale</p>
+      <div>
+        <button
+          id="exhale-decrement"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          -
+        </button>
+        <span class="mx-4" id="exhale">5</span>
+        <button
+          id="exhale-increment"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          +
+        </button>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center">
+      <p>Hold at bottom</p>
+      <div>
+        <button
+          id="endHold-decrement"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          -
+        </button>
+        <span class="mx-4" id="endHold">2</span>
+        <button
+          id="endHold-increment"
+          class="w-8 h-8 border-none bg-gray-200 cursor-pointer"
+        >
+          +
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-8">
+    <button
+      class="border-4 rounded-md border-teal-700 py-1 px-2 font-semibold"
+      onclick="updateConfig()"
+    >
+      Set Breathing Pace
+    </button>
+  </div>
+</div>
+<script>
+  let inhaleDuration = 5000;
+  let holdDuration = 3000;
+  let exhaleDuration = 5000;
+  let endHoldDuration = 2000;
+
+  document
+    .getElementById("inhale-decrement")
+    .addEventListener("click", () => {
+      if (inhaleDuration <= 0) return;
+      inhaleDuration -= 1000;
+      document.getElementById("inhale").innerHTML = inhaleDuration / 1000;
+    });
+
+  document
+    .getElementById("inhale-increment")
+    .addEventListener("click", () => {
+      inhaleDuration += 1000;
+      document.getElementById("inhale").innerHTML = inhaleDuration / 1000;
+    });
+
+  document
+    .getElementById("hold-decrement")
+    .addEventListener("click", () => {
+      if (holdDuration <= 0) return;
+      holdDuration -= 1000;
+      document.getElementById("hold").innerHTML = holdDuration / 1000;
+    });
+
+  document
+    .getElementById("hold-increment")
+    .addEventListener("click", () => {
+      holdDuration += 1000;
+      document.getElementById("hold").innerHTML = holdDuration / 1000;
+    });
+
+  document
+    .getElementById("exhale-decrement")
+    .addEventListener("click", () => {
+      if (exhaleDuration <= 0) return;
+      exhaleDuration -= 1000;
+      document.getElementById("exhale").innerHTML = exhaleDuration / 1000;
+    });
+
+  document
+    .getElementById("exhale-increment")
+    .addEventListener("click", () => {
+      exhaleDuration += 1000;
+      document.getElementById("exhale").innerHTML = exhaleDuration / 1000;
+    });
+
+  document
+    .getElementById("endHold-decrement")
+    .addEventListener("click", () => {
+      if (endHoldDuration <= 0) return;
+      endHoldDuration -= 1000;
+      document.getElementById("endHold").innerHTML = endHoldDuration / 1000;
+    });
+
+  document
+    .getElementById("endHold-increment")
+    .addEventListener("click", () => {
+      endHoldDuration += 1000;
+      document.getElementById("endHold").innerHTML = endHoldDuration / 1000;
+    });
+
+  const circle = document.getElementById("breathing-circle");
+  const actionText = document.getElementById("action-text");
+  let currentAnimation;
+
+  function updateConfig() {
+    if (currentAnimation) {
+      currentAnimation.cancel()
+    }
+    animateBreath(); // Restart the animation with new values
+  }
+
+  function animateBreath() {
+    const totalDuration =
+      inhaleDuration + holdDuration + exhaleDuration + endHoldDuration;
+
+    const inhaleKeyFrame = inhaleDuration / totalDuration;
+    const holdKeyFrame = (inhaleDuration + holdDuration) / totalDuration;
+    const exhaleKeyFrame =
+      (inhaleDuration + holdDuration + exhaleDuration) / totalDuration;
+    const endHoldKeyFrame = 1;
+
+    const keyframes = [
+      { transform: "scale(2)", offset: inhaleKeyFrame },
+      { transform: "scale(2)", offset: holdKeyFrame },
+      { transform: "scale(1)", offset: exhaleKeyFrame },
+      { transform: "scale(1)", offset: endHoldKeyFrame },
+    ];
+    const options = {
+      duration: totalDuration,
+      iterations: Infinity,
+    };
+
+    currentAnimation = circle.animate(keyframes, options);
+    updateBreathText();
+  }
+
+  function updateBreathText() {
+    actionText.textContent = "Inhale";
+
+    setTimeout(() => {
+      actionText.textContent = "Hold";
+
+      setTimeout(() => {
+        actionText.textContent = "Exhale";
+
+        setTimeout(() => {
+          actionText.textContent = "Hold";
+
+          setTimeout(updateBreathText, endHoldDuration);
+        }, exhaleDuration);
+      }, holdDuration);
+    }, inhaleDuration);
+  }
+</script>

@@ -4,7 +4,7 @@
   "private": true,
   "description": "Some tinkering",
   "scripts": {
-    "clean": "rimraf _site",
+    "clean": "rm -rf _site",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "watch": "npx @11ty/eleventy --watch",
     "start": "npx @11ty/eleventy --serve",
@@ -15,7 +15,7 @@
     "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
     "dev": "npm-run-all clean --parallel dev:*",
     "build": "NODE_ENV=production npm-run-all clean build:eleventy build:tailwind",
-    "ci": "npm run clean && npm install"
+    "ci": "bun run clean && bun install"
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",

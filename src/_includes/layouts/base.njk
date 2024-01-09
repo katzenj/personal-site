@@ -82,8 +82,11 @@
         <div class="footer-menu flex flex-row place-content-center items-end mb-4">
           {% include "menu-items.njk" %}
         </div>
-        <p>© Jordan Katzen {{ "now" | date("yyyy")}}</p>
+        <p>© Jordan Katzen <span id="current-year"></span></p>
       </div>
     </footer>
   </body>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </html>

@@ -62,9 +62,6 @@ American Kingpin — [link](https://www.goodreads.com/en/book/show/31920777)
 
 Fantastic read about the founder of the Silk Road (dark-web site to buy almost anything — drugs, weapons, …), Ross Ulbricht. It read more like a story than anything, which was fine. Some portions of the story seem generously extrapolated from research. The chapter about research provided some insight, but didn't change that the book often read more like a story than anything else. Chapters would often end with some suspenseful point like "little did Ross know, he was on the DHS target list." Definitely entertaining, but it sometimes felt like it detracted from the core story.
 
-Tiramisu Blog — [link](https://www.notion.so/Notes-on-self-001-baa1fcaf6cb64a3e9d326f9761810687)
-
-I’m not sure who writes this, but I stumbled upon it last week. I enjoyed several writings like the one about [Tom Sachs](https://tiramisu.bearblog.dev/tom-sachs/) and [eating alone](https://tiramisu.bearblog.dev/on-eating-alone/). I also appreciate that the author often links to other sites/articles like one about [half-assing work](https://www.lesswrong.com/posts/ijYCZSQvgNeaQqcHN/half-assing-it-with-everything-you-ve-got), which end up providing even more value.
 
 Dan Wang’s 2022 Letter — [link](https://danwang.co/2022-letter/)
 

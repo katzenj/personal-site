@@ -4,11 +4,11 @@ type: note
 description: Thoughts on choosing tools.
 tags:
   - seed
-updated_at: 2023-10-02
+updated_at: 2024-01-24
 layout: layouts/note.njk
 ---
 
-Choosing tools matters in writing (per [On Writing: A Memoir of the Craft](/notes/on-writing-a-memoir-of-the-craft)) and programming.
+Choosing tools matters in writing (per Stephen King's [On Writing: A Memoir of the Craft](https://bookshop.org/p/books/on-writing-a-memoir-of-the-craft-stephen-king/14560198?ean=9781982159375)On Writing: A Memoir of the Craft</u>) and programming.
 
 When writing, it’s important to choose a tool that gets out of the way and doesn’t bog you down with features, settings, and other tweaks that would otherwise take up time. Pick a tool that allows you to get words down, whether on paper or online.
 

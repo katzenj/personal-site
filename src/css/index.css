@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: "Noto Serif", serif;
+  }
+}
+
 .page-header {
   @apply text-2xl tracking-tight font-bold;
 }

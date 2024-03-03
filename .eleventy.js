@@ -14,11 +14,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/static");
 
-  eleventyConfig.addCollection("notes", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/notes/*.md");
+  eleventyConfig.addCollection("musings", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/musings/*.md");
   });
 
-  eleventyConfig.addWatchTarget("src/notes/*.md");
+  eleventyConfig.addWatchTarget("src/musings/*.md");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -30,9 +30,9 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-      "LLL dd, yyyy",
-    );
+    return DateTime.fromJSDate(dateObj, {
+      zone: "America/Los_Angeles",
+    }).toLocaleString(DateTime.DATE_MED);
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -58,12 +58,12 @@ module.exports = function (eleventyConfig) {
   });
 
   function filterTagList(tags) {
-    return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1,
-    );
+    return (tags || []).filter((tag) => ["musings"].indexOf(tag) === -1);
   }
 
   eleventyConfig.addFilter("filterTagList", filterTagList);
+
+  eleventyConfig.addShortcode("sort", (tags) => tags.sort());
 
   function filterNotesList(notes) {
     return (notes || []).filter(
@@ -86,7 +86,7 @@ module.exports = function (eleventyConfig) {
       (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
 
-    return filterTagList([...tagSet]);
+    return filterTagList([...tagSet]).sort();
   });
 
   function sortByDateDescending(collection) {
@@ -95,15 +95,21 @@ module.exports = function (eleventyConfig) {
     return arr;
   }
 
-  eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
-    return sortByDateDescending(
-      collectionApi.getFilteredByGlob("**/posts/*.md"),
-    );
-  });
+  // eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
+  //   return sortByDateDescending(
+  //     collectionApi.getFilteredByGlob("**/posts/*.md"),
+  //   );
+  // });
+  //
+  // eleventyConfig.addCollection("sortedNotes", function (collectionApi) {
+  //   return sortByDateDescending(
+  //     collectionApi.getFilteredByGlob("**/notes/*.md"),
+  //   );
+  // });
 
-  eleventyConfig.addCollection("sortedNotes", function (collectionApi) {
+  eleventyConfig.addCollection("sortedMusings", function (collectionApi) {
     return sortByDateDescending(
-      collectionApi.getFilteredByGlob("**/notes/*.md"),
+      collectionApi.getFilteredByGlob("**/musings/*.md"),
     );
   });
 

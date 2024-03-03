@@ -1,0 +1,20 @@
+<div class="pt-2">
+  <ul>
+  {% for ele in data %}
+    <li class="py-1">
+      <a href="{{ ele.url | url }}" aria-label="Go to page for highlight {{ele.data.title}}" class="text-lg font-medium text-teal-700 pr-2 hover:underline">
+        {% if ele.data.title %}{{ ele.data.title }}{% else %}<code>{{ ele.url }}</code>{% endif %}
+      </a>
+      {% if ele.date %}
+        <time class="pr-4" datetime="{{ ele.date | htmlDateString }}">{{ ele.date | readableDate }}</time>
+      {% endif %}
+      {% for tag in ele.data.tags | filterTagList | sort %}
+        {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag" aria-label="Go to page for tag {{tag}}">
+          {{ tag }}
+        </a>
+      {% endfor %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>

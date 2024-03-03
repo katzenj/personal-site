@@ -2,15 +2,17 @@
 layout: layouts/home.njk
 title: Archive
 description: All of my previous posts, essays, thoughts, etc.
-permalink: /posts/
+permalink: /musings/
 eleventyNavigation:
   key: Archive
-  order: 2
+  order: 3
 ---
 
 <div class="">
   <h1 class="page-header">Archive</h1>
 
-  {% set postslist = collections.posts %}
-  {% include "postslist.njk" %}
+  <div class="pt-2">
+    {% set data = collections.sortedMusings %}
+    {% include "musingslist.njk" %}
+  </div>
 </div>

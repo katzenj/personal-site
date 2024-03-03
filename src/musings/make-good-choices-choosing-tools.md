@@ -4,6 +4,7 @@ type: note
 description: Thoughts on choosing tools.
 tags:
   - seed
+date: 2024-01-24
 updated_at: 2024-01-24
 layout: layouts/note.njk
 ---

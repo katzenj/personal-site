@@ -1,0 +1,56 @@
+---
+layout: layouts/home.njk
+title: Reading
+description: Reads and stuff
+permalink: /reading/
+updated: 2024-03-02
+eleventyNavigation:
+  key: Reading
+  order: 1
+---
+
+<div class="">
+  <h1 class="page-header">Reading</h1>
+  <p>Things I'm reading or have read that were important enough to note here.</p>
+
+  <div class="mt-4 mb-8">
+
+    {%- if recs.articlesList %}
+    <h3 class="text-lg font-semibold">Articles</h3>
+    <div class="md:ml-8 mb-4">
+      <ul class="list-disc">
+        {% for article in recs.articlesList %}
+          <li class="py-1">
+            <a href="{{ article.url | url }}" target="_blank" aria-label="Go to article line for article {{article.title}}" class="mr-1 underline">
+              {{ article.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+
+    {%- if recs.booksList %}
+    <h3 class="text-lg pt-8 md:pt-0 font-semibold">Books</h3>
+    <div class="books-list md:ml-8 mb-4">
+      <ul class="list-disc">
+        {% for book in recs.booksList %}
+          <li class="py-1">
+            <a href="{{ book.url | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">{{ book.title }}</a>
+            by {{ book.author }}
+
+            {%- if book.review %}
+              <p class="pt-1 ml-8 w-2/3">{{ book.review }}</p>
+            {%- endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%- endif %}
+
+  </div>
+
+  <div class="mt-16">
+    <p><b>Last updated:</b> <time>{{ updated | readableDate }}</time></p>
+  </div>
+</div>

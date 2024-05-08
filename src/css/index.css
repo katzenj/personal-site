@@ -4,7 +4,19 @@
 
 @layer base {
   html {
-    font-family: "Noto Serif", serif;
+    font-family: "Noto Sans", sans-serif;
+  }
+}
+
+.prose-list {
+  @apply list-disc ps-5;
+
+  li::marker {
+    @apply text-slate-300;
+  }
+
+  li {
+    @apply my-2;
   }
 }
 

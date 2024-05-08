@@ -1,0 +1,21 @@
+{
+  "books": [
+    {
+      "title": "Wherever You Go, There You Are",
+      "detail": "",
+      "link": "https://bookshop.org/p/books/wherever-you-go-there-you-are-mindfulness-meditation-in-everyday-life-jon-kabat-zinn/19968905"
+    },
+    {
+      "title": "San Fransicko",
+      "detail": "",
+      "link": "https://bookshop.org/p/books/san-fransicko-why-progressives-ruin-cities-michael-shellenberger/17143892?ean=9780063093621"
+    }
+  ],
+  "articles": [],
+  "tv": [
+    {
+      "title": "Young Royals",
+      "detail": "Wow, just wow."
+    }
+  ]
+}

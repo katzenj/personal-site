@@ -39,8 +39,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
-      zone: "America/Los_Angeles",
+      zone: "UTC",
     }).toLocaleString(DateTime.DATE_MED);
+  });
+
+  eleventyConfig.addFilter("readableDateString", (dateStr) => {
+    return DateTime.fromFormat(dateStr, "yyyy-MM-dd", {}).toLocaleString(
+      DateTime.DATE_MED,
+    );
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

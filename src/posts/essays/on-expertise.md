@@ -17,11 +17,8 @@ But I don't know any of those things deeply enough to consider myself an expert.
 
 In short, I'm an expert in being a jack of all trades. I excel at spreading myself across multiple disciplines and pursuits without ever getting good enough at one thing to consider myself an expert. I spend just enough time on a subject to become proficient (according to my own standards) before either moving on or relaxing in the zone of proficiency.
 
-<br />
 So, how might you become an expert in being proficient in many things but a master of none? Here are five steps:
 
-<br />
-<br />
 
 **Step 1** <br/>
 Pick a passion or interest of yours. It could be painting, hunting, or knitting throw pillows. Have fun with it! What you pick doesn’t really matter, just that you have some interest in it.
@@ -37,8 +34,6 @@ Reach the zone of proficiency. Congrats, you’ve reached what I have deemed “
 
 **Step 5** <br/>
 Deprioritize your chosen subject. Stop practicing as frequently. Maybe you only paint a couple days a week. Or you keep running every few days but stop reading so much about different routines and how to optimize your training. At this point, you’ve lost the passion and intrigue you felt at step one. Your chosen subject is still interesting, but knitting every day was getting old, so now you just do it when you have time. You can still tell your friends what they’re doing wrong when you have your knitting club meetings, but you’ve stopped really progressing.
-
-<br/>
 
 By following those five steps, you can become an expert in being an expert of absolutely nothing. Those steps make up the simple framework that I continue to use throughout my life.
 

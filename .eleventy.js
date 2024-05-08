@@ -14,11 +14,19 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/static");
 
-  eleventyConfig.addCollection("musings", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/musings/*.md");
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/**/*.md");
   });
 
-  eleventyConfig.addWatchTarget("src/musings/*.md");
+  eleventyConfig.addCollection("essays", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/potsts/essays/*.md");
+  });
+
+  eleventyConfig.addCollection("notes", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/notes/*.md");
+  });
+
+  eleventyConfig.addWatchTarget("src/posts/**/*.md");
 
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
@@ -58,7 +66,9 @@ module.exports = function (eleventyConfig) {
   });
 
   function filterTagList(tags) {
-    return (tags || []).filter((tag) => ["musings"].indexOf(tag) === -1);
+    return (tags || []).filter(
+      (tag) => ["essays", "posts", "notes"].indexOf(tag) === -1,
+    );
   }
 
   eleventyConfig.addFilter("filterTagList", filterTagList);
@@ -107,9 +117,21 @@ module.exports = function (eleventyConfig) {
   //   );
   // });
 
-  eleventyConfig.addCollection("sortedMusings", function (collectionApi) {
+  eleventyConfig.addCollection("sortedNotes", function (collectionApi) {
     return sortByDateDescending(
-      collectionApi.getFilteredByGlob("**/musings/*.md"),
+      collectionApi.getFilteredByGlob("**/notes/*.md"),
+    );
+  });
+
+  eleventyConfig.addCollection("sortedEssays", function (collectionApi) {
+    return sortByDateDescending(
+      collectionApi.getFilteredByGlob("**/essays/*.md"),
+    );
+  });
+
+  eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
+    return sortByDateDescending(
+      collectionApi.getFilteredByGlob("**/posts/**/*.md"),
     );
   });
 

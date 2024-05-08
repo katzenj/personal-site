@@ -1,0 +1,15 @@
+---
+layout: layouts/home.njk
+title: Notes
+description: All of my previous notes/thoughts.
+permalink: /posts/notes/
+---
+
+<div class="">
+  <h1 class="page-header">Notes</h1>
+
+  <div class="pt-2">
+    {% set data = collections.sortedNotes %}
+    {% include "writinglist.njk" %}
+  </div>
+</div>

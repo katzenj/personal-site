@@ -17,7 +17,6 @@ I briefly touch on my phrase-of-focus for the next month, "consume less."
 
 And then I shed a little light on what my pre-half Ironman (70.3) training looks like.
 
-<br />
 <hr />
 
 ## On my mind
@@ -40,7 +39,6 @@ It’s almost like I too have to stop swimming against the current and see what 
 
 The above might seem self-centered. It focuses almost exclusively on my attempts to convey my own thoughts on how this friend should move forward. While this is a retrospective on my own thoughts, it’s important to recognize my friend is the main character of this story and I’m a supporting character. I read a passage from a book today that said something to the effect of, just be there for the person. Whether it’s your presence, a gift, or words, be there to support this person.
 
-<br />
 <hr />
 
 ## Reflection
@@ -53,7 +51,6 @@ I’ve been struggling a bit with mindless social media use. It’s too easy to 
 
 Consuming less social media and material goods are undoubtedly beneficial. But consuming less information is an interesting idea that popped up recently. I consume a lot of disparate information, from newsletters to fashion columns to posts on HackerNews. I enjoy that and feel I get value from it, but my ratio of input to output favors input far too heavily right now. My goal is to start outputting and creating more than I have been.
 
-<br />
 <hr />
 
 ## Reads / Learning
@@ -73,7 +70,6 @@ Not going to expand much on this because I couldn’t do so in any coherent mann
 
 I loved this quote from the book I’m reading — “’Her parents can buy her anything she wants. Why would she want some dumb thing I drew on the back of an envelope?’ Sam said. ‘I suppose…because her parents can buy her anything she wants.’”
 
-<br />
 <hr />
 
 ## Training Log
@@ -96,7 +92,6 @@ This was my second “full” week of swimming. It is still difficult and my for
 
 **Sunday:** Full-body workout
 
-<br />
 <hr />
 
 ## Closing Thoughts

@@ -14,7 +14,6 @@ layout: layouts/post.njk
 
 I do a short dive into discipline and my effort to consume less. Then, I mention a handful of reads I found interesting, particularly “Remembering Quartz’s Lauren Brown” — if you read anything, read that. Finally, a recap of my inconsistent and undisciplined week of training.
 
-<br />
 <hr />
 
 ## On my mind: discipline and consumption
@@ -45,7 +44,6 @@ As mentioned earlier, I’m subscribed to too many newsletters. Yet, for most of
 
 I haven't figured out if there are any easy steps to work on consuming more slowly. It might help to set aside time solely for reading newsletters and articles. Other than scheduling time for reading, I'll have to be more self-aware to prevent myself from multitasking and skimming. I’ll let you know if I find any quality advice while reading Stolen Focus.
 
-<br />
 <hr />
 
 ## Reads and other tidbits
@@ -68,7 +66,6 @@ Is it ironic or merely coincidental that after my “consume less” and “cut 
 
   I struggled to write a short blurb for this, so I’ll just use this quote to do it for me: “’The experience taught me that, despite all of the circumstances in life we can’t control, “happiness” is one thing you can. Happiness is not a feeling, but an orientation. It is an active approach to life, in a million small ways, that insists on persevering through shitty circumstances. Sure, this approach means that much of the time, you’re faking happiness before you feel it. But that’s when it’s most important.’”
 
-<br />
 <hr />
 
 ## Training log
@@ -96,7 +93,6 @@ Consistency is key and last week was anything but consistent. I missed a couple 
 **Sunday**: Full-body workout
 
 
-<br />
 <hr />
 
 ## Parting thoughts

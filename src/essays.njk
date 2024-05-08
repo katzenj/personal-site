@@ -1,0 +1,15 @@
+---
+layout: layouts/home.njk
+title: Essays
+description: All of my previous essays.
+permalink: /posts/essays/
+---
+
+<div class="">
+  <h1 class="page-header">Essays</h1>
+
+  <div class="pt-2">
+    {% set data = collections.sortedEssays %}
+    {% include "writinglist.njk" %}
+  </div>
+</div>

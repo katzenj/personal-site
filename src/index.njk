@@ -2,15 +2,32 @@
 layout: layouts/home.njk
 ---
 
-<div class="">
-  {# Show my ~musings~ #}
-  <h1 class="page-header">Musings</h1>
-  {% set data = collections.sortedMusings | head(4) %}
-  {% set counter = collections.sortedMusings | length %}
-  {% include "musingslist.njk" %}
+<div>
+  {# I guess tell the people who I am #}
+  <p class="mb-12">
+  Howdy. I'm Jordan, an engineer, wannabe writer, opinion provider, and reader. I currently work at Settle building the operating system for inventory-based businesses. 
+  This site is meant as a dumping ground for the occasional "essay" (if you can call it that), "note" (whatever that means), or whatever else I feel like putting here 🤗.
+  <p>
+   
+  
+  {# Show my ~essays~ #}
+  <h1 class="page-header">Essays</h1>
+  {% set data = collections.sortedEssays | head(4) %}
+  {% set counter = collections.sortedEssays | length %}
+  {% include "writinglist.njk" %}
 
   {%- if counter > 4 %}
-  <p class="pt-4">More musings can be found in <a class="underline" href="{{ '/musings' | url }}">the archive</a>.</p>
+  <p class="pt-4">More essays can be found in <a class="underline" href="{{ '/posts/notes' | url }}">the archive</a>.</p>
+  {%- endif %}
+
+  {# Show my ~notes~ #}
+  <h1 class="page-header mt-12">Notes</h1>
+  {% set data = collections.sortedNotes | head(4) %}
+  {% set counter = collections.sortedNotes | length %}
+  {% include "writinglist.njk" %}
+
+  {%- if counter > 4 %}
+  <p class="pt-4">More notes can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.</p>
   {%- endif %}
 
   {# List out my recs #}

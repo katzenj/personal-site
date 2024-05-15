@@ -21,7 +21,7 @@
 }
 
 .page-header {
-  @apply text-2xl tracking-tight font-bold;
+  @apply text-xl tracking-tight font-bold;
 }
 
 .post-tag {

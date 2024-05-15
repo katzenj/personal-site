@@ -9,14 +9,12 @@ eleventyNavigation:
 ---
 
 <div class="">
-  <h1 class="page-header">Archive</h1>
-
   <div class="pt-2">
-    <h2 class="text-xl tracking-tight font-semibold mt-4">Essays</h1>
+    <h1 class="page-header">Essays</h1>
     {% set data = collections.sortedEssays %}
     {% include "writinglist.njk" %}
 
-    <h2 class="text-xl tracking-tight font-semibold mt-12">Notes</h1>
+    <h1 class="page-header mt-12">Notes</h1>
     {% set data = collections.sortedNotes %}
     {% include "writinglist.njk" %}
   </div>

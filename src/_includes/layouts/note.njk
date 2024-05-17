@@ -6,7 +6,7 @@ description: "{{ description }}"
 <div class="h-full note">
   {# Post header info #}
   <div class="pb-4">
-    <h1 class="text-3xl tracking-tight font-bold pb-2">{{title}}</h1>
+    <h1 class="text-xl tracking-tight font-bold pb-2">{{title}}</h1>
 
     {%- if type == "highlight" -%}
       <p>Author: {{ author }}</p>
@@ -30,7 +30,7 @@ description: "{{ description }}"
     {%- endfor %}
   </div>
 
-  <div class="post-content">
+  <div class="post-content prose">
     {{ content | safe }}
   </div>
 

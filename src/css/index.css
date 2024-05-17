@@ -25,7 +25,7 @@
 }
 
 .post-tag {
-  @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200;
+  @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200 text-base;
 }
 
 .post-content a {

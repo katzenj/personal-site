@@ -2,20 +2,23 @@
   "books": [
     {
       "title": "Wherever You Go, There You Are",
+      "author": "Jon Kabat-Zinn",
       "detail": "",
       "link": "https://bookshop.org/p/books/wherever-you-go-there-you-are-mindfulness-meditation-in-everyday-life-jon-kabat-zinn/19968905"
     },
     {
-      "title": "San Fransicko",
+      "title": "The Best Minds",
+      "author": "Jonathan Rosen",
       "detail": "",
-      "link": "https://bookshop.org/p/books/san-fransicko-why-progressives-ruin-cities-michael-shellenberger/17143892?ean=9780063093621"
+      "link": "https://bookshop.org/p/books/the-best-minds-a-story-of-friendship-madness-and-the-tragedy-of-good-intentions-jonathan-rosen/18745743"
+    },
+    {
+      "title": "The Blade Itself",
+      "author": "Joe Abercrombie",
+      "detail": "",
+      "link": "https://bookshop.org/p/books/the-blade-itself-joe-abercrombie/112503?ean=9780316387316"
     }
   ],
   "articles": [],
-  "tv": [
-    {
-      "title": "Young Royals",
-      "detail": "Wow, just wow."
-    }
-  ]
+  "tv": []
 }

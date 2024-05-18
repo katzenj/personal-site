@@ -12,7 +12,10 @@ eleventyNavigation:
 <div>
   <h1 class="page-header">Now</h1>
   <p>
-    Working on finding meaning. We'll see how that goes.
+    Working on finding meaning. We'll see how that goes. I'm also training for the NYC Marathon! 
+    I will be running and raising money for <a href="https://www.achillesinternational.org/" class="underline" target="_blank">Achilles International</a>. 
+    Please <a class="italic underline" target="_blank" href="https://give.achillesinternational.org/jordan">donate</a> and support
+    athletes with disabilities in their training and in getting to the start (and finish) line!
   </p>
   <h2 class="text-xl font-semibold mt-8">Current media</h2>
 
@@ -23,6 +26,9 @@ eleventyNavigation:
         {% for book in currentMedia.books %}
           <li class="">
             <a href="{{ book.link | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="underline">{{ book.title }}</a>
+            {%- if book.author %}
+            <span class="text-sm text-slate-800">by {{ book.author }}</span>
+            {%- endif %}
 
             {%- if book.detail %}
               <p class="">{{ book.detail }}</p>

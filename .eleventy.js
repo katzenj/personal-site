@@ -43,6 +43,13 @@ module.exports = function (eleventyConfig) {
     }).toLocaleString(DateTime.DATE_MED);
   });
 
+  eleventyConfig.addFilter("readableTimestampString", (dateStr) => {
+    return DateTime.fromFormat(dateStr, "yyyy-MM-dd HH:mm:ss", { zone: "utc" })
+      .toLocal()
+      .setZone("America/Los_Angeles")
+      .toLocaleString(DateTime.DATETIME_MED);
+  });
+
   eleventyConfig.addFilter("readableDateString", (dateStr) => {
     return DateTime.fromFormat(dateStr, "yyyy-MM-dd", {}).toLocaleString(
       DateTime.DATE_MED,
@@ -110,18 +117,6 @@ module.exports = function (eleventyConfig) {
     arr.sort((a, b) => b.data.date - a.data.date);
     return arr;
   }
-
-  // eleventyConfig.addCollection("sortedPosts", function (collectionApi) {
-  //   return sortByDateDescending(
-  //     collectionApi.getFilteredByGlob("**/posts/*.md"),
-  //   );
-  // });
-  //
-  // eleventyConfig.addCollection("sortedNotes", function (collectionApi) {
-  //   return sortByDateDescending(
-  //     collectionApi.getFilteredByGlob("**/notes/*.md"),
-  //   );
-  // });
 
   eleventyConfig.addCollection("sortedNotes", function (collectionApi) {
     return sortByDateDescending(

@@ -5,7 +5,7 @@ module.exports = async function () {
 
 	/* This returns a promise */
 	return EleventyFetch(url, {
-		duration: "1m", // save for 1 hour
+		duration: "1h", // save for 1 hour
 		type: "json", // we’ll parse JSON for you
 	})
 }

@@ -1,22 +1,22 @@
 {
   "books": [
     {
-      "title": "Wherever You Go, There You Are",
-      "author": "Jon Kabat-Zinn",
-      "detail": "",
-      "link": "https://bookshop.org/p/books/wherever-you-go-there-you-are-mindfulness-meditation-in-everyday-life-jon-kabat-zinn/19968905"
-    },
-    {
-      "title": "The Best Minds",
-      "author": "Jonathan Rosen",
-      "detail": "",
-      "link": "https://bookshop.org/p/books/the-best-minds-a-story-of-friendship-madness-and-the-tragedy-of-good-intentions-jonathan-rosen/18745743"
-    },
-    {
-      "title": "The Blade Itself",
+      "title": "Last Argument of Kings",
       "author": "Joe Abercrombie",
       "detail": "",
-      "link": "https://bookshop.org/p/books/the-blade-itself-joe-abercrombie/112503?ean=9780316387316"
+      "link": "https://bookshop.org/p/books/last-argument-of-kings-joe-abercrombie/112510?ean=9780316387408"
+    },
+    {
+      "title": "In This Economy? How Money and Markets Really Work",
+      "author": "Kyla Scanlon",
+      "detail": "",
+      "link": "https://bookshop.org/p/books/in-this-economy-how-money-and-markets-really-work-kyla-scanlon/20065675?ean=9780593727874"
+    },
+    {
+      "title": "Scarcity Brain",
+      "author": "Michael Easter",
+      "detail": "",
+      "link": "https://bookshop.org/p/books/the-scarcity-brain-fix-your-craving-mindset-stop-chasing-more-and-rewire-your-habits-to-thrive-with-enough-michael-easter/19598243?ean=9780593236628"
     }
   ],
   "articles": [],

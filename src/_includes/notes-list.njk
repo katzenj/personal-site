@@ -1,0 +1,15 @@
+<div class="pt-2">
+  <ul>
+  {% for ele in data %}
+    <li class="py-1">
+      <a href="{{ ele.url | url }}" aria-label="Go to page {{ele.data.title}}" class="text-md font-medium text-teal-700 pr-2 hover:underline">
+        {% if ele.data.title %}{{ ele.data.title }}{% else %}<code>{{ ele.url }}</code>{% endif %}
+      </a>
+      {% if ele.date %}
+        <time class="pr-4" datetime="{{ ele.date | htmlDateString }}">{{ ele.date | readableDate }}</time>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+

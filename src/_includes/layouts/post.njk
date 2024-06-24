@@ -34,3 +34,19 @@ templateClass: tmpl-post
   {%- endif %}
   {%- endif %}
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const headerLinks = document.querySelectorAll('.direct-link');
+  headerLinks.forEach((header) => {
+    header.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = new URL(header.href);
+      const fullUrl = `${window.location.href}${url.hash}`;
+
+      navigator.clipboard.writeText(fullUrl).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    });
+  });
+});
+</script>

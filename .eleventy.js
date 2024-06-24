@@ -143,9 +143,9 @@ module.exports = function (eleventyConfig) {
   })
     .use(markdownItAnchor, {
       permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "before",
+        placement: "after",
         class: "direct-link",
-        symbol: "#",
+        symbol: "<i class=\"ph ph-link\"></i>",
       }),
       level: [1, 2, 3, 4],
       slugify: eleventyConfig.getFilter("slugify"),

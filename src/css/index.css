@@ -32,6 +32,10 @@
   @apply text-teal-700 hover:underline;
 }
 
+.post-content .direct-link {
+  @apply no-underline 
+}
+
 .post-content code[class*="language-"],
 .post-content pre[class*="language-"] {
   font-size: 14px;

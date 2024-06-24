@@ -20,9 +20,11 @@ templateClass: tmpl-post
     {{ content | safe }}
   </div>
 
-  {%- if collections.posts %}
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+  {%- if collections.sortedEssays %}
+  {# Previous will get the previous post in chronological order which would be the "next" element #}
+  {%- set previousPost = collections.sortedEssays | getNextCollectionItem(page) %}
+  {# Next will get the next post in chronological order (aka newest) which would be the "previous" element #}
+  {%- set nextPost = collections.sortedEssays | getPreviousCollectionItem(page) %}
   {%- if nextPost or previousPost %}
   <div class="py-12">
     -------

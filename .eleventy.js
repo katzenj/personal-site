@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -145,7 +143,7 @@ module.exports = function (eleventyConfig) {
       permalink: markdownItAnchor.permalink.ariaHidden({
         placement: "after",
         class: "direct-link",
-        symbol: "<i class=\"ph ph-link\"></i>",
+        symbol: '<i class="ph ph-link"></i>',
       }),
       level: [1, 2, 3, 4],
       slugify: eleventyConfig.getFilter("slugify"),

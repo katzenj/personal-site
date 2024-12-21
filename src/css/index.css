@@ -6,6 +6,19 @@
   html {
     font-family: "Funnel Sans", sans-serif;
   }
+
+  .prose * {
+    @apply text-black;
+  }
+  :is(.dark .prose *) {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .post-tag {
+    @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-teal-300 text-base dark:hover:bg-teal-700;
+  }
 }
 
 .prose-list {
@@ -22,10 +35,6 @@
 
 .page-header {
   @apply text-xl tracking-tight font-bold;
-}
-
-.post-tag {
-  @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-200 text-base;
 }
 
 .post-content a {

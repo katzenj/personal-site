@@ -3,37 +3,32 @@ layout: layouts/home.njk
 ---
 
 <div>
-  {# I guess tell the people who I am #}
-  <p class="mb-6">
-  Howdy. I'm Jordan, an engineer, wannabe writer, opinion provider, and reader. 
-  This site is meant as a dumping ground for the occasional "essay" (if you can call it that), "note" (whatever that means), and whatever else I feel like putting here 🤗.
-  <p>
-  
-  {# Show my ~essays~ #}
-  <h1 class="page-header">Essays</h1>
-  {% set data = collections.sortedEssays | head(4) %}
-  {% set counter = collections.sortedEssays | length %}
-  {% include "writinglist.njk" %}
+    {# I guess tell the people who I am #}
+    <p class="mb-6">
+        Howdy! I'm Jordan, an engineer, wannabe writer, opinion provider, and reader. I build software, get obsessed with a topic for a month before switching, and periodically update this site.
+    </p>
 
-  {%- if counter > 4 %}
-  <p class="pt-4">More essays can be found in <a class="underline" href="{{ '/posts/notes' | url }}">the archive</a>.</p>
-  {%- endif %}
-
-  {# Show my ~notes~ #}
-  <h1 class="page-header mt-12">Notes</h1>
-  {% set data = collections.sortedNotes | head(4) %}
-  {% set counter = collections.sortedNotes | length %}
-  {% include "notes-list.njk" %}
-
-  {%- if counter > 4 %}
-  <p class="pt-4">More notes can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.</p>
-  {%- endif %}
-
-  {# List out my recs #}
-  {% include "recs.njk" %}
-
-  <div class="hidden">
-    An occasionally (seldom) updated site with some musings and links to what I find interesting.
-  </div>
-
+    {# Show my ~essays~ #}
+    <h1 class="page-header">Essays</h1>
+    {% set data = collections.sortedEssays | head(4) %}
+    {% set counter = collections.sortedEssays | length %}
+    {% include "writinglist.njk" %}
+    {%- if counter > 4 %}
+        <p class="pt-4">
+            More essays can be found in <a class="underline" href="{{ '/posts/notes' | url }}">the archive</a>.
+        </p>
+    {%- endif %}
+    {# Show my ~notes~ #}
+    <h1 class="page-header mt-12">Notes</h1>
+    {% set data = collections.sortedNotes | head(4) %}
+    {% set counter = collections.sortedNotes | length %}
+    {% include "notes-list.njk" %}
+    {%- if counter > 4 %}
+        <p class="pt-4">
+            More notes can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.
+        </p>
+    {%- endif %}
+    {# List out my recs #}
+    {% include "recs.njk" %}
+    <div class="hidden">An occasionally (seldom) updated site with some musings and links to what I find interesting.</div>
 </div>

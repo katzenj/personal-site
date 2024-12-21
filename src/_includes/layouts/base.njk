@@ -64,7 +64,7 @@
           {% include "menu-items.njk" %}
         </div>
 
-        <div class="flex items-end">
+        <nav class="flex items-end">
           <ul class="list-none flex justify-evenly">
           {%- for entry in collections.all | eleventyNavigation %}
             <li class="font-semibold mx-2 hover:underline {% if entry.url == page.url %}underline{% endif %}">
@@ -72,7 +72,7 @@
             </li>
           {%- endfor %}
           </ul>
-        </div>
+        </nav>
       </div>
       <hr class="mt-6" />
     </header>

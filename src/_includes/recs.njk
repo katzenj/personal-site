@@ -36,6 +36,18 @@
       </ul>
     </div>
     {%- endif %}
+    {%- if recs.links %}
+    <h3 class="text-md pt-8 md:pt-0">Other</h3>
+    <div class="books-list ml-8 mb-4">
+      <ul class="list-disc">
+        {% for link in recs.links %}
+          <li class="py-1">
+            <a href="{{ link.url | url }}" target="_blank" aria-label="{{link.label}}" class="mr-1 underline">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {%- endif %}
 
   </div>
 </div>

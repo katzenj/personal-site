@@ -32,6 +32,10 @@
   @apply text-teal-700 hover:underline;
 }
 
+:is(.dark .post-content a) {
+  @apply text-teal-300;
+}
+
 .post-content .direct-link {
   @apply no-underline 
 }
@@ -134,13 +138,13 @@ pre > code.highlight {
   outline-offset: 0.4em;
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 640px) {
   .menu {
     display: none;
   }
 }
 
-@media only screen and (min-device-width: 480px) {
+@media only screen and (min-device-width: 640px) {
   .footer-menu {
     display: none;
   }

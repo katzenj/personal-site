@@ -1,13 +1,14 @@
-const { DateTime } = require("luxon");
-const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
-const markdownItLinkAttr = require("markdown-it-link-attributes");
+import { DateTime } from "luxon";
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItLinkAttr from "markdown-it-link-attributes";
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const pluginNavigation = require("@11ty/eleventy-navigation");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import EleventyPluginRobotsTxt from "eleventy-plugin-robotstxt";
 
-module.exports = function (eleventyConfig) {
+export default function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/static");
@@ -30,6 +31,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
+
+  /** @type {import("eleventy-plugin-robotstxt/typedefs.js").EleventyPluginRobotsTxtOptions} */
+  const eleventyPluginRobotsTxtOptions = {
+    rules: new Map([["Googlebot-Image", [{ disallow: "/" }]]]),
+    shouldBlockAIRobots: true,
+  };
+  eleventyConfig.addPlugin(
+    EleventyPluginRobotsTxt,
+    eleventyPluginRobotsTxtOptions,
+  );
 
   eleventyConfig.addFilter("date", (_, format) => {
     return DateTime.local().toFormat(format);
@@ -192,4 +203,4 @@ module.exports = function (eleventyConfig) {
       output: "_site",
     },
   };
-};
+}

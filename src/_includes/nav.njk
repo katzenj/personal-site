@@ -1,36 +1,21 @@
 <header class="my-8 ">
-  <div class="flex flex-row justify-between">
-    <div>
-      <h1 class="text-4xl font-bold tracking-tight text-teal-700 dark:text-teal-300"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+    <div class="flex md:flex-row flex-col justify-between">
+        <div>
+            <h1 class="text-4xl font-bold tracking-tight text-teal-700 dark:text-teal-300">
+                <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+            </h1>
+        </div>
+        <div class="menu flex flex-row place-content-center items-end">{% include "menu-items.njk" %}</div>
+        <nav class="flex items-end">
+            <ul id="nav-content" class="mt-2 grid grid-cols-4 md:flex md:flex-row">
+                {%- for entry in collections.all | eleventyNavigation %}
+                    <li class="font-semibold mx-2 underline-offset-2 hover:underline {% if entry.url == page.url %}underline{% endif %} block sm:inline-block sm:text-center py-2 sm:py-0 md:text-right text-left">
+                        <a href="{{ entry.url | url }}"
+                           aria-label="Link to page {{ entry.title }}">{{ entry.title }}</a>
+                    </li>
+                {%- endfor %}
+            </ul>
+        </nav>
     </div>
-
-    <div class="menu flex flex-row place-content-center items-end">
-      {% include "menu-items.njk" %}
-    </div>
-
-    <nav class="flex items-end">
-      <ul id="nav-content-web" class="hidden sm:block mt-2">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <li class="font-semibold mx-2 underline-offset-2 hover:underline {% if entry.url == page.url %}underline{% endif %} block sm:inline-block text-right sm:text-center py-2 sm:py-0">
-            <a href="{{ entry.url | url }}" aria-label="Link to page {{entry.title}}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-      </ul>
-
-      <div class="flex-col">
-      <div id="nav-toggle" class="cursor-pointer flex items-center justify-between sm:hidden">
-        <span id="toggle-text" class="font-semibold me-2">Show Navigation</span>
-        <span id="toggle-icon" class="inline-block transition-transform duration-200">▼</span> 
-      </div>
-      <ul id="nav-content" class="hidden mt-2">
-        {%- for entry in collections.all | eleventyNavigation %}
-          <li class="font-semibold mx-2 underline-offset-2 hover:underline {% if entry.url == page.url %}underline{% endif %} block sm:inline-block text-right sm:text-center py-2 sm:py-0">
-            <a href="{{ entry.url | url }}" aria-label="Link to page {{entry.title}}">{{ entry.title }}</a>
-          </li>
-        {%- endfor %}
-      </ul>
-    </div>
-    </nav>
-  </div>
-  <hr class="mt-6" />
+    <hr class="mt-6" />
 </header>

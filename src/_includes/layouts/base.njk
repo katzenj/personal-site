@@ -73,29 +73,6 @@
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const navToggle = document.getElementById('nav-toggle');
-      const navContent = document.getElementById('nav-content');
-      const toggleText = document.getElementById('toggle-text');
-      const toggleIcon = document.getElementById('toggle-icon');
-      let isOpen = false;
-
-      navToggle.addEventListener('click', () => {
-        isOpen = !isOpen;
-        toggleText.textContent = isOpen ? 'Close Navigation' : 'Show Navigation';
-        toggleIcon.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-
-        // I wish I knew why I needed to add margin-top. Nothing else worked.
-        if (isOpen) {
-          navContent.classList.remove('hidden');
-          navToggle.classList.add('mt-[16px]')
-        } else {
-          navContent.classList.add('hidden'); 
-          navToggle.classList.remove('mt-[16px]')
-        }
-      });
-    });
-
     // Check for saved theme preference, otherwise use system preference
     const theme = localStorage.getItem('theme') || 
         (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');

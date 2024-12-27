@@ -1,9 +1,15 @@
+import typography from "@tailwindcss/typography";
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  darkMode: 'selector',
+export default {
+  darkMode: "selector",
   content: ["./src/**/*.{html,njk,md,js}"],
   theme: {
     extend: {
+      colors: {
+        eggshell: "#F7F6EB",
+        "dark-blue": "#141A28",
+      },
       margin: {
         "16px": "16px",
         "18px": "18px",
@@ -13,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [typography],
 };

@@ -52,7 +52,7 @@ Is it ironic or merely coincidental that after my “consume less” and “cut 
 
 - (Book) Tomorrow and Tomorrow and Tomorrow — [link](https://www.goodreads.com/book/show/58784475-tomorrow-and-tomorrow-and-tomorrow?ref=nav_sb_ss_1_9)
 
-  Fire book. Not sure I could think of any more apt adjectives to describe this one. I’m a sucker for books that can navigate relationships well and this one did just that. I don’t particularly enjoy romance-specific novels, but instead, those that include an exploration of relationships (romantic, platonic, familial, …). Several nights this past week I stayed up past my usual “bedtime” (if you know me, you know that’s a bit wild) to keep reading this book.
+  Very good. Not sure I could think of any more apt adjectives to describe this one. I’m a sucker for books that can navigate relationships well and this one did just that. I don’t particularly enjoy romance-specific novels, but instead, those that include an exploration of relationships (romantic, platonic, familial, …). Several nights this past week I stayed up past my usual “bedtime” (if you know me, you know that’s a bit wild) to keep reading this book.
 
 - (Book) Stolen Focus — [link](https://www.goodreads.com/book/show/57933306-stolen-focus?ac=1&from_search=true&qid=CkWOVPE9eY&rank=3)
 

@@ -8,7 +8,9 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import EleventyPluginRobotsTxt from "eleventy-plugin-robotstxt";
 
-export default function(eleventyConfig) {
+import markdownLink from "./utils/markdown-link.js";
+
+export default function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/static");
@@ -151,17 +153,20 @@ export default function(eleventyConfig) {
     linkify: true,
   })
     .use(markdownItAnchor, {
-      permalink: markdownItAnchor.permalink.ariaHidden({
-        placement: "after",
-        class: "direct-link",
+      permalink: markdownItAnchor.permalink.linkInsideHeader({
+        assistiveText: (title) => `Permalink to “${title}”`,
         symbol: '<i class="ph ph-link"></i>',
+        placement: "after",
       }),
-      level: [1, 2, 3, 4],
-      slugify: eleventyConfig.getFilter("slugify"),
+      level: [1, 2, 3],
     })
     .use(markdownItLinkAttr, {
+      matcher(href) {
+        return !href.startsWith("#");
+      },
       attrs: { target: "_blank", rel: "noopener" },
     });
+  // .use(markdownLink);
 
   eleventyConfig.setLibrary("md", markdownLibrary);
 

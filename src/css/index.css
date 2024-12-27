@@ -37,16 +37,24 @@
   @apply text-xl tracking-tight font-bold;
 }
 
-.post-content a {
+.post-content .header-anchor {
+  @apply hover:underline no-underline;
+}
+
+.post-content .external-link {
   @apply text-teal-700 hover:underline;
 }
 
-:is(.dark .post-content a) {
+.post-content .external-link > i {
+  @apply text-teal-700 hover:underline;
+}
+
+:is(.dark .post-content .external-link) {
   @apply text-teal-300;
 }
 
 .post-content .direct-link {
-  @apply no-underline 
+  @apply no-underline;
 }
 
 .post-content code[class*="language-"],

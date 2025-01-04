@@ -54,6 +54,34 @@
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body class="container w-10/12 lg:w-1/2 xl:w-1/3 m-auto h-screen flex flex-col bg-eggshell dark:bg-dark-blue text-black dark:text-stone-100">
+    <script>
+      // Put at top of body to avoid flicker.
+      // Check for saved theme preference, otherwise use system preference
+      const theme = localStorage.getItem('theme') || 
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+      // Apply theme on page load
+      document.documentElement.setAttribute('data-theme', theme);
+      addThemeClass(theme);
+
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        addThemeClass(newTheme);
+      }
+
+      function addThemeClass(theme) {
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark")
+        } else {
+          document.documentElement.classList.remove("dark")
+        }
+      }
+    </script>
+
     {% include "nav.njk" %}
 
     <main class="mb-8 grow">
@@ -72,30 +100,5 @@
   </body>
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Check for saved theme preference, otherwise use system preference
-    const theme = localStorage.getItem('theme') || 
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-    // Apply theme on page load
-    document.documentElement.setAttribute('data-theme', theme);
-    addThemeClass(theme);
-
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
-
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      addThemeClass(newTheme);
-    }
-
-    function addThemeClass(theme) {
-      if (theme === "dark") {
-        document.documentElement.classList.add("dark")
-      } else {
-        document.documentElement.classList.remove("dark")
-      }
-    }
   </script>
 </html>

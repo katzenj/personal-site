@@ -17,7 +17,11 @@
 
 @layer components {
   .post-tag {
-    @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 hover:bg-slate-300 text-base dark:hover:bg-teal-700 no-underline;
+    @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 text-base no-underline;
+  }
+
+  .menu-button {
+    @apply px-1 hover:text-teal-700 dark:hover:text-teal-300;
   }
 }
 

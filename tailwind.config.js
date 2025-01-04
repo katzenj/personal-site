@@ -9,6 +9,9 @@ export default {
       colors: {
         eggshell: "#F7F6EB",
         "dark-blue": "#141A28",
+        "neptune": "#80BEBE",
+        "sinbad": "#A0CFCE"
+
       },
       margin: {
         "16px": "16px",

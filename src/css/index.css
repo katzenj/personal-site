@@ -17,7 +17,7 @@
 
 @layer components {
   .post-tag {
-    @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-slate-200 text-base no-underline;
+    @apply border-2 rounded-lg border-solid px-2 inline-flex items-center border-teal-700 border-opacity-25 dark:border-sinbad dark:border-opacity-40 text-base no-underline;
   }
 
   .menu-button {

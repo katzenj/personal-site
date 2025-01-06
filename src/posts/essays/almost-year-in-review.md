@@ -42,7 +42,7 @@ I’ll probably do a more in-depth review of my year in January, so this section
 
 ## **What does it matter?**
 
-Figuring out how to spend every minute of the day might be useful to some, but not me. I prefer an outline with some flexibility rather than a rigid schedule. Yet, it is useful to understand much time we waste each day doing things that we don’t actually care about. If watching Love Island is the best way to decompress for you, then by all means, watch it! But for me, if I compare time I spent reading to time I spent watching TV, I feel much better after reading.
+Figuring out how to spend every minute of the day might be useful to some, but not me. I prefer an outline with some flexibility rather than a rigid schedule. Yet, it is useful to understand how much time we waste each day doing things that we don’t actually care about. If watching Love Island is the best way to decompress for you, then by all means, watch it! But for me, if I compare to the time I spent reading to time I spent watching TV, I feel much better after reading.
 
 Doing this exercise helps me realize that
 

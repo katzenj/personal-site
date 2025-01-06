@@ -4,11 +4,11 @@ description: Discipline and consumption, introspective reads, and building up to
 type: article
 date: 2023-03-20
 tags:
-  - time
   - fitness
   - "2023"
 layout: layouts/post.njk
 ---
+*NOTE*: "notes on self" was an attempt to start a newsletter because I wanted to commit to writing. You can see by the presence of only two entries in 2023, that the venture stopped about as quickly as it started. It was supposed to be a "training log" while I trained for an Ironman 70.3 that contained some thoughts and/or expositions. The writing is rough, but we all start somewhere.
 
 ## A look at what’s ahead
 
@@ -18,11 +18,11 @@ I do a short dive into discipline and my effort to consume less. Then, I mention
 
 ## On my mind: discipline and consumption
 
-This past week, I’ve had a lot on my mind, but nothing notable. I wrote ~800 words about motivation, extrinsic vs. intrinsic motivators, and what I planned to do moving forward. But, what I wrote was pretty damn boring. I even had a cool meme and everything (see below). In the interest of keeping the meme relevant, I’ll briefly address discipline before moving on to consumption.
+I wrote ~800 words about motivation, extrinsic vs. intrinsic motivators, and what changes I would make before I realized the entire "piece" was dull. However, I had a cool meme that can't go to waste, so I wrote a quick blurb on discipline.
 
 ![Discipline meme](/img/discipline.avif)
 
-I enjoy writing and have wanted to write for a while, but never dedicated any time to it. I could employ some motivation-related techniques to write more consistently, but discipline is the key. Having some routine or commitment every day or every week is what’s necessary. That means sitting down to write this piece (or other things) no matter what gets in the way. Yeah yeah, there may be exceptions but unless an “act of God” happens, I should be able to dedicate the necessary time to my writing goal.
+I enjoy writing and have wanted to write for a while, but never dedicated any time to it. I could use motivation-related techniques to write more consistently, but discipline is the key. Having some routine or commitment every day or every week is what’s necessary. That means sitting down to write this piece (or other things) no matter what gets in the way. Yeah yeah, there may be exceptions but unless an “act of God” happens, I should be able to dedicate the necessary time to my writing goal.
 
 So here’s me, being “disciplined” and writing *something* for you, dear reader (or friend I forced to read because no one else will).
 

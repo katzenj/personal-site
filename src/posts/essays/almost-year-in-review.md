@@ -4,7 +4,6 @@ description: A pre-end-of-year look at 2022. I spent ~2 days of my year watching
 type: article
 date: 2022-12-02
 tags:
-  - time
   - fitness
   - "2022"
 layout: layouts/post.njk
@@ -43,10 +42,10 @@ I’ll probably do a more in-depth review of my year in January, so this section
 
 ## **What does it matter?**
 
-Figuring out how to spend every minute of the day might be useful to some, but not me. I prefer an outline with some flexibility rather than a rigid schedule. Yet, it is useful to understand much time we waste each day doing things that we don’t actually care about. If watching Love Island is the best way to decompress for you, then to each their own. But for me, I'd rather try and find time I can spend writing or working out.
+Figuring out how to spend every minute of the day might be useful to some, but not me. I prefer an outline with some flexibility rather than a rigid schedule. Yet, it is useful to understand much time we waste each day doing things that we don’t actually care about. If watching Love Island is the best way to decompress for you, then by all means, watch it! But for me, if I compare time I spent reading to time I spent watching TV, I feel much better after reading.
 
 Doing this exercise helps me realize that
 
 - I do have enough hours/minutes in the day, but I occasionally waste them
 - Over the course of a year, I spend A LOT of times on net-negative activities like scrolling through Twitter
-- Training for an Ironman 70.3 is time intensive, but doable if I’m more considerate of my time
+- Training for an Ironman 70.3 is time intensive, but doable if I’m more disciplined with my time

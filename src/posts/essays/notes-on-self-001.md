@@ -5,11 +5,12 @@ type: article
 date: 2023-03-13
 tags:
   - support
-  - friends
   - fitness
   - "2023"
 layout: layouts/post.njk
 ---
+*NOTE*: "notes on self" was an attempt to start a newsletter because I wanted to commit to writing. You can see by the presence of only two entries in 2023, that the venture stopped about as quickly as it started. It was supposed to be a "training log" while I trained for an Ironman 70.3 that contained some thoughts and/or expositions. The writing is rough, but we all start somewhere.
+
 ## At a glance
 In this edition, I consider how to best provide support for a struggling friend. There's a brief consideration of how our life has an infinite number of paths it could take (see image below), and why focusing on previous branches/possibilities is a fool’s errand.
 

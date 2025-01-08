@@ -5,7 +5,7 @@
   <div class="mt-4 mb-8">
 
     {%- if recs.articlesList %}
-    <h3 class="text-md">Articles</h3>
+    <h2 class="text-md">Articles</h2>
     <div class="ml-8 mb-4">
       <ul class="list-disc">
         {% for article in recs.articlesList %}
@@ -20,7 +20,7 @@
     {%- endif %}
 
     {%- if recs.booksList %}
-    <h3 class="text-md pt-8 md:pt-0">Books</h3>
+    <h2 class="text-md pt-8 md:pt-0">Books</h2>
     <div class="books-list ml-8 mb-4">
       <ul class="list-disc">
         {% for book in recs.booksList %}
@@ -37,7 +37,7 @@
     </div>
     {%- endif %}
     {%- if recs.links %}
-    <h3 class="text-md pt-8 md:pt-0">Other</h3>
+    <h2 class="text-md pt-8 md:pt-0">Other</h2>
     <div class="books-list ml-8 mb-4">
       <ul class="list-disc">
         {% for link in recs.links %}

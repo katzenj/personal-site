@@ -1,6 +1,6 @@
 {
-  "name": "Jordan's site",
-  "short_name": "Jordan's site",
+  "name": "",
+  "short_name": "",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -17,3 +17,4 @@
   "background_color": "#ffffff",
   "display": "standalone"
 }
+

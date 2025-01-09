@@ -50,6 +50,10 @@
   @apply ms-2 hover:underline no-underline;
 }
 
+.post-content .header-anchor > svg {
+  @apply dark:fill-white;
+}
+
 .post-content .external-link {
   @apply text-teal-700 hover:underline;
 }

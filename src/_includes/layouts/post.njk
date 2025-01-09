@@ -16,23 +16,27 @@ templateClass: tmpl-post
     {%- endfor %}
   </div>
 
-  <div class="post-content">
-    {{ content | safe }}
-  </div>
+  <article>
+    <div class="post-content">
+      {{ content | safe }}
+    </div>
+  </article>
 
   {%- if collections.sortedEssays %}
-  {# Previous will get the previous post in chronological order which would be the "next" element #}
-  {%- set previousPost = collections.sortedEssays | getNextCollectionItem(page) %}
-  {# Next will get the next post in chronological order (aka newest) which would be the "previous" element #}
-  {%- set nextPost = collections.sortedEssays | getPreviousCollectionItem(page) %}
-  {%- if nextPost or previousPost %}
-  <div class="py-12">
-    -------
-    <ul>
-      {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}" class="underline" aria-label="Go to post {{nextPost.data.title}}">{{ nextPost.data.title }}</a></li>{% endif %}
-      {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}" class="underline" aria-label="Go to post {{previousPost.data.title}}">{{ previousPost.data.title }}</a></li>{% endif %}
-    </ul>
-  </div>
-  {%- endif %}
+    {# Previous will get the previous post in chronological order which would be the "next" element #}
+    {%- set previousPost = collections.sortedEssays | getNextCollectionItem(page) %}
+
+    {# Next will get the next post in chronological order (aka newest) which would be the "previous" element #}
+    {%- set nextPost = collections.sortedEssays | getPreviousCollectionItem(page) %}
+
+    {%- if nextPost or previousPost %}
+      <div class="py-12">
+        -------
+        <ul>
+          {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}" class="underline" aria-label="Go to post {{nextPost.data.title}}">{{ nextPost.data.title }}</a></li>{% endif %}
+          {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}" class="underline" aria-label="Go to post {{previousPost.data.title}}">{{ previousPost.data.title }}</a></li>{% endif %}
+        </ul>
+      </div>
+    {%- endif %}
   {%- endif %}
 </div>

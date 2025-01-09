@@ -7,11 +7,11 @@
   "feed": {
     "subtitle": "There's nothing here because I can't write it seems.",
     "filename": "feed.xml",
-    "path": "/feed/feed.xml",
+    "path": "/feed.xml",
     "id": "https://jordankatzen.com/"
   },
   "jsonfeed": {
-    "path": "/feed/feed.json",
+    "path": "/feed.json",
     "url": "https://jordankatzen.com/feed/feed.json"
   },
   "author": {

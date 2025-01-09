@@ -26,7 +26,7 @@ One issue is that labels generally exist as binaries — introvert vs. extrovert
 
 Let’s use politics as an example (I can hear the groans behind the screen). The graphic below shows my rough depiction of the U.S. political spectrum compared to what it looks like when we use labels like Democrat and Republican.
 
-![Untitled](/img/political.png)
+![Political Spectrum Image](/img/political.avif)
 
 Democrat vs. Republican oversimplifies where you can exist on the political spectrum and also sets up a “them vs. us” mentality. As soon as we hear someone mention that they support a political party, we often start to make assumptions about their views, lifestyle, and personality even if we know nothing about the person.
 

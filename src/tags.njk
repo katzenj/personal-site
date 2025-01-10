@@ -16,6 +16,6 @@ permalink: /tags/{{ tag | slugify }}/
 <h1 class="page-header mb-4">Tagged “{{ tag }}”</h1>
 
 {% set data = collections[ tag ] %}
-{% include "essay-list.njk" %}
+{% include "post-list.njk" %}
 
 <p class="mt-8">See <a href="{{ '/tags/' | url }}" class="underline">all tags</a>.</p>

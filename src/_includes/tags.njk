@@ -1,0 +1,7 @@
+{% for tag in ele.data.tags | filterTagList | sort %}
+  {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+  <a href="{{ tagUrl | url }}" class="post-tag" aria-label="Go to page for tag {{tag}}">
+    {{ tag }}
+  </a>
+{% endfor %}
+

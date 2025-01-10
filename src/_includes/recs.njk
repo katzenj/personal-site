@@ -10,7 +10,7 @@
       <ul class="list-disc">
         {% for article in recs.articlesList %}
           <li class="py-1">
-            <a href="{{ article.url | url }}" target="_blank" aria-label="Go to article line for article {{article.title}}" class="mr-1 underline">
+            <a href="{{ article.url | url }}" target="_blank" aria-label="Go to article line for article {{article.title}}" class="underline">
               {{ article.title }}
             </a>
           </li>
@@ -25,7 +25,7 @@
       <ul class="list-disc">
         {% for book in recs.booksList %}
           <li class="py-1">
-            <a href="{{ book.url | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="mr-1 underline">{{ book.title }}</a>
+            <a href="{{ book.url | url }}" target="_blank" aria-label="Go to shop for book {{book.title}}" class="underline">{{ book.title }}</a>
             by {{ book.author }}
 
             {%- if book.review %}
@@ -42,7 +42,7 @@
       <ul class="list-disc">
         {% for link in recs.links %}
           <li class="py-1">
-            <a href="{{ link.url | url }}" target="_blank" aria-label="{{link.label}}" class="mr-1 underline">{{ link.title }}</a>
+            <a href="{{ link.url | url }}" target="_blank" aria-label="{{link.label}}" class="underline">{{ link.title }}</a>
           </li>
         {% endfor %}
       </ul>

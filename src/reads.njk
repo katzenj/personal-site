@@ -1,0 +1,36 @@
+---
+layout: layouts/home.njk
+title: Reads
+description: What I've read.
+permalink: /reads/
+updated: 2025-01-10
+---
+{% macro stars(rating) %}
+  {% for i in range(rating) %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path></svg>
+  {% endfor %}
+{% endmacro %}
+
+<div>
+    <h1 class="page-header">Reads</h1>
+    {% set data = books %}
+    <table class="mt-4 table-auto">
+      <thead>
+        <tr>
+          <th class="pr-2 text-left">Title</th>
+          <th class="px-3 text-left">Rating</th>
+          <th class="text-left">Date Read</th>
+        </tr>
+      </thead>
+      <tbody>
+      {%- for book in books %}
+        <tr>
+          <td class="align-top py-1 pr-2">{{ book.title }}</td> 
+          <td class="align-top py-2 px-3 inline-flex">{{ stars(book.userRating) }}</td>
+          <td class="align-top py-1 whitespace-nowrap">{{ book.userReadAt | maybeISOToString }}</td>
+        </tr>
+      {%- endfor %}
+      </tbody>
+    </table>
+</div>
+

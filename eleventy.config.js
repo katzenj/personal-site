@@ -81,6 +81,13 @@ export default function (eleventyConfig) {
       .toLocaleString(DateTime.DATETIME_MED);
   });
 
+  eleventyConfig.addFilter("maybeISOToString", (dateStr) => {
+    if (!dateStr) {
+      return "";
+    }
+    return DateTime.fromISO(dateStr).toLocaleString(DateTime.DATE_MED);
+  });
+
   eleventyConfig.addFilter("readableDateString", (dateStr) => {
     return DateTime.fromFormat(dateStr, "yyyy-MM-dd", {}).toLocaleString(
       DateTime.DATE_MED,

@@ -4,6 +4,9 @@ title: Reads
 description: What I've read.
 permalink: /reads/
 updated: 2025-01-10
+eleventyNavigation:
+  key: Reading
+  order: 2
 ---
 {% macro stars(rating) %}
   {% for i in range(rating) %}
@@ -25,7 +28,9 @@ updated: 2025-01-10
       <tbody>
       {%- for book in books %}
         <tr>
-          <td class="align-top py-1 pr-2 text-ellipsis overflow-hidden line-clamp-2 md:line-clamp-1 md:max-w-[400px]">{{ book.title }}</td> 
+          <td class="align-top py-1 pr-2 text-ellipsis overflow-hidden line-clamp-2 md:line-clamp-1 md:max-w-[400px]">
+            {% bookNoteLink book.title %}
+          </td> 
           <td class="align-top py-1 opacity-80 whitespace-nowrap text-right">{{ book.userReadAt | maybeISOToString }}</td>
           <td class="align-top py-1 px-3 inline-flex text-left">{{ stars(book.userRating) }}</td>
         </tr>

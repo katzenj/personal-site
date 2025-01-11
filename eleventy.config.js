@@ -31,6 +31,22 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("src/posts/**/*.md");
 
+  eleventyConfig.addCollection("bookNotes", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("src/reads/*.md");
+  });
+  eleventyConfig.addWatchTarget("src/reads/*.md");
+  eleventyConfig.addShortcode("bookNoteLink", function (title) {
+    const note = this.ctx.collections.bookNotes.find(
+      (note) => note.data.title == title,
+    );
+
+    if (note) {
+      return `<a href="${note.page.url}">${title}</a>`;
+    } else {
+      return title;
+    }
+  });
+
   const metadataData = metadata.default;
   // Add plugins
   eleventyConfig.addPlugin(feedPlugin, {

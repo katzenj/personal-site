@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-book-notes
+description: "{{ description }}"
+---
+<div class="h-full note">
+  <div class="post-content prose">
+    {{ content | safe }}
+  </div>
+
+  {%- if updated_at -%}
+    <div class="updated-at mt-16">
+      <p><b>Last updated: </b><time class="pr-4" datetime="{{ updated_at | htmlDateString }}">{{ updated_at | readableDate }}</time></p>
+    </div>
+  {%- endif -%}
+</div>
+
+

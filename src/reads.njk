@@ -1,9 +1,12 @@
 ---
 layout: layouts/home.njk
-title: Reads
+title: Reading
 description: What I've read.
-permalink: /reads/
+permalink: "reads/{{ pagination.pageNumber + 1 }}/index.html"
 updated: 2025-01-10
+pagination:
+  data: books
+  size: 100
 eleventyNavigation:
   key: Reading
   order: 2
@@ -15,8 +18,7 @@ eleventyNavigation:
 {% endmacro %}
 
 <div>
-    <h1 class="page-header">Reads</h1>
-    {% set data = books %}
+    <h1 class="page-header">{{ title }}</h1>
     <table class="mt-4 table-auto">
       <thead>
         <tr>
@@ -26,7 +28,7 @@ eleventyNavigation:
         </tr>
       </thead>
       <tbody>
-      {%- for book in books %}
+      {%- for book in pagination.items %}
         <tr>
           <td class="align-top py-1 pr-2 text-ellipsis overflow-hidden line-clamp-2 md:line-clamp-1 md:max-w-[400px]">
             {% bookNoteLink book.title %}
@@ -37,5 +39,23 @@ eleventyNavigation:
       {%- endfor %}
       </tbody>
     </table>
+    <div class="mt-8 grid grid-cols-2">
+      <div class="text-left">
+        {% if pagination.href.previous %}
+          <a class="cursor-pointer inline-flex items-center" href="{{ pagination.href.previous }}">
+            <svg class="dark:fill-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path></svg>
+            Previous
+          </a>
+        {% endif %}
+      </div>
+      <div class="text-right">
+        {% if pagination.href.next %}
+          <a class="cursor-pointer inline-flex items-center" href="{{ pagination.href.next }}">
+            <span class="align-middle inline-block">Next</span>
+            <svg class="dark:fill-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 256 256"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path></svg>
+          </a>
+        {% endif %}
+      </div>
+    </div>
 </div>
 

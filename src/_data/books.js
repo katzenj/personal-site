@@ -24,7 +24,7 @@ export default async function () {
     },
     {
       requestId: "books",
-      duration: "1d",
+      duration: "3d",
       type: "json",
     },
   );

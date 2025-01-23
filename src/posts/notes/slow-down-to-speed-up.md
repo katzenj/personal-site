@@ -2,8 +2,6 @@
 title: Slow down to speed up?
 type: note
 description: Thoughts on work
-tags:
-  - seedling
 date: 2024-05-17
 updated_at: 2024-05-17
 layout: layouts/note.njk

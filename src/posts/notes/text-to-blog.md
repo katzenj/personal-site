@@ -2,8 +2,6 @@
 title: Text-to-blog
 type: note
 description: Using val.town and my phone to update my "microblog"
-tags:
-  - seedling
 date: 2024-05-31
 updated_at: 2024-12-21
 layout: layouts/note.njk

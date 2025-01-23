@@ -2,8 +2,6 @@
 title: Make good choices when choosing tools
 type: note
 description: Thoughts on choosing tools.
-tags:
-  - seedling
 date: 2024-01-24
 updated_at: 2024-01-24
 layout: layouts/note.njk

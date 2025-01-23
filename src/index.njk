@@ -8,22 +8,23 @@ layout: layouts/home.njk
         Howdy! I'm Jordan, an engineer, wannabe writer, opinion provider, and reader. I build software, get obsessed with a topic for a month before switching, and periodically update this site.
     </p>
 
+    {% set maxCount = 5 %}
     {# Show my ~essays~ #}
     <h1 class="page-header">Essays</h1>
-    {% set data = collections.sortedEssays | head(4) %}
+    {% set data = collections.sortedEssays | head(maxCount) %}
     {% set counter = collections.sortedEssays | length %}
     {% include "post-list.njk" %}
-    {%- if counter > 4 %}
+    {%- if counter > maxCount %}
         <p class="pt-4">
             More essays can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.
         </p>
     {%- endif %}
     {# Show my ~notes~ #}
     <h1 class="page-header mt-12">Notes</h1>
-    {% set data = collections.sortedNotes | head(4) %}
+    {% set data = collections.sortedNotes | head(maxCount) %}
     {% set counter = collections.sortedNotes | length %}
     {% include "post-list.njk" %}
-    {%- if counter > 4 %}
+    {%- if counter > maxCount %}
         <p class="pt-4">
             More notes can be found in <a class="underline" href="{{ '/posts/' | url }}">the archive</a>.
         </p>

@@ -2,8 +2,6 @@
 title: On snacking
 type: note
 description: Thoughts on "snacking" to make progress.
-tags:
-  - seedling
 date: 2024-12-24
 updated_at: 2024-12-24
 layout: layouts/note.njk

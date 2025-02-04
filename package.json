@@ -16,7 +16,8 @@
     "build:eleventy": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy",
     "dev": "npm-run-all clean --parallel dev:*",
     "build": "NODE_ENV=production npm-run-all clean build:eleventy build:tailwind",
-    "ci": "bun run clean && bun install"
+    "ci": "bun run clean && bun install",
+    "new:note": "bun scripts/create-note.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

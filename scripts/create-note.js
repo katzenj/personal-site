@@ -1,4 +1,4 @@
-const template = ` ---
+const template = `---
 title: Title
 type: note
 description: Description

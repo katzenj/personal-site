@@ -1,0 +1,369 @@
+---
+layout: layouts/home.njk
+title: Secure Message Encryption
+description: Encrypt and decrypt messages securely in your browser
+permalink: /encrypt/
+---
+
+
+<h1 class="text-3xl font-bold text-center mb-6">Secure Message Tool</h1>
+    
+    <div class="mb-4">
+      <div class="grid grid-cols-2 rounded-md overflow-hidden border border-gray-200 shadow-sm">
+        <button class="tab-trigger py-2 px-4 text-sm font-medium bg-white text-black" data-tab="encrypt">Encrypt</button>
+        <button class="tab-trigger py-2 px-4 text-sm font-medium bg-gray-100 text-gray-600" data-tab="decrypt">Decrypt</button>
+      </div>
+    </div>
+    
+    <div id="encrypt-tab" class="tab-content active">
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-2 text-black">Encrypt a Message</h2>
+          <p class="text-gray-600 text-sm mb-4">Enter your passphrase and message to encrypt</p>
+          <div class="space-y-4">
+            <div>
+              <label for="passphrase" class="block text-sm font-medium text-gray-700 mb-1">Passphrase</label>
+              <input 
+                id="passphrase" 
+                type="password" 
+                placeholder="Enter your secret passphrase"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md text-black text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                autocomplete="new-password"
+              >
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea 
+                id="message" 
+                placeholder="Enter the message you want to encrypt"
+                rows="4"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md text-black text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              ></textarea>
+            </div>
+            
+            <p id="encrypt-error" class="text-sm text-red-500 hidden"></p>
+            
+
+        <button type="submit" id="encrypt-btn"
+            class="bg-teal-700 hover:bg-teal-800 text-white py-3 px-5 text-center inline-block cursor-pointer rounded transition-colors duration-300">Encrypt message</button>
+            
+            <div id="encrypted-result" class="mt-4 space-y-2 hidden">
+              <label class="block text-sm font-medium text-gray-700">Encrypted Message</label>
+              <div id="encrypted-text" class="p-3 bg-gray-100 text-black rounded-md break-all text-sm"></div>
+              
+              <div class="">
+                <p class="text-sm text-gray-500">
+                  Share this link to allow others to decrypt your message
+                </p>
+
+                <div id="share-url" class="break-all p-2.5 bg-gray-100 rounded-md my-4 text-sm font-mono text-black"></div>
+                <button id="copy-btn" 
+                    class="bg-teal-700 hover:bg-teal-800 text-white py-3 px-5 text-center inline-block cursor-pointer rounded transition-colors duration-300">Copy link to clipboard</button>
+                <div id="copy-status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="decrypt-tab" class="tab-content hidden">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-2 text-black">Decrypt a Message</h2>
+          <p class="text-gray-600 text-sm mb-4">Enter the passphrase to decrypt the message</p>
+          <div class="space-y-4">
+            <div>
+              <label for="decrypt-passphrase" class="block text-sm font-medium text-gray-700 mb-1">Passphrase</label>
+              <input 
+                id="decrypt-passphrase" 
+                type="password" 
+                placeholder="Enter the secret passphrase"
+                class="w-full px-3 py-2 border border-gray-300 text-black rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                autocomplete="new-password"
+              >
+            </div>
+            
+            <p id="url-message" class="text-xs text-gray-500 mt-1 hidden">
+              Encrypted message detected from URL
+            </p>
+            
+            <p id="decrypt-error" class="text-sm text-red-500 hidden"></p>
+            
+        <button type="submit" id="decrypt-btn"
+            class="bg-teal-700 hover:bg-teal-800 text-white py-3 px-5 text-center inline-block cursor-pointer rounded transition-colors duration-300">Decrypt message</button>
+            
+            <div id="decrypted-result" class="mt-4 rounded-md hidden">
+              <div class="space-y-2">
+              <label class="block text-sm font-medium text-gray-700">Decrypted Message</label>
+              <div id="decrypted-text" class="p-3 bg-gray-100 text-black rounded-md break-all text-sm"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    // Encryption utilities using WebCrypto API
+    const encryptionUtils = {
+      async generateKey(passphrase, salt) {
+        // Convert passphrase to key material
+        const encoder = new TextEncoder();
+        const passphraseData = encoder.encode(passphrase);
+        
+        // Use PBKDF2 to derive a key from the passphrase
+        const importedKey = await crypto.subtle.importKey(
+          'raw',
+          passphraseData,
+          { name: 'PBKDF2' },
+          false,
+          ['deriveBits', 'deriveKey']
+        );
+        
+        // Derive an AES-GCM key using PBKDF2
+        return crypto.subtle.deriveKey(
+          {
+            name: 'PBKDF2',
+            salt: salt,
+            iterations: 100000,
+            hash: 'SHA-256'
+          },
+          importedKey,
+          { name: 'AES-GCM', length: 256 },
+          false,
+          ['encrypt', 'decrypt']
+        );
+      },
+      
+      async encrypt(message, passphrase) {
+        try {
+          // Generate a random salt and IV
+          const salt = crypto.getRandomValues(new Uint8Array(16));
+          const iv = crypto.getRandomValues(new Uint8Array(12));
+          
+          // Generate encryption key from passphrase
+          const key = await this.generateKey(passphrase, salt);
+          
+          // Encrypt the message
+          const encoder = new TextEncoder();
+          const messageData = encoder.encode(message);
+          
+          const encryptedData = await crypto.subtle.encrypt(
+            { name: 'AES-GCM', iv },
+            key,
+            messageData
+          );
+          
+          // Combine salt, IV, and encrypted data into one array
+          const combinedData = new Uint8Array(salt.length + iv.length + encryptedData.byteLength);
+          combinedData.set(salt, 0);
+          combinedData.set(iv, salt.length);
+          combinedData.set(new Uint8Array(encryptedData), salt.length + iv.length);
+          
+          // Convert to base64 for easy URL sharing
+          return btoa(String.fromCharCode.apply(null, combinedData));
+        } catch (error) {
+          console.error('Encryption error:', error);
+          throw new Error('Failed to encrypt the message');
+        }
+      },
+      
+      async decrypt(encryptedMessage, passphrase) {
+        try {
+          // Convert base64 back to Uint8Array
+          const binaryString = atob(encryptedMessage);
+          const bytes = new Uint8Array(binaryString.length);
+          for (let i = 0; i < binaryString.length; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+          }
+          
+          // Extract salt, IV, and encrypted data
+          const salt = bytes.slice(0, 16);
+          const iv = bytes.slice(16, 28);
+          const encryptedData = bytes.slice(28);
+          
+          // Generate decryption key from passphrase
+          const key = await this.generateKey(passphrase, salt);
+          
+          // Decrypt the message
+          const decryptedData = await crypto.subtle.decrypt(
+            { name: 'AES-GCM', iv },
+            key,
+            encryptedData
+          );
+          
+          // Convert decrypted data to string
+          const decoder = new TextDecoder();
+          return decoder.decode(decryptedData);
+        } catch (error) {
+          console.error('Decryption error:', error);
+          throw new Error('Failed to decrypt the message. Wrong passphrase?');
+        }
+      }
+    };
+
+    // DOM Elements
+    const tabTriggers = document.querySelectorAll('.tab-trigger');
+    const encryptTab = document.getElementById('encrypt-tab');
+    const decryptTab = document.getElementById('decrypt-tab');
+    
+    const passphraseInput = document.getElementById('passphrase');
+    const messageInput = document.getElementById('message');
+    const encryptBtn = document.getElementById('encrypt-btn');
+    const encryptError = document.getElementById('encrypt-error');
+    const encryptedResult = document.getElementById('encrypted-result');
+    const encryptedText = document.getElementById('encrypted-text');
+    const copyBtn = document.getElementById('copy-btn');
+    
+    const decryptPassphraseInput = document.getElementById('decrypt-passphrase');
+    const urlMessage = document.getElementById('url-message');
+    const decryptBtn = document.getElementById('decrypt-btn');
+    const decryptError = document.getElementById('decrypt-error');
+    const decryptedResult = document.getElementById('decrypted-result');
+    const decryptedText = document.getElementById('decrypted-text');
+    
+    // Tab functionality
+    tabTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        // Update tab styling
+        tabTriggers.forEach(t => {
+          t.classList.remove('bg-white', 'text-black');
+          t.classList.add('bg-gray-100', 'text-gray-600');
+        });
+        
+        trigger.classList.remove('bg-gray-100', 'text-gray-600');
+        trigger.classList.add('bg-white', 'text-black');
+        
+        // Show/hide content
+        const tabName = trigger.getAttribute('data-tab');
+        if (tabName === 'encrypt') {
+          encryptTab.classList.remove('hidden');
+          encryptTab.classList.add('active');
+          decryptTab.classList.add('hidden');
+          decryptTab.classList.remove('active');
+        } else {
+          decryptTab.classList.remove('hidden');
+          decryptTab.classList.add('active');
+          encryptTab.classList.add('hidden');
+          encryptTab.classList.remove('active');
+        }
+      });
+    });
+    
+    // Check for hash in URL on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        // Switch to decrypt tab
+        tabTriggers.forEach(t => {
+          t.classList.remove('bg-white', 'text-black');
+          t.classList.add('bg-gray-100', 'text-gray-600');
+        });
+        
+        tabTriggers[1].classList.remove('bg-gray-100', 'text-gray-600');
+        tabTriggers[1].classList.add('bg-white', 'text-black');
+        
+        encryptTab.classList.add('hidden');
+        encryptTab.classList.remove('active');
+        decryptTab.classList.remove('hidden');
+        decryptTab.classList.add('active text-black');
+        
+        // Show URL message
+        urlMessage.classList.remove('hidden');
+      }
+    });
+    
+    // Encrypt button click handler
+    encryptBtn.addEventListener('click', async () => {
+      const passphrase = passphraseInput.value;
+      const message = messageInput.value;
+      
+      // Validation
+      if (!passphrase) {
+        encryptError.textContent = 'Please enter a passphrase';
+        encryptError.classList.remove('hidden');
+        return;
+      }
+      
+      if (!message) {
+        encryptError.textContent = 'Please enter a message';
+        encryptError.classList.remove('hidden');
+        return;
+      }
+      
+      try {
+        const encrypted = await encryptionUtils.encrypt(message, passphrase);
+        encryptedText.textContent = encrypted;
+        encryptedResult.classList.remove('hidden');
+        encryptError.classList.add('hidden');
+
+        document.getElementById('encrypted-text').textContent = encrypted;
+        
+        // Update URL with encrypted message
+        const shareUrl = `${window.location.origin}${window.location.pathname}#${encrypted}`;
+        document.getElementById('share-url').textContent = shareUrl;
+        
+        // Update URL fragment
+        window.location.hash = encrypted;
+      } catch (err) {
+        encryptError.textContent = 'Encryption failed. Please try again.';
+        encryptError.classList.remove('hidden');
+        console.error(err);
+      }
+    });
+    
+
+    // Copy button click handler
+    copyBtn.addEventListener('click', () => {
+        const shareUrl = document.getElementById('share-url').textContent;
+        navigator.clipboard.writeText(shareUrl)
+        .then(() => {
+            console.log('Link copied to clipboard!');
+            const statusElement = document.getElementById('copy-status');
+            statusElement.textContent = 'Link copied to clipboard!';
+            statusElement.className = 'text-teal-700 mt-2.5';
+            
+            setTimeout(() => {
+            statusElement.textContent = '';
+            }, 3000);
+        })
+        .catch(err => {
+            document.getElementById('copy-status').textContent = `Failed to copy: ${err}`;
+            document.getElementById('copy-status').className = 'text-red-500 mt-2.5';
+        });
+    });
+    
+    // Decrypt button click handler
+    decryptBtn.addEventListener('click', async () => {
+      const passphrase = decryptPassphraseInput.value;
+      const encryptedMessage = window.location.hash.substring(1);
+      
+      // Validation
+      if (!passphrase) {
+        decryptError.textContent = 'Please enter a passphrase';
+        decryptError.classList.remove('hidden');
+        return;
+      }
+      
+      if (!encryptedMessage) {
+        decryptError.textContent = 'No encrypted message found in URL';
+        decryptError.classList.remove('hidden');
+        return;
+      }
+      
+      try {
+        const decrypted = await encryptionUtils.decrypt(encryptedMessage, passphrase);
+        decryptedText.textContent = decrypted;
+        decryptedResult.classList.remove('hidden');
+        decryptError.classList.add('hidden');
+      } catch (err) {
+        decryptError.textContent = 'Decryption failed. Please check your passphrase and try again.';
+        decryptError.classList.remove('hidden');
+        decryptedResult.classList.add('hidden');
+        console.error(err);
+      }
+    });
+
+  </script>

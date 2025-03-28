@@ -30,7 +30,7 @@ eleventyNavigation:
       <tbody>
       {%- for book in pagination.items %}
         <tr>
-          <td class="align-top py-1 pr-2 text-ellipsis overflow-hidden line-clamp-2 md:line-clamp-1 md:max-w-[400px]">
+        <td class="align-top py-1 pr-2 text-ellipsis overflow-hidden line-clamp-2 md:line-clamp-1 md:max-w-[400px]" title="{{ book.title }}">
             {% bookNoteLink book.title %}
           </td> 
           <td class="align-top py-1 opacity-80 whitespace-nowrap text-right">{{ book.userReadAt | maybeISOToString }}</td>

@@ -9,7 +9,7 @@
         <nav class="flex items-end">
             <ul id="nav-content" class="mt-2 flex flex-row">
                 {%- for entry in collections.all | eleventyNavigation %}
-                    <li class="font-semibold mx-2 underline-offset-2 hover:underline {% if entry.url == page.url %}underline{% endif %} block sm:inline-block sm:text-center py-2 sm:py-0 md:text-right text-left">
+                    <li class="font-semibold mx-2 underline-offset-2 hover:underline {% if entry.url == page.url %}underline{% endif %} block sm:inline-block sm:text-center py-2 sm:py-0 cursor-pointer md:text-right text-left">
                         <a href="{{ entry.url | url }}"
                            aria-label="Link to page {{ entry.title }}">{{ entry.title }}</a>
                     </li>

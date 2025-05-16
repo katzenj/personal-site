@@ -3,7 +3,7 @@ title: Time is a mother
 type: note
 description: Some barely cohesive thoughts on time
 date: 2025-04-30
-updated_at: 2025-04-30
+updated_at: 2025-05-09
 layout: layouts/note.njk
 ---
 
@@ -19,6 +19,6 @@ Is this just what happens? You grow up and accumulate obligations like a hoarder
 
 I have so many disjointed thoughts about time that I’ll leave it at this for now. Time really is a motherf*****.
 
-<hr/>
+--
 
 Note: the em-dash usage is my favorite punctuation mark. It's a shame it’s turned into some sort of AI/bot giveaway, but real humans do use it! Some people think you can just use "-" (a hyphen) or an en-dash (I'm not even sure how to type those), but alas, [they are wrong](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use).

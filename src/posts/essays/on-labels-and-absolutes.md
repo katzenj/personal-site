@@ -10,6 +10,9 @@ tags:
   - "2023"
 layout: layouts/post.njk
 ---
+*Note*: this wasn't my best writing, but I keep it around for the heck of it.
+
+--
 
 Recently, I've been thinking about how often we throw around labels and absolutes. They're everywhere—"She's a vegan," "I'm a foodie," "I'd never tolerate that," you name it. We lean on these shortcuts to express who we are and what we think, but we don't often stop to consider how they shape our opinions, self-perceptions, and how others see us.
 

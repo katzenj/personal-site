@@ -3,41 +3,26 @@ layout: layouts/base.njk
 templateClass: tmpl-notes
 description: "{{ description }}"
 ---
+
 <div class="h-full note">
-  {# Post header info #}
-  <div class="pb-4">
-    <h1 class="text-xl tracking-tight font-bold pb-2">{{title}}</h1>
-
-    {%- if type == "highlight" -%}
-      <p>Author: {{ author }}</p>
-      <p>Rating: {{ rating }}</p>
-      {%- if completed_on -%}
-      <p>Last read: <time datetime="{{ completed_on | htmlDateString}}">{{ completed_on | readableDate }}</time></p>
-      {%- endif -%}
-
-      {%- if link -%}
-      <p>Link: <a class="text-blue-600 visited:text-purple-600" href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
-      {%- endif -%}
-
-    {%- endif -%}
-
-
-    {%- for tag in tags | filterTagList %}
-    {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    <a href="{{ tagUrl | url }}" aria-label="Go to page for tag {{tag}}" class="post-tag">
-      {{tag}}
-    </a>
-    {%- endfor %}
-  </div>
-
-  <div class="post-content prose">
-    {{ content | safe }}
-  </div>
-
-  {%- if updated_at -%}
-    <div class="updated-at mt-16">
-      <p><b>Last updated: </b><time class="pr-4" datetime="{{ updated_at | htmlDateString }}">{{ updated_at | readableDate }}</time></p>
+    {# Post header info #}
+    <div class="pb-4 md:pb-6">
+        <div>
+            {# I tried font-old-style but it looked odd when other places didn't have it #}
+            <h1 class="text-2xl tracking-tight font-bold pb-2">{{ title }}</h1>
+            {%- for tag in tags | filterTagList %}
+                {%- set tagUrl %}/tags/{{ tag | slugify }}/
+                {% endset %}
+                <a href="{{ tagUrl | url }}"
+                   aria-label="Go to page for tag {{ tag }}"
+                   class="post-tag">{{ tag }}</a>
+            {%- endfor %}
+        </div>
+        <div class="pr-2 text-sm italic">
+            <span>Published: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
+            <span>&#x2022;</span>
+            <span>Last updated: <time datetime="{{ page.date | htmlDateString }}">{{ updated_at | readableDate }}</time></span>
+        </div>
     </div>
-  {%- endif -%}
+    <div class="post-content prose">{{ content | safe }}</div>
 </div>
-

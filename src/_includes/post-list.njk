@@ -12,7 +12,7 @@
             </a>
         </div>
         {% if ele.date %}
-            <time class="pr-4" datetime="{{ ele.date | htmlDateString }}">{{ ele.date | readableDate }}</time>
+            <time class="text-right" datetime="{{ ele.date | htmlDateString }}">{{ ele.date | readableDate }}</time>
         {% endif %}
     {% endfor %}
 </div>

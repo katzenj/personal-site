@@ -3,7 +3,7 @@ title: An ode to the Giro (and Simon Yates and Wout)
 type: note
 description: Beautiful tactics from Visma and outstanding team effort from Wout 
 date: 2025-05-31
-updated_at: 2025-05-31
+updated_at: 2025-06-01
 layout: layouts/note.njk
 ---
 My mind is mush from biking 102 miles today (can someone tell me how the pros do it?), so this is going to be a short one about the Giro d’Italia of all things. If you’re not into cycling, some things (General Classification, the Giro, Pogi, …) won’t make sense! But I’d give ‘em a quick search or ChatGPT or whatever if necessary.
@@ -16,7 +16,7 @@ Anyway, this year’s Giro has been pretty great, especially without Pogi destro
 
 But today… today was a thing of beauty. Watching Simon Yates (Team Visma), who was down like 1:20 (a minute twenty) going into today’s stage, attack, take a small lead, and end up putting like five minutes into Del Toro (the leader) to effectively win the Giro… chef’s kiss. And the moment Yates linked up with Wout after the Colle delle Finestre… wow. I didn’t get to watch that part cause I was on a bike ride, but I re-watched the stage starting at the attack and then the highlights. Absolute madness. 
 
-Following sports is an interesting thing. It’s a whirlwind of emotions—the highs when your team/person wins, the lows when they don’t, and the swings when you have no idea what’ll happen. But it’s so much fun to watch some of the cycling races like the Strade Bianchi, the Giro, and the Tour de France (and yes I know there many other races—I’ve tried to watch them, but struggle to get into it). You can root for multiple people to place in different ways, whether it’s the sprint jersey, the climb jersey, the leader jersey, or one of the other jerseys depending on the race. And then in TDF, there are even other factors like the team GC vs individual GC.
+Following sports is an interesting thing. It’s a whirlwind of emotions—the highs when your team/person wins, the lows when they don’t, and the swings when you have no idea what’ll happen. But it’s so much fun to watch some of the cycling races like the Strade Bianchi, the Giro, and the Tour de France (and yes I know there many other races—I’ve tried to watch them, but struggle to get into it). You can root for multiple people to place in different ways, whether it’s the sprint jersey, the climb jersey, the leader jersey, or one of the other jerseys depending on the race.
 
 It’s fun to be able to cheer on different people and to learn about race tactics—today I learned that UAE didn’t seem to have any!
 

@@ -87,14 +87,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
       zone: "UTC",
-    }).toLocaleString(DateTime.DATE_MED);
-  });
-
-  eleventyConfig.addFilter("readableTimestampString", (dateStr) => {
-    return DateTime.fromFormat(dateStr, "yyyy-MM-dd HH:mm:ss", { zone: "utc" })
-      .toLocal()
-      .setZone("America/Los_Angeles")
-      .toLocaleString(DateTime.DATETIME_MED);
+    }).toLocaleString(DateTime.DATE_FULL);
   });
 
   eleventyConfig.addFilter("maybeISOToString", (dateStr) => {
@@ -102,12 +95,6 @@ export default function (eleventyConfig) {
       return "";
     }
     return DateTime.fromISO(dateStr).toLocaleString(DateTime.DATE_MED);
-  });
-
-  eleventyConfig.addFilter("readableDateString", (dateStr) => {
-    return DateTime.fromFormat(dateStr, "yyyy-MM-dd", {}).toLocaleString(
-      DateTime.DATE_MED,
-    );
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string

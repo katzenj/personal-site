@@ -5,11 +5,12 @@ description: "{{ description }}"
 ---
 
 <div class="h-full note">
+  <article>
     {# Post header info #}
-    <div class="pb-4 md:pb-6">
+    <div class="pb-4 md:pb-12">
         <div>
             {# I tried font-old-style but it looked odd when other places didn't have it #}
-            <h1 class="text-2xl tracking-tight font-bold pb-2">{{ title }}</h1>
+            <h1 class="text-3xl tracking-tight font-bold pb-2">{{ title }}</h1>
             {%- for tag in tags | filterTagList %}
                 {%- set tagUrl %}/tags/{{ tag | slugify }}/
                 {% endset %}
@@ -18,11 +19,12 @@ description: "{{ description }}"
                    class="post-tag">{{ tag }}</a>
             {%- endfor %}
         </div>
-        <div class="pr-2 text-sm italic">
-            <span>Published: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
+        <div class="pr-2 text-sm opacity-90">
+            <span><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
             <span>&#x2022;</span>
             <span>Last updated: <time datetime="{{ page.date | htmlDateString }}">{{ updated_at | readableDate }}</time></span>
         </div>
     </div>
     <div class="post-content prose">{{ content | safe }}</div>
+  </article>
 </div>

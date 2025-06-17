@@ -4,8 +4,7 @@
 
 @layer base {
   html {
-    /* font-family: "Funnel Sans", sans-serif; */
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
   }
 
   .prose * {

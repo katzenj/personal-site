@@ -21,8 +21,10 @@ description: "{{ description }}"
         </div>
         <div class="pr-2 text-sm opacity-90">
             <span><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></span>
+            {%- if page.date | readableDate != updated_at | readableDate %}
             <span>&#x2022;</span>
-            <span>Last updated: <time datetime="{{ page.date | htmlDateString }}">{{ updated_at | readableDate }}</time></span>
+            <span>Last updated: <time datetime="{{ updated_at | htmlDateString }}">{{ updated_at | readableDate }}</time></span>
+            {% endif %}
         </div>
     </div>
     <div class="post-content prose">{{ content | safe }}</div>
